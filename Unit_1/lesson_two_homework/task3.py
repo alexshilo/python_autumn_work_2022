@@ -3,9 +3,8 @@
 age = 36.6
 temperature = 25
 x = age
-y = temperature
+age = temperature
 temperature = x
-age = y
 
 print ("age =", age)
 print ("temperature =", temperature)

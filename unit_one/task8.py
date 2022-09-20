@@ -9,11 +9,15 @@ C = 7
 # B = 7
 # C = 10
 
-# Пример 2:
-A = 2
-B = 10
-C = 7
-# Итоговый результат должен быть:
-# A = 2
-# B = 7
-# C = 10
+if A =< B and A =< C:
+    A == A
+    if B =< A and B =< C:
+        B == B
+    elif C =< A and C=<B:
+        C == C
+    else:
+
+
+print ("A=", A)
+print ("B=", B)
+print ("C=", C)

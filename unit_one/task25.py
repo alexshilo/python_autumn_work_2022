@@ -7,11 +7,8 @@
 # apple	                        aple
 # 25.04.2022 Good morning !!	    godmrni
 
-x = "apple"
-y = "25.04.2022 Good morning !!"
+input_1 = "apple"
+input_2 = "25.04.2022 Good morning !!"
+print("".join(dict.fromkeys(input_1)))
+print("".join(dict.fromkeys(filter(str.isalpha, input_2.lower()))))
 
-output_x = "".join(dict.fromkeys(x))
-output_y = "".join(dict.fromkeys(filter(str.isalpha, y.lower())))
-
-print (output_x)
-print (output_y)

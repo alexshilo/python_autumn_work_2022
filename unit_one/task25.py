@@ -12,5 +12,6 @@ y = "25.04.2022 Good morning !!"
 
 output_x = "".join(dict.fromkeys(x))
 output_y = "".join(dict.fromkeys(filter(str.isalpha, y.lower())))
+
 print (output_x)
 print (output_y)

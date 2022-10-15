@@ -16,7 +16,6 @@ print(transpose_matrix)
 
 # Вариант_2
 #def transpose(matrix):
-
 #transpose(matrix)
 
 

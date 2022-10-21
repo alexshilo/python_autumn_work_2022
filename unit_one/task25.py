@@ -7,6 +7,7 @@
 # apple	                        aple
 # 25.04.2022 Good morning !!	    godmrni
 
+
 input_1 = "apple"
 input_2 = "25.04.2022 Good morning !!"
 print("".join(dict.fromkeys(input_1)))

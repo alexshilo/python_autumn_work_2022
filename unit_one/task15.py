@@ -23,34 +23,29 @@ desc_ = ["Это слово обозначает наименьшую автон
 
 from random import randrange
 
-# выбираем случайное слово и задание из массива words
-i = randrange(len(words))
+i = randrange(len(words))                       #выбираем случайное слово и задание из массива words
 word, description = words[i], desc_[i]
 print(word, i)
 print("Задание:\n", description)
-word_lst = list(word) # создаем список из слова
-k = len(word_lst) # создаем счетчик количества букв
-template = ["_"]*k # создаем шаблон в виде списка с тем же количеством букв
-#print(template)
-
-failed_attempt = 4 # создаем счетчик неправильных попыток
-# создаем цикл игры из неограниченного числа правильных попыток
-while "_" in template:
-    print(template)
-    letter = str(input("Введите букву: "))
-    for l in range(0, len(word_lst)):
-        if word_lst[l] == letter:
+word_lst = list(word)                           #создаем список из слова
+template = ["_"]*len(word_lst)                  #создаем шаблон в виде списка с тем же количеством букв
+allowed_attempt = 10                            #создаем счетчик неправильных попыток
+while "_" in template:                          #создаем цикл игры
+    print(template)                             #смотрим как выглядит шаблон, есть ли в нем буквы
+    letter = str(input("Введите букву: "))      #вводим букву
+    for l in range(0, len(word_lst)):           #создаем цикл, в котором для индекса по всей длине массива загаданного слова ищем:
+        if word_lst[l] == letter:               #если в загаданном слове в нужной позиции есть введенная буква то все отлично
             print(f"Есть! Откройте {letter}")
-            template[l] = letter
-        if letter not in word_lst:
-            failed_attempt -= 1
-            print(f"Нет буквы. У вас осталось {failed_attempt} неправильных попыток")
+            template[l] = letter                #закидываем угаданную букву в шаблон
+        if letter not in word_lst:              #если буквы в слове нет, то ошибка
+            allowed_attempt -= 1
+            print(f"Нет буквы. У вас осталось {allowed_attempt} попыток с ошибками")
             break
-    if failed_attempt == 0:
+    if allowed_attempt == 0:                    #если ошибок много, то проигрыш
         print("Вы проиграли")
         break
 if "_" not in template:
-    print("вы выиграли")
+    print("вы выиграли")                        #если все буквы разгаданы, то выигрыш
 
 
 

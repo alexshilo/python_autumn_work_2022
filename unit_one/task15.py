@@ -31,26 +31,26 @@ print("Задание:\n", description)
 word_lst = list(word) # создаем список из слова
 k = len(word_lst) # создаем счетчик количества букв
 template = ["_"]*k # создаем шаблон в виде списка с тем же количеством букв
-print(template)
+#print(template)
 
 failed_attempt = 4 # создаем счетчик неправильных попыток
-l = 0
 # создаем цикл игры из неограниченного числа правильных попыток
-while template[l] == "_":
+while "_" in template:
+    print(template)
     letter = str(input("Введите букву: "))
     for l in range(0, len(word_lst)):
         if word_lst[l] == letter:
             print(f"Есть! Откройте {letter}")
             template[l] = letter
-            print(template)  # выводим шаблон со вставленной буквой
         if letter not in word_lst:
             failed_attempt -= 1
             print(f"Нет буквы. У вас осталось {failed_attempt} неправильных попыток")
-            if failed_attempt == -1:
-                print("Вы проиграли")
-                break
             break
-
+    if failed_attempt == 0:
+        print("Вы проиграли")
+        break
+if "_" not in template:
+    print("вы выиграли")
 
 
 

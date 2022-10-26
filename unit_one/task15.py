@@ -29,53 +29,31 @@ word, description = words[i], desc_[i]
 print(word, i)
 print("Задание:\n", description)
 word_lst = list(word) # создаем список из слова
-print("word_lst=", word_lst)
-k = int(len(word_lst))
-template = ("_ "*k) # создаем шаблон с тем же количеством букв
-# todo сделать шаблон в виде списка
+k = len(word_lst) # создаем счетчик количества букв
+template = ["_"]*k # создаем шаблон в виде списка с тем же количеством букв
 print(template)
 
-attempt = 0 # создаем счетчик попыток
-while attempt:
-    if attempt < 10
-        letter = str(input("Введите букву: "))
-        if letter in word_lst:
-            print(f"Есть такая буква! Откройте букву {letter}")
+failed_attempt = 4 # создаем счетчик неправильных попыток
 
-            #todo сделать замену в шаблоне
-            print(template) # выводим шаблон со вставленной буквой
+# создаем цикл игры из неограниченного числа правильных попыток с помощью счетчика k
+while template[k-1] == "_":
+    letter = str(input("Введите букву: "))
+    for k in range(0, len(word_lst)):
+        if word_lst[k] == letter:
+            print(f"Есть! Откройте букву {letter}")
+            template[k] = letter
+            print(template)  # выводим шаблон со вставленной буквой
+            #print(f"У вас осталось {failed_attempt} неправильных попыток")
+        # if word_lst[k] != letter:
+        #     failed_attempt -= 1
+        #     print(f"Нет буквы. У вас осталось {failed_attempt} неправильных попыток")
+        #     break
+        # if failed_attempt == attempt:
+        #     print("Проиграли")
+        #     break
 
-        else:
-            print(f"Нет такой буквы :( Вращайте барабан. У вас осталось {attempt} поопыток")
-
-# for j in word_lst: # вводим букву в шаблон
-#     if letter in word_lst:
-#         for k in template:
-#             template[k] = letter
-#             print(template)
+    # else:
+    #     print("Вы проиграли")
+    #     break
 
 
-
-# j in word_lst: # вводим букву в шаблон
-# if letter in word_lst:
-#     for k in template:
-#         template[k] = letter
-#         print(template)
-
-# https://python.su/forum/topic/29845/
-# y = 0
-# while y < 4:
-#     t = input("Введите пароль:")
-#     y +=1
-#     if t!="Rose":
-#         print('Неправильный пароль, осталось попыток :', 4-y)
-#     else:
-#         print('Пароль верный, вход выполнен')
-#         break
-
-# for t in reversed(range(4)):
-#     p = input("Введите пароль:")
-#     if p == "Rose":
-#         print('Пароль верный, вход выполнен')
-#         break
-#     print('Неправильный пароль, осталось попыток :', t)

@@ -4,21 +4,39 @@
 #  В этой задаче удобно считывать файл построчно, шифруя каждую строку в отдельности.
 # В каждой строчке содержатся различные символы. Шифровать нужно только буквы кириллицы.
 
-myfile = open("message.txt", "wt", encoding="utf-8")
+myfile = open("message.txt", "r", encoding="utf-8")
 
-text = """Шифр Цезаря
-Описание шифра.
-В криптографии шифр Цезаря, также известный шифр сдвига, код Цезаря или сдвиг Цезаря,
-является одним из самых простых и широко известных методов шифрования.
-Это тип подстановочного шифра, в котором каждая буква в открытом тексте заменяется буквой на некоторое
-фиксированное количество позиций вниз по алфавиту. Например, со сдвигом влево 3, D будет заменен на A,
-E станет Б, и так далее. Метод назван в честь Юлия Цезаря, который использовал его в своей частной переписке."""
-
-cyrillic_low = set("съешь же еще этих мягких французских булок да выпей чаю".replace(" ",""))
-cyrillic_high = [x.upper() for x in cyrillic_low]
-sorted_cyr_low, sorted_cyr_high = sorted(cyrillic_low), sorted(cyrillic_high)
+cyr_low = set("съешь же еще этих мягких французских булок да выпей чаю".replace(" ", ""))
+cyr_high = [x.upper() for x in cyr_low]
+sorted_cyr_low, sorted_cyr_high = sorted(cyr_low), sorted(cyr_high)
 sorted_cyr = sorted_cyr_low + sorted_cyr_high
 print(sorted_cyr)
+
+shift = 0
+count = len(myfile.readlines())
+myfile.seek(0,0)
+encryption = ''
+while shift <= count:
+    shift += 1
+    line = myfile.readlines()
+    for i in line:
+        if i.isupper():
+
+            ######## в работе"
+            # i_unicode = ord(i)
+            # i_index = ord(i) - ord("А")
+            # new_index = (i_index + shift)%32
+            # new_unicode = new_index + ord("А")
+            # new_character = chr(new_unicode)
+            # encryption = encryption + new_character
+        else:
+            encryption += i
+
+print(encryption)
+
+
+
+
 
 
 

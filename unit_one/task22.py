@@ -4,38 +4,27 @@
 #  В этой задаче удобно считывать файл построчно, шифруя каждую строку в отдельности.
 # В каждой строчке содержатся различные символы. Шифровать нужно только буквы кириллицы.
 
-myfile = open("message.txt", "r", encoding="utf-8")
+myfile = open("message.txt", "r", encoding="utf-8")                         # открываем файл для чтения
 
-cyr_low = set("съешь же еще этих мягких французских булок да выпей чаю".replace(" ", ""))
-cyr_high = [x.upper() for x in cyr_low]
-sorted_cyr_low, sorted_cyr_high = sorted(cyr_low), sorted(cyr_high)
-sorted_cyr = sorted_cyr_low + sorted_cyr_high
-print(sorted_cyr)
+cyr_low = set("съешь же еще этих мягких французских булок да выпей чаю".replace(" ", "")) # делаем список алфавита из фразы
+cyr_high = [x.upper() for x in cyr_low]                              # делаем маленькие буквы большими
+sorted_cyr_low, sorted_cyr_high = sorted(cyr_low), sorted(cyr_high)  # сортируем в алфавитном порядке
+cyrillic = sorted_cyr_low + sorted_cyr_high                        # объединяем списки в один
+print(cyrillic)                                                    # проверяем, все ли верно в списке
 
-shift = 0
-count = len(myfile.readlines())
-myfile.seek(0,0)
-encryption = ''
-while shift <= count:
-    shift += 1
-    line = myfile.readlines()
-    for i in line:
-        if i.isupper():
+encryption = ""                                     # создаем пустую переменную, сюда будем записывать итоговый шифр
+strings = myfile.readlines()                        # создаем метод по считыванию строк из открытого файле
 
-            ######## в работе"
-            # i_unicode = ord(i)
-            # i_index = ord(i) - ord("А")
-            # new_index = (i_index + shift)%32
-            # new_unicode = new_index + ord("А")
-            # new_character = chr(new_unicode)
-            # encryption = encryption + new_character
+for string in strings:                              # создаем общий цикл для строк
+    for symbol in string:                           # в этом цикле создаем цикл для каждого символа строки
+        if symbol in cyrillic:                      # если символ в данной строке есть в списке алфавита, то:
+            k = cyrillic.index(symbol)              # ищем индекс этого символа в алфавите
+            k_changed = k - 1                         # делаем смещение этого индекса на 1
+            encryption = encryption + cyrillic[k_changed]   # записываем в строку
         else:
-            encryption += i
+            encryption = encryption + symbol        # либо записываем другой символ в строку
 
 print(encryption)
-
-
-
 
 
 

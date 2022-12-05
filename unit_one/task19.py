@@ -6,12 +6,15 @@
 
 #Каждое значение из списка должно находится на отдельной строке.
 
-import csv
-f = open ("algoritm.csv", "wt")
-algoritm = [ "C4.5" , "k - means" , "Метод опорных векторов" , "Apriori" , "EM" , "PageRank" , "AdaBoost", "kNN" , "Наивный байесовский классификатор" , "CART" ]
-id = 1
-for i in algoritm:
-    f.write (str(id) + ". " + i + "\n")
-    id = id + 1
-f.close()
+# import csv
+# f = open ("algoritm.csv", "wt")
+# algoritm = [ "C4.5" , "k - means" , "Метод опорных векторов" , "Apriori" , "EM" , "PageRank" , "AdaBoost", "kNN" , "Наивный байесовский классификатор" , "CART" ]
+# id = 1
+# for i in algoritm:
+#     f.write (str(id) + ". " + i + "\n")
+#     id = id + 1
+# f.close()
+
+
+
 

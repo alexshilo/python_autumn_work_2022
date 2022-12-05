@@ -18,13 +18,10 @@ for i in range(1,7):
 lst_sum = []
 for summ in range(0, 13):
     lst_sum.append(list())
-
+max_lst_sum = []
 # бежим по всем парам и считаем сумму
 for k in lst:
     s = sum(k)
     lst_sum[s].append(k)
     print("Сумма", s, "комбинация", lst_sum[s])
-
-
-
 

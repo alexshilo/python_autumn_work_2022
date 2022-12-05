@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="ac2f2880d1d011e1800000215ad4efdf" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_DamperOccurrence</Name>
+  <Definition>Damper occurrence attributes attached to an instance of IfcDamper</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcDamper</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcDamper</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="b2250980d1d011e1800000215ad4efdf">
+      <Name>SizingMethod</Name>
+      <Definition>Identifies whether the damper is sized nominally or with exact measurements:
+
+NOMINAL: Nominal sizing method. 
+EXACT: Exact sizing method.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DamperSizingMethod">
+            <EnumItem>NOMINAL</EnumItem>
+            <EnumItem>EXACT</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>NOMINAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Nominal</NameAlias>
+                <NameAlias lang="ru-RU">Номинальный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Nominal sizing method</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Номинальный метод определения размеров</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXACT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Exact</NameAlias>
+                <NameAlias lang="ru-RU">Точный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Exact sizing method</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Точный метод определения размеров</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Sizing Method</NameAlias>
+        <NameAlias lang="ru-RU">Метод определения размеров</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Указывает, определен ли размер регулирующего клапана номинально или точно:NOMINAL: номинальный метод определения размеров. EXACT: точный метод определения размеров.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Атрибуты реализации регулирующего клапана, приписанные экземпляру IfcFan.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

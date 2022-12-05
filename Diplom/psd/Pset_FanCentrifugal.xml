@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="747dac00d1e311e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_FanCentrifugal</Name>
+  <Definition>Centrifugal fan occurrence attributes attached to an instance of IfcFan.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcFan/CENTRIFUGAL</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcFan/CENTRIFUGAL</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="7cd5e700d1e311e1800000215ad4efdf">
+      <Name>DischargePosition</Name>
+      <Definition>Centrifugal fan discharge position.
+
+TOPHORIZONTAL: Top horizontal discharge. 
+TOPANGULARDOWN: Top angular down discharge. 
+DOWNBLAST: Downblast discharge. 
+BOTTOMANGULARDOWN: Bottom angular down discharge. 
+BOTTOMHORIZONTAL: Bottom horizontal discharge. 
+BOTTOMANGULARUP: Bottom angular up discharge. 
+UPBLAST: Upblast discharge. 
+TOPANGULARUP: Top angular up discharge. 
+OTHER: Other type of fan arrangement.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CentrifugalFanDischargePosition">
+            <EnumItem>TOPHORIZONTAL</EnumItem>
+            <EnumItem>TOPANGULARDOWN</EnumItem>
+            <EnumItem>TOPANGULARUP</EnumItem>
+            <EnumItem>DOWNBLAST</EnumItem>
+            <EnumItem>BOTTOMANGULARDOWN</EnumItem>
+            <EnumItem>BOTTOMHORIZONTAL</EnumItem>
+            <EnumItem>BOTTOMANGULARUP</EnumItem>
+            <EnumItem>UPBLAST</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>TOPHORIZONTAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Top Horizontal</NameAlias>
+                <NameAlias lang="ru-RU">Верхний горизонтальный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Top horizontal discharge</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Верхний горизонтальный выброс</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TOPANGULARDOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">Top Angular Down</NameAlias>
+                <NameAlias lang="ru-RU">Верхний угловой выброс вниз</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Top angular down discharge</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Верхний угловой выброс вниз</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TOPANGULARUP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Top Angular Up</NameAlias>
+                <NameAlias lang="ru-RU">Верхний угловой факельный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Top angular up discharge</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Верхний угловой факельный выброс.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DOWNBLAST</Name>
+              <NameAliases>
+                <NameAlias lang="en">Down Blast</NameAlias>
+                <NameAlias lang="ru-RU">Внезапный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Downblast discharge</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Внезапный выброс вниз</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BOTTOMANGULARDOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">Bottom Angular Down</NameAlias>
+                <NameAlias lang="ru-RU">Нижний угловой факельный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Bottom angular down discharge</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Нижний угловой факельный выброс</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BOTTOMHORIZONTAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Bottom Horizontal</NameAlias>
+                <NameAlias lang="ru-RU">Нижний горизонтальный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Bottom horizontal discharge</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Нижний горизонтальный выброс</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BOTTOMANGULARUP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Bottom Angular Up</NameAlias>
+                <NameAlias lang="ru-RU">Нижний угловой факельный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Bottom angular up discharge</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Нижний угловой факельный выброс</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UPBLAST</Name>
+              <NameAliases>
+                <NameAlias lang="en">Upblast</NameAlias>
+                <NameAlias lang="ru-RU">Факельный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Upblast discharge</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Факельный выброс</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Discharge Position</NameAlias>
+        <NameAlias lang="ja-JP">吐出位置</NameAlias>
+        <NameAlias lang="ru-RU">Положение выброса</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">遠心送風機の吐出位置
+TOPHORIZONTAL: 上部水平 
+TOPANGULARDOWN: 上部角度付き下向き 
+DOWNBLAST: 下向き
+BOTTOMANGULARDOWN: 下部角度付き下向き
+BOTTOMHORIZONTAL: 下部水平
+BOTTOMANGULARUP: 下部角度付き上向き
+UPBLAST: 上向き
+TOPANGULARUP: 上部角度付き上向き. 
+OTHER: その他</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Положение выброса центробежного вентилятора. TOPHORIZONTAL: Верхний горизонтальный выброс. TOPANGULARDOWN: Верхний угловой выброс вниз. DOWNBLAST: Внезапный выброс вниз. BOTTOMANGULARDOWN: Нижний угловой выброс вниз. BOTTOMHORIZONTAL: Нижний горизонтальный выброс. BOTTOMANGULARUP: Нижний угловой факельный выброс. UPBLAST: Факельный выброс. TOPANGULARUP: Верхний угловой факельный выброс. OTHER: Другой тип расположения выброса вентилятора.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="94ad6b00d1e311e1800000215ad4efdf">
+      <Name>DirectionOfRotation</Name>
+      <Definition>The direction of the centrifugal fan wheel rotation when viewed from the drive side of the fan.
+
+CLOCKWISE: Clockwise. 
+COUNTERCLOCKWISE: Counter-clockwise. 
+OTHER: Other type of fan rotation.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CentrifugalFanRotation">
+            <EnumItem>CLOCKWISE</EnumItem>
+            <EnumItem>COUNTERCLOCKWISE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>CLOCKWISE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Clockwise</NameAlias>
+                <NameAlias lang="ru-RU">По часовой стрелке</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Clockwise</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">По часовой стрелке</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>COUNTERCLOCKWISE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Counter-clockwise</NameAlias>
+                <NameAlias lang="ru-RU">Против часовой стрелки</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Counter-clockwise</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Против часовой стрелки</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Direction Of Rotation</NameAlias>
+        <NameAlias lang="ja-JP">角度方向</NameAlias>
+        <NameAlias lang="ru-RU">Направление поворота</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">ファンの駆動側から見たホイール回転方向
+CLOCKWISE　　時計回り
+ COUNTERCLOCKWISE　反時計回り
+ OTHER　その他</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Направление вращения центробежного вентилятора со стороны привода вентилятора. CLOCKWISE: По часовой стрелке. COUNTERCLOCKWISE: Против часовой стрелки. OTHER: Другой тип вращения вентилятора.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a262f080d1e311e1800000215ad4efdf">
+      <Name>Arrangement</Name>
+      <Definition>Defines the fan and motor drive arrangement as defined by AMCA.
+
+ARRANGEMENT1: Arrangement 1. 
+ARRANGEMENT2: Arrangement 2. 
+ARRANGEMENT3: Arrangement 3. 
+ARRANGEMENT4: Arrangement 4. 
+ARRANGEMENT7: Arrangement 7. 
+ARRANGEMENT8: Arrangement 8. 
+ARRANGEMENT9: Arrangement 9. 
+ARRANGEMENT10: Arrangement 10. 
+OTHER: Other type of fan drive arrangement.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CentrifugalFanArrangement">
+            <EnumItem>ARRANGEMENT1</EnumItem>
+            <EnumItem>ARRANGEMENT2</EnumItem>
+            <EnumItem>ARRANGEMENT3</EnumItem>
+            <EnumItem>ARRANGEMENT4</EnumItem>
+            <EnumItem>ARRANGEMENT7</EnumItem>
+            <EnumItem>ARRANGEMENT8</EnumItem>
+            <EnumItem>ARRANGEMENT9</EnumItem>
+            <EnumItem>ARRANGEMENT10</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>ARRANGEMENT1</Name>
+              <NameAliases>
+                <NameAlias lang="en">Arrangement1</NameAlias>
+                <NameAlias lang="ru-RU">Расположение1</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Arrangement 1</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Расположение 1</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ARRANGEMENT2</Name>
+              <NameAliases>
+                <NameAlias lang="en">Arrangement2</NameAlias>
+                <NameAlias lang="ru-RU">Расположение2</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Arrangement 2</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Расположение 2</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ARRANGEMENT3</Name>
+              <NameAliases>
+                <NameAlias lang="en">Arrangement3</NameAlias>
+                <NameAlias lang="ru-RU">Расположение3</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Arrangement 3</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Расположение 3</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ARRANGEMENT4</Name>
+              <NameAliases>
+                <NameAlias lang="en">Arrangement4</NameAlias>
+                <NameAlias lang="ru-RU">Расположение4</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Arrangement 4</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Расположение 4</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ARRANGEMENT7</Name>
+              <NameAliases>
+                <NameAlias lang="en">Arrangement7</NameAlias>
+                <NameAlias lang="ru-RU">Расположение7</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Arrangement 7</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Расположение 7</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ARRANGEMENT8</Name>
+              <NameAliases>
+                <NameAlias lang="en">Arrangement8</NameAlias>
+                <NameAlias lang="ru-RU">Расположение8</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Arrangement 8</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Расположение 8</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ARRANGEMENT9</Name>
+              <NameAliases>
+                <NameAlias lang="en">Arrangement9</NameAlias>
+                <NameAlias lang="ru-RU">Расположение9</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Arrangement 9</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Расположение 9</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ARRANGEMENT10</Name>
+              <NameAliases>
+                <NameAlias lang="en">Arrangement10</NameAlias>
+                <NameAlias lang="ru-RU">Расположение10</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Arrangement 10</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Расположение 10</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Arrangement</NameAlias>
+        <NameAlias lang="ja-JP">配置</NameAlias>
+        <NameAlias lang="ru-RU">Расположение</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">ファンとモーターの配置（AMCAによる定義）
+ARRANGEMENT1, ARRANGEMENT2, ARRANGEMENT3, ARRANGEMENT4, ARRANGEMENT7, ARRANGEMENT8, ARRANGEMENT9, ARRANGEMENT10, OTHER, NOTKNOWN, UNSET</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Определяет расположение вентилятора и привода, как определено AMCA. ARRANGEMENT1: Расположение 1. ARRANGEMENT2: Расположение 2. ARRANGEMENT3: Расположение 3. ARRANGEMENT4: Расположение 4. ARRANGEMENT7: Расположение 7. ARRANGEMENT8: Расположение 8. ARRANGEMENT9: Расположение 9. ARRANGEMENT10: Расположение 10. OTHER: Другой тип расположения привода вентилятора.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">IfcFanの値に付け加えられた遠心送風機の属性</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Атрибуты образца центробежного вентилятора, приписанные экземпляру IfcFan.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

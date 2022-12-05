@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="73fe0900d21511e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_VibrationIsolatorTypeCommon</Name>
+  <Definition>Vibration isolator type common attributes.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcVibrationIsolator</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcVibrationIsolator</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="795b5380d21511e1800000215ad4efdf">
+      <Name>Reference</Name>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1').</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Reference</NameAlias>
+        <NameAlias lang="ja-JP">参照記号</NameAlias>
+        <NameAlias lang="ru-RU">Ссылка</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Ссылочный идентификатор данного конкретного типа в настоящем проекте  (например, тип «A-1»).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="1a989eee042c4402833bb2453e382388">
+      <Name>Status</Name>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+          <ConstantList>
+            <ConstantDef>
+              <Name>NEW</Name>
+              <Definition>element designed as new addition</Definition>
+              <NameAliases>
+                <NameAlias lang="en">New</NameAlias>
+                <NameAlias lang="ru-RU">Новый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент создан как новая пристройка</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXISTING</Name>
+              <Definition>element exists and is to remain</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Existing</NameAlias>
+                <NameAlias lang="ru-RU">Существующий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует и останется без изменений</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DEMOLISH</Name>
+              <Definition>element exists but is to be demolished</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Demolish</NameAlias>
+                <NameAlias lang="ru-RU">Подлежит сносу</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует, но подлежит сносу</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TEMPORARY</Name>
+              <Definition>element will exist only temporarily (such as a temporary support structure)</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Temporary</NameAlias>
+                <NameAlias lang="ru-RU">Временный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент будет существовать только временно (например, временная опорная конструкция)</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7f513480d21511e1800000215ad4efdf">
+      <Name>VibrationTransmissibility</Name>
+      <Definition>The vibration transmissibility percentage.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Vibration Transmissibility</NameAlias>
+        <NameAlias lang="ja-JP">振動伝達</NameAlias>
+        <NameAlias lang="ru-RU">Распространение вибрации</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">振動伝達割合</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Процент распространения вибрации.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="85dfac00d21511e1800000215ad4efdf">
+      <Name>IsolatorStaticDeflection</Name>
+      <Definition>Static deflection of the vibration isolator.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Isolator Static Deflection</NameAlias>
+        <NameAlias lang="ja-JP">振動絶縁材静的たわみ</NameAlias>
+        <NameAlias lang="ru-RU">Статическое отклонение изолятора</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">振動絶縁材の静的たわみ</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Статическое отклонение виброизолятора.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="8b3cf680d21511e1800000215ad4efdf">
+      <Name>IsolatorCompressibility</Name>
+      <Definition>The compressibility of the vibration isolator.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Isolator Compressibility</NameAlias>
+        <NameAlias lang="ja-JP">振動絶縁材の圧縮率</NameAlias>
+        <NameAlias lang="ru-RU">Сжимаемость виброизолятора</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">振動絶縁材の圧縮率の圧縮率</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Сжимаемость виброизолятора.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="998b1280d21511e1800000215ad4efdf">
+      <Name>MaximumSupportedWeight</Name>
+      <Definition>The maximum weight that can be carried by the vibration isolator.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Maximum Supported Weight</NameAlias>
+        <NameAlias lang="ja-JP">最高支持重量</NameAlias>
+        <NameAlias lang="ru-RU">Предельный вес</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">振動絶縁材で支えられる最高重量</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Предельный вес, который может выдержать виброизолятор.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="9132d780d21511e1800000215ad4efdf">
+      <Name>NominalHeight</Name>
+      <Definition>Height of the vibration isolator before the application of load.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Height</NameAlias>
+        <NameAlias lang="ja-JP">高さ</NameAlias>
+        <NameAlias lang="ru-RU">Высота</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">負荷を掛ける前の振動絶縁材の高さ</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Высота виброизолятора до приложения нагрузки.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">振動絶縁体の共通属性</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Общие атрибуты типа виброизолятора.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

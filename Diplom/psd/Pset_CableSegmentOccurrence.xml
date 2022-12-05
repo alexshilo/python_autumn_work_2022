@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="8b098786504d43c3bc4033c8ceccee6d" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_CableSegmentOccurrence</Name>
+  <Definition>Properties for the occurrence of an electrical cable, core or conductor that conforms to a type as specified by an appropriate type definition within IFC. NOTE: Maximum allowed voltage drop should be derived from the property within Pset_ElectricalCircuit.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcCableSegment</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcCableSegment</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="55fbb56361a24104a0e4b53d8e4cffd5">
+      <Name>DesignAmbientTemperature</Name>
+      <Definition>The highest and lowest local ambient temperature likely to be encountered.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Design Ambient Temperature</NameAlias>
+        <NameAlias lang="ru-RU">Расчетная температура окружающей среды</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Самая высокая и самая низкая локальная температура окружающей среды, которая вероятнее всего будет встречаться.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d9a5be4540394d228b6c573471e71f22">
+      <Name>UserCorrectionFactor</Name>
+      <Definition>An arbitrary correction factor that may be applied by the user.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">User Correction Factor</NameAlias>
+        <NameAlias lang="ru-RU">Поправочный коэффициент пользователя</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Произвольный поправочный коэффициент, который может применяться пользователем.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="4a80a2ecf3504fc6ba3f2235e2f25f04">
+      <Name>NumberOfParallelCircuits</Name>
+      <Definition>Number of parallel circuits.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Number Of Parallel Circuits</NameAlias>
+        <NameAlias lang="ru-RU">Количество параллельных цепей</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Количество параллельных цепей.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7c0ce24f9d034d9b83da2ac5e4a0634c">
+      <Name>InstallationMethod</Name>
+      <Definition>Method of installation of cable/conductor. Installation methods are typically defined by reference in standards such as IEC 60364-5-52, table 52A-1 or BS7671 Appendix 4 Table 4A1 etc. Selection of the value to be used should be determined from such a standard according to local usage.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Installation Method</NameAlias>
+        <NameAlias lang="ru-RU">Способ монтажа</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Способ монтажа кабеля/проводника. Способы монтажа обычно определены ссылкой в стандартах, таких как IEC 60364-5-52, таблица 52A-1, или BS7671 Приложение 4 Таблица 4A1 и т.д. Выбор значения, которое будет использоваться, должен быть произведен на основании такого стандарта в соответствии с локальным использованием.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="be5fd0db9e234a84b4e07762a0e065e1">
+      <Name>InstallationMethodFlagEnum</Name>
+      <Definition>Special installation conditions relating to particular types of installation based on IEC60364-5-52:2001 reference installation methods C and D.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_InstallationMethodFlagEnum">
+            <EnumItem>INDUCT</EnumItem>
+            <EnumItem>INSOIL</EnumItem>
+            <EnumItem>ONWALL</EnumItem>
+            <EnumItem>BELOWCEILING</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>INDUCT</Name>
+              <NameAliases>
+                <NameAlias lang="en">In Duct</NameAlias>
+                <NameAlias lang="ru-RU">В трубопроводе</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INSOIL</Name>
+              <NameAliases>
+                <NameAlias lang="en">In Soil</NameAlias>
+                <NameAlias lang="ru-RU">В почве</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ONWALL</Name>
+              <NameAliases>
+                <NameAlias lang="en">On Wall</NameAlias>
+                <NameAlias lang="ru-RU">На стене</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BELOWCEILING</Name>
+              <NameAliases>
+                <NameAlias lang="en">Below Ceiling</NameAlias>
+                <NameAlias lang="ru-RU">Под потолком</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Installation Method Flag Enum</NameAlias>
+        <NameAlias lang="ru-RU">Флаг Enum способа монтажа</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Специальные условия монтажа, связанные с определенными типами монтажа, основанные на эталонных методах монтажа C и D IEC60364-5-52:2001.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="977d1cc9f8f548dcaa23820a3e9d0774">
+      <Name>DistanceBetweenParallelCircuits</Name>
+      <Definition>Distance measured between parallel circuits.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Distance Between Parallel Circuits</NameAlias>
+        <NameAlias lang="ru-RU">Расстояние между параллельными цепями</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Расстояние между параллельными цепями.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="366428fd19e54457a10ad655640758e7">
+      <Name>SoilConductivity</Name>
+      <Definition>Thermal conductivity of soil. Generally, within standards such as IEC 60364-5-52, table 52A-16, the resistivity of soil is required (measured in [SI] units of degK.m /W). This is the reciprocal of the conductivity value and needs to be calculated accordingly.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermalConductivityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Soil Conductivity</NameAlias>
+        <NameAlias lang="ru-RU">Проводимость грунта</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Теплопроводимость грунта. Как правило, в соответствии с такими стандартами, как IEC 60364-5-52, Таблица 52A-16, требуется сопротивление почвы (измеренное в единицах [СИ] K*м/Вт). Это обратная величина проводимости, которая рассчитывается соответствующим образом.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7a917ce35e224ad58d1e87bc3656c1b8">
+      <Name>CarrierStackNumber</Name>
+      <Definition>Number of carrier segments (tray, ladder etc.) that are vertically stacked (vertical is measured as the z-axis of the local coordinate system of the carrier segment).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Carrier Stack Number</NameAlias>
+        <NameAlias lang="ru-RU">Количество рядов канала</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Количество сегментов канала (лоток, лестница, и т.д.), которые уложены вертикально (вертикаль измеряется как ось Z локальной системы координат сегмента канала).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="12584689253640919491fb29d755ac82">
+      <Name>MountingMethod</Name>
+      <Definition>The method of mounting cable segment occurrences on a cable carrier occurrence from which the method required can be selected. This is for the purpose of carrying out 'worst case' cable sizing calculations and may be a conceptual requirement rather than a statement of the physical occurrences of cable and carrier segments.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_MountingMethodEnum">
+            <EnumItem>PERFORATEDTRAY</EnumItem>
+            <EnumItem>LADDER</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>PERFORATEDTRAY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Perforated Tray</NameAlias>
+                <NameAlias lang="ru-RU">Перфорированный лоток</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LADDER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Ladder</NameAlias>
+                <NameAlias lang="ru-RU">Лестница</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Mounting Method</NameAlias>
+        <NameAlias lang="ru-RU">Способ монтажа</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Способ монтажа вхождения сегмента кабеля во вхождение кабель-канала, из которого можно выбрать требуемый метод. Предназначен для проведения расчетов размера кабелей с учетом наихудших условий и может являться концептуальным требованием, а не положением о физических проявлениях сегментов кабеля и канала.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d4ec271863334e1ea8cdd1a1d63c7708">
+      <Name>IsHorizontalCable</Name>
+      <Definition>Indication of whether the cable occurrences are mounted horizontally (= TRUE) or vertically (= FALSE).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Is Horizontal Cable</NameAlias>
+        <NameAlias lang="ru-RU">Горизонтальный кабель</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Указывает, монтируются ли вхождения кабеля горизонтально (=TRUE (ИСТИННО)) или вертикально (= FALSE (ЛОЖНО)).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="2632b74803d346c0aafd3f7cff1f8d99">
+      <Name>IsMountedFlatCable</Name>
+      <Definition>Indication of whether the cable occurrences are mounted flat (= TRUE) or in a trefoil pattern (= FALSE).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Is Mounted Flat Cable</NameAlias>
+        <NameAlias lang="ru-RU">Кабель, монтированный в плоскости</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Указывает, монтируются ли вхождения кабеля  в плоскости (= TRUE (ИСТИННО)) или в виде трилистника (= FALSE (ЛОЖНО)).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a56d336272784003b1418d8169f8652f">
+      <Name>CurrentCarryingCapasity</Name>
+      <Definition>Maximum value of electric current which can be carried continuously by a conductor, a device or an apparatus, under specified conditions without its steady-state temperature exceeding a  specified value. Based on IEC60826-11-13. NOTE: The temperature specified value is maximum Design Ambient Temperature.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricCurrentMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Current Carrying Capasity</NameAlias>
+        <NameAlias lang="ru-RU">Текущая несущая способность</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Максимальное значение электрического тока, который может непрерывно проводиться через проводник, устройство или аппарат при заданных условиях без превышения заданного значения установившейся температуры. Основано на IEC60826-11-13. ПРИМЕЧАНИЕ: Заданное значение температуры является предельным Расчетным значением температуры окружающей среды.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a008e02d7f54483383e4f8069dde0f37">
+      <Name>MaximumCableLength</Name>
+      <Definition>Maximum cable length based on voltagedrop. NOTE: This value may also be specified as a constraint within an IFC model if required but is included within the property set at this stage pending implementation of the required capabilities within software applications.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Maximum Cable Length</NameAlias>
+        <NameAlias lang="ru-RU">Максимальная длина кабеля</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Максимальная длина кабеля, основанная на падении напряжения. ПРИМЕЧАНИЕ: Данное значение, при необходимости, также может указываться в виде ограничения в пределах модели IFC, но включается в набор свойств на данном этапе перед реализацией требуемых способностей в пределах программных приложений.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="47d6edba8d714af2b05f07d968909ff6">
+      <Name>PowerLoss</Name>
+      <Definition>Total loss of power across this cable.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcElectricCurrentMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Power Loss</NameAlias>
+        <NameAlias lang="ru-RU">Потеря мощности</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Полная потеря мощности в этом кабеле.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Свойства для вхождения электрического кабеля, жилы или проводника согласно типу, указанному в соответствующем определении типа в IFC. ПРИМЕЧАНИЕ: Предельно допустимое падение напряжения выводится из свойства в Pset_ElectricalCircuit.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

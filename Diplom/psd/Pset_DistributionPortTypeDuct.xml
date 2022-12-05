@@ -1,0 +1,408 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="e3a0f7f7ae494e08baa3474d1816fafd" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_DistributionPortTypeDuct</Name>
+  <Definition>Duct port occurrence attributes attached to an instance of IfcDistributionPort.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcDistributionPort/DUCT</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcDistributionPort/DUCT</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="d2b239a61db14c2ab423e3d735a6de1f">
+      <Name>ConnectionType</Name>
+      <Definition>The end-style treatment of the duct port:
+
+BEADEDSLEEVE: Beaded Sleeve. 
+COMPRESSION: Compression. 
+CRIMP: Crimp. 
+DRAWBAND: Drawband. 
+DRIVESLIP: Drive slip. 
+FLANGED: Flanged. 
+OUTSIDESLEEVE: Outside Sleeve. 
+SLIPON: Slipon. 
+SOLDERED: Soldered. 
+SSLIP: S-Slip. 
+STANDINGSEAM: Standing seam. 
+SWEDGE: Swedge. 
+WELDED: Welded. 
+OTHER: Another type of end-style has been applied.
+NONE: No end-style has been applied.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_DuctConnectionType">
+            <EnumItem>BEADEDSLEEVE</EnumItem>
+            <EnumItem>COMPRESSION</EnumItem>
+            <EnumItem>CRIMP</EnumItem>
+            <EnumItem>DRAWBAND</EnumItem>
+            <EnumItem>DRIVESLIP</EnumItem>
+            <EnumItem>FLANGED</EnumItem>
+            <EnumItem>OUTSIDESLEEVE</EnumItem>
+            <EnumItem>SLIPON</EnumItem>
+            <EnumItem>SOLDERED</EnumItem>
+            <EnumItem>SSLIP</EnumItem>
+            <EnumItem>STANDINGSEAM</EnumItem>
+            <EnumItem>SWEDGE</EnumItem>
+            <EnumItem>WELDED</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>USERDEFINED</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>BEADEDSLEEVE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Beaded Sleeve</NameAlias>
+                <NameAlias lang="ru-RU">Развальцованная муфта</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Beaded Sleeve</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Развальцованная муфта</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>COMPRESSION</Name>
+              <NameAliases>
+                <NameAlias lang="en">Compression</NameAlias>
+                <NameAlias lang="ru-RU">Компрессия</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Compression</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Компрессия</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CRIMP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Crimp</NameAlias>
+                <NameAlias lang="ru-RU">Гофрированная поверхность</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Crimp</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Гофрированная поверхность</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DRAWBAND</Name>
+              <NameAliases>
+                <NameAlias lang="en">Drawband</NameAlias>
+                <NameAlias lang="ru-RU">Натяжной хомут</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Drawband</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Натяжной хомут</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DRIVESLIP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Driveslip</NameAlias>
+                <NameAlias lang="ru-RU">Ведущий шкив</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Drive slip</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Ведущий шкив</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FLANGED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Flanged</NameAlias>
+                <NameAlias lang="ru-RU">Фланцевый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Flanged</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Фланцевый</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OUTSIDESLEEVE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Outside Sleeve</NameAlias>
+                <NameAlias lang="ru-RU">Наружная муфта</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Outside Sleeve</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Наружная муфта</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SLIPON</Name>
+              <NameAliases>
+                <NameAlias lang="en">Slipon</NameAlias>
+                <NameAlias lang="ru-RU">Приварной</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Slipon</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Приварной</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SOLDERED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Soldered</NameAlias>
+                <NameAlias lang="ru-RU">Спаянный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Soldered</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Спаянный</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SSLIP</Name>
+              <NameAliases>
+                <NameAlias lang="en">S-Slip</NameAlias>
+                <NameAlias lang="ru-RU">S-образная рейка</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">S-Slip</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">S-образная рейка</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>STANDINGSEAM</Name>
+              <NameAliases>
+                <NameAlias lang="en">Standing seam</NameAlias>
+                <NameAlias lang="ru-RU">Стоячий фальц</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Standing seam</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Стоячий фальц</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SWEDGE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Swedge</NameAlias>
+                <NameAlias lang="ru-RU">Патрубок</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Swedge</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Патрубок</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WELDED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Welded</NameAlias>
+                <NameAlias lang="ru-RU">Сварной</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Welded</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Сварной</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+                <NameAlias lang="ru-RU">Нет</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">No end-style has been applied</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Конечный стиль не применяется</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>USERDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Userdefined</NameAlias>
+                <NameAlias lang="ru-RU">Определяется пользователем</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+                <NameAlias lang="ru-RU">Неопределенный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Connection Type</NameAlias>
+        <NameAlias lang="ru-RU">Тип соединения</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Условия эксплуатации конечного стиля отверстия канала:BEADEDSLEEVE: Развальцованная муфта. COMPRESSION: Компрессия. CRIMP: Гофрированная поверхность. DRAWBAND: Натяжной хомут. DRIVESLIP: Ведущий шкив. FLANGED: Фланцевый. OUTSIDESLEEVE: Наружная муфта. SLIPON: Приварной. SOLDERED: Спаянный. SSLIP: S-образная рейка. STANDINGSEAM: Стоячий фальц. SWEDGE: Патрубок. WELDED: Сварной. OTHER: Применен другой тип конечного стиля.NONE: Конечный стиль не применен.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="15d916dd1d7340bc81481576f81d2a08">
+      <Name>ConnectionSubType</Name>
+      <Definition>The physical port connection subtype that further qualifies the ConnectionType.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Connection Sub Type</NameAlias>
+        <NameAlias lang="ru-RU">Подтип соединения</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Подтип физического соединения отверстия, который в дальнейшем соответствует требованиям ConnectionType.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a28e9f226e204a909976810e633a45f4">
+      <Name>NominalWidth</Name>
+      <Definition>The nominal width or diameter of the duct connection.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Width</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная ширина</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Номинальная ширина или диаметр соединения канала.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="90a90418907a41809a527bb1ef069005">
+      <Name>NominalHeight</Name>
+      <Definition>The nominal height of the duct connection. Only provided for rectangular shaped ducts.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Height</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная высота</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Номинальная высота соединения канала. Указывается только для прямоугольных каналов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="9aa93573818943ee9e7ad7e898fddfae">
+      <Name>NominalThickness</Name>
+      <Definition>The nominal wall thickness of the duct at the connection point.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Thickness</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная толщина</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">The nominal wall thickness of the duct at the connection point.</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальная толщина стенок канала в точке соединения.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="0e28d2efe50346319664f17e52ebd118">
+      <Name>DryBulbTemperature</Name>
+      <Definition>Dry bulb temperature of the air.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Dry Bulb Temperature</NameAlias>
+        <NameAlias lang="ru-RU">Температура по сухому термометру в тени</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Температура воздуха по сухому термометру в тени.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="46e6cb4f3ecb4016b3d952ec26836ce6">
+      <Name>WetBulbTemperature</Name>
+      <Definition>Wet bulb temperature of the air.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Wet Bulb Temperature</NameAlias>
+        <NameAlias lang="ru-RU">Температура по влажному термометру</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Температура воздуха по влажному термометру.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="639c0067eb444ed8b9d177247c1f1cc2">
+      <Name>VolumetricFlowRate</Name>
+      <Definition>The volumetric flow rate of the fluid.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Volumetric Flow Rate</NameAlias>
+        <NameAlias lang="ru-RU">Объемная скорость потока</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Объемная скорость потока жидкой среды.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="26538518abf6475ba1562ce731d7975e">
+      <Name>Velocity</Name>
+      <Definition>The velocity of the fluid.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcLinearVelocityMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Velocity</NameAlias>
+        <NameAlias lang="ru-RU">Скорость</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Скорость жидкой среды.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7583cd7c5ea74d109e2b6ad6d0dafa4b">
+      <Name>Pressure</Name>
+      <Definition>The pressure of the fluid.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Pressure</NameAlias>
+        <NameAlias lang="ru-RU">Давление</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Давление жидкой среды.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Атрибуты реализации отверстия канала, приписанные экземпляру IfcDistributionPort.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

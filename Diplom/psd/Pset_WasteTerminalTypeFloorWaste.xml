@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="e3c0c380d21611e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_WasteTerminalTypeFloorWaste</Name>
+  <Definition>Pipe fitting, set into the floor, that collects waste water and discharges it to a separate trap.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcWasteTerminal/FLOORWASTE</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcWasteTerminal/FLOORWASTE</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="e8857780d21611e1800000215ad4efdf">
+      <Name>NominalBodyLength</Name>
+      <Definition>Nominal or quoted length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the waste.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Body Length</NameAlias>
+        <NameAlias lang="ja-JP">呼称躯体長</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная длина корпуса</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">廃棄物の区画の半径か局所座標系のＸ軸に沿って測定された呼称もしくは積算された長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальная или приведенная длина, измеренная по оси x в локальной системе координат, или радиус (в случае круглой формы в плане) водоотводного оборудования.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f20edf80d21611e1800000215ad4efdf">
+      <Name>NominalBodyWidth</Name>
+      <Definition>Nominal or quoted length measured along the y-axis in the local coordinate system of the waste.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Body Width</NameAlias>
+        <NameAlias lang="ja-JP">呼称躯体幅</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная ширина корпуса</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">廃棄物の半径か局所座標系のＹ軸に沿って測定された呼称もしくは積算された長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальная или приведенная длина, измеренная по оси y в локальной системе координат водоотводного оборудования.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="faffb100d21611e1800000215ad4efdf">
+      <Name>NominalBodyDepth</Name>
+      <Definition>Nominal or quoted length measured along the z-axis in the local coordinate system of the waste.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Body Depth</NameAlias>
+        <NameAlias lang="ja-JP">呼称躯体深さ</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная глубина корпуса</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">廃棄物の半径か局所座標系のZ軸に沿って測定された呼称もしくは積算された長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальная или приведенная длина, измеренная по оси z в локальной системе координат водоотводного оборудования.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="03f08280d21711e1800000215ad4efdf">
+      <Name>OutletConnectionSize</Name>
+      <Definition>Size of the outlet connection from the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Outlet Connection Size</NameAlias>
+        <NameAlias lang="ja-JP">排気口サイズ</NameAlias>
+        <NameAlias lang="ru-RU">Размер выпускного соединения</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">要素からの排気口サイズ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Размер выпускного соединения объекта.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="0d79ea80d21711e1800000215ad4efdf">
+      <Name>CoverLength</Name>
+      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the waste.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Cover Length</NameAlias>
+        <NameAlias lang="ja-JP">カバー長さ</NameAlias>
+        <NameAlias lang="ru-RU">Длина крышки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">局所座標系のX軸に沿うか、半径（円状の形の場合）で測定された防臭弁カバーの長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Длина, измеренная по оси x в локальной системе координат, или радиус (в случае круглой формы в плане) крышки водоотводного оборудования.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="17035280d21711e1800000215ad4efdf">
+      <Name>CoverWidth</Name>
+      <Definition>The length measured along the y-axis in the local coordinate system of the cover of the  waste.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Cover Width</NameAlias>
+        <NameAlias lang="ja-JP">カバー幅</NameAlias>
+        <NameAlias lang="ru-RU">Ширина крышки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">局所座標系のY軸で測定された防臭弁カバーの長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Длина крышки водоотводного оборудования, измеренная по оси y в локальной системе координат.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">廃水や廃水を集めて分離する防臭弁を持つ、床に据え付けられた配管。</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Трубная оконцовка, вмонтированная в пол, которая предназначена для сбора и слива сточных вод в отдельный слив.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="91b77800d1ed11e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_MaterialOptical</Name>
+  <Definition>A set of optical properties of materials.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcMaterial</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcMaterial</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="954aff00d1ed11e1800000215ad4efdf">
+      <Name>VisibleTransmittance</Name>
+      <Definition>Transmittance at normal incidence (visible). Defines the fraction of the visible spectrum of solar radiation that passes through per unit area, perpendicular to the surface.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Visible Transmittance</NameAlias>
+        <NameAlias lang="ru-RU">Коэффициент пропускания  (видимая часть спектра).</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Коэффициент пропускания при нормальном падении (видимая часть спектра). Определяет долю видимого спектра солнечного излучения, проходящего через единицу площади перпендикулярно поверхности.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="9c720d00d1ed11e1800000215ad4efdf">
+      <Name>SolarTransmittance</Name>
+      <Definition>Transmittance at normal incidence (solar). Defines the fraction of solar radiation that passes through per unit area, perpendicular to the surface.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Solar Transmittance</NameAlias>
+        <NameAlias lang="ru-RU">Коэффициент пропускания солнечного света</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Коэффициент пропускания при нормальном падении (солнечный спектр) Определяет долю спектра солнечного излучения, проходящего через единицу площади перпендикулярно поверхности.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a1cf5780d1ed11e1800000215ad4efdf">
+      <Name>ThermalIrTransmittance</Name>
+      <Definition>Thermal IR transmittance at normal incidence. Defines the fraction of thermal energy that passes through per unit area, perpendicular to the surface.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Thermal Ir Transmittance</NameAlias>
+        <NameAlias lang="ru-RU">Коэффициент теплового пропускания</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Коэффициент теплового пропускания при нормальном падении (инфракрасный спектр). Определяет долю теплового излучения, проходящего через единицу площади перпендикулярно поверхности.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a72ca200d1ed11e1800000215ad4efdf">
+      <Name>ThermalIrEmissivityBack</Name>
+      <Definition>Thermal IR emissivity: back side. Defines the fraction of thermal energy emitted per unit area to "blackbody" at the same temperature, through the "back" side of the material.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Thermal Ir Emissivity Back</NameAlias>
+        <NameAlias lang="ru-RU">Коэффициент теплового излучения (задняя сторона)</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Коэффициент теплового излучения, или степень черноты (инфракрасный спектр): задняя сторона. Определяет долю теплового излучения, излучаемого на единицу площади от излучения так называемого "абсолютно черного тела" при той же температуре через "заднюю" сторону материала.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="ac89ec80d1ed11e1800000215ad4efdf">
+      <Name>ThermalIrEmissivityFront</Name>
+      <Definition>Thermal IR emissivity: front side. Defines the fraction of thermal energy emitted per unit area to "blackbody" at the same temperature, through the "front" side of the material.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Thermal Ir Emissivity Front</NameAlias>
+        <NameAlias lang="ru-RU">Коэффициент теплового излучения (передняя сторона)</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Коэффициент теплового излучения, или степень черноты (инфракрасный спектр): передняя сторона. Определяет долю теплового излучения, излучаемого на единицу площади от излучения так называемого "абсолютно черного тела" при той же температуре через "переднюю" сторону материала.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="b7448180d1ed11e1800000215ad4efdf">
+      <Name>VisibleReflectanceBack</Name>
+      <Definition>Reflectance at normal incidence (visible): back side. Defines the fraction of the solar ray in the visible spectrum that is reflected and not transmitted when the ray passes from one medium into another, at the "back" side of the other material, perpendicular to the surface. Dependent on material and surface characteristics.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Visible Reflectance Back</NameAlias>
+        <NameAlias lang="ru-RU">Отражательная способность для задней стороны (видимая часть спектра)</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Отражательная способность при нормальном падении (видимая часть спектра): задняя сторона. Определяет долю видимого спектра солнечного излучения, которое отражается и не пропускается при прохождении излучения из одной среды в другую на "задней" стороне другого материала перпендикулярно поверхности. Зависит от характеристик материала и поверхности.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="bd3a6280d1ed11e1800000215ad4efdf">
+      <Name>VisibleReflectanceFront</Name>
+      <Definition>Reflectance at normal incidence (visible): front side. Defines the fraction of the solar ray in the visible spectrum that is reflected and not transmitted when the ray passes from one medium into another, at the "front" side of the other material, perpendicular to the surface. Dependent on material and surface characteristics.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Visible Reflectance Front</NameAlias>
+        <NameAlias lang="ru-RU">Отражательная способность для передней стороны (видимая часть спектра)</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Отражательная способность при нормальном падении (видимая часть спектра): передняя сторона. Определяет долю видимого спектра солнечного излучения, которое отражается и не пропускается при прохождении излучения из одной среды в другую на "передней" стороне другого материала перпендикулярно поверхности. Зависит от характеристик материала и поверхности.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="c3304380d1ed11e1800000215ad4efdf">
+      <Name>SolarReflectanceBack</Name>
+      <Definition>Reflectance at normal incidence (solar): back side. Defines the fraction of the solar ray that is reflected and not transmitted when the ray passes from one medium into another, at the "back" side of the other material, perpendicular to the surface. Dependent on material and surface characteristics.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Solar Reflectance Back</NameAlias>
+        <NameAlias lang="ru-RU">Отражательная способность для задней стороны (спектр солнечного излучения)</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Отражательная способность при нормальном падении (Спектр солнечного излучения): задняя сторона. Определяет долю солнечного излучения, которое отражается и не пропускается при прохождении излучения из одной среды в другую на "задней" стороне другого материала перпендикулярно поверхности. Зависит от характеристик материала и поверхности.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="c7f4f780d1ed11e1800000215ad4efdf">
+      <Name>SolarReflectanceFront</Name>
+      <Definition>Reflectance at normal incidence (solar): front side. Defines the fraction of the solar ray that is reflected and not transmitted when the ray passes from one medium into another, at the "front" side of the other material, perpendicular to the surface. Dependent on material and surface characteristics.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Solar Reflectance Front</NameAlias>
+        <NameAlias lang="ru-RU">Отражательная способность для передней стороны (солнечный спектр)</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Отражательная способность при нормальном падении (солнечный спектр): передняя сторона. Определяет долю солнечного излучения, которое отражается и не пропускается при прохождении излучения из одной среды в другую на "передней" стороне другого материала перпендикулярно поверхности. Зависит от характеристик материала и поверхности.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Набор оптических свойств материалов.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

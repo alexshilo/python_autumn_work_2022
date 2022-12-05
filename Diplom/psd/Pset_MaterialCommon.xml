@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="cecf3a80d1ec11e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_MaterialCommon</Name>
+  <Definition>A set of general material properties.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcMaterial</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcMaterial</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="d262c180d1ec11e1800000215ad4efdf">
+      <Name>MolecularWeight</Name>
+      <Definition>Molecular weight of material (typically gas).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMolecularWeightMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Molecular Weight</NameAlias>
+        <NameAlias lang="ru-RU">Молекулярная масса</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Молекулярная масса материала (как правило, газа).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d858a280d1ec11e1800000215ad4efdf">
+      <Name>Porosity</Name>
+      <Definition>The void fraction of the total volume occupied by material (Vbr - Vnet)/Vbr.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNormalisedRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Porosity</NameAlias>
+        <NameAlias lang="ru-RU">Пористость</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Доля пустот в общем объеме, занимаемом материалом (Vbr - Vnet)/Vbr.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="ddb5ed00d1ec11e1800000215ad4efdf">
+      <Name>MassDensity</Name>
+      <Definition>Material mass density.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassDensityMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Mass Density</NameAlias>
+        <NameAlias lang="ru-RU">Плотность массы</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Массовая плотность материала.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Набор общих свойств материала.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

@@ -1,0 +1,810 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="ff20d400d20011e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_Risk</Name>
+  <Definition>An indication of exposure to mischance, peril, menace, hazard or loss. 
+
+HISTORY: Extended in IFC2x3
+
+There are various types of risk that may be encountered and there may be several instances of Pset_Risk associated in an instance of an IfcProcess.
+Specification of this property set incorporates the values of the Incom risk analysis matrix (satisfying AS/NZS 4360) together with additional identified requirements.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcProcess</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcProcess</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="0516b500d20111e1800000215ad4efdf">
+      <Name>RiskType</Name>
+      <Definition>Identifies the predefined types of risk from which the type required may be set.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_RiskType">
+            <EnumItem>BUSINESS</EnumItem>
+            <EnumItem>HAZARD</EnumItem>
+            <EnumItem>HEALTHANDSAFETY</EnumItem>
+            <EnumItem>INSURANCE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>BUSINESS</Name>
+              <NameAliases>
+                <NameAlias lang="en">Business</NameAlias>
+                <NameAlias lang="ru-RU">Коммерческий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>HAZARD</Name>
+              <NameAliases>
+                <NameAlias lang="en">Hazard</NameAlias>
+                <NameAlias lang="ru-RU">Опасности</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>HEALTHANDSAFETY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Health and Safety</NameAlias>
+                <NameAlias lang="ru-RU">Техники безопасности</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INSURANCE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Insurance</NameAlias>
+                <NameAlias lang="ru-RU">Страховой</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Risk Type</NameAlias>
+        <NameAlias lang="ru-RU">Тип риска</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Определяет заранее установленные типы риска, из которых можно установить необходимый тип.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="1495fe00d20111e1800000215ad4efdf">
+      <Name>NatureOfRisk</Name>
+      <Definition>An indication of the generic nature of the risk that might be encountered. 
+
+NOTE: It is anticipated that there will be a local agreement that constrains the values that might be assigned to this property. An example might be 'Fall'  or 'Fall of grille unit' causing injury and damage to person and property.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nature Of Risk</NameAlias>
+        <NameAlias lang="ru-RU">Характер риска</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Обозначение общего характера риска, с которым можно столкнуться. ПРИМЕЧАНИЕ: Предполагается наличие локально применимого соглашения, ограничивающего значения, которые можно присваивать данному свойству. Примером может послужить "Падение" или "Падение с решетчатой установки", повлекшее за собой травмы и ущерб, нанесенный людям и собственности.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="1bbd0c00d20111e1800000215ad4efdf">
+      <Name>SubNatureOfRisk1</Name>
+      <Definition>A first subsidiary value that might be assigned to designate a more specific type of risk.
+
+NOTE: Nature of risk may be identified in various ways depending upon the place where risk assessment takes place and according to local agreement. This property set allows for a generic nature of risk and up to two subsidiary natures. An example might be 'causing injury and damage'.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Sub Nature Of Risk1</NameAlias>
+        <NameAlias lang="ru-RU">Дополнительный характер риска 1</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Первое дополнительное значение, которое может быть присвоено для уточнения конкретного типа риска. ПРИМЕЧАНИЕ: Характер риска может определяться по-разному, в зависимости от места проведения оценки риска, а также в соответствии с локально применимым соглашением. Данный набор свойств позволяет обозначить общий характер риска и до двух дополнительных его характеристик. Примером может послужить "повлекший за собой травмы и материальный ущерб".</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="224b8380d20111e1800000215ad4efdf">
+      <Name>SubNatureOfRisk2</Name>
+      <Definition>A second subsidiary value that might be assigned to designate a more specific type of risk. An example might be 'o person and property'.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Sub Nature Of Risk2</NameAlias>
+        <NameAlias lang="ru-RU">Дополнительный характер риска 2</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Второе дополнительное значение, которое может быть присвоено для уточнения конкретного типа риска. Примером может послужить "нанесенный людям и собственности".</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="29729180d20111e1800000215ad4efdf">
+      <Name>RiskCause</Name>
+      <Definition>A value that may be assigned to capture the cause or trigger for the risk. An example might be 'poor fixing'.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Risk Cause</NameAlias>
+        <NameAlias lang="ru-RU">Причина риска</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Значение, которое может присваиваться для уточнения причины или пускового механизма развития данного риска. Примером может быть "некачественно выполненное крепление".</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="30010900d20111e1800000215ad4efdf">
+      <Name>AssessmentOfRisk</Name>
+      <Definition>Likelihood of risk event occurring.
+
+Note  that assessment of risk may frequently be associated with the physical location of the object for which the risk is assessed.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_RiskAssessment">
+            <EnumItem>ALMOSTCERTAIN</EnumItem>
+            <EnumItem>VERYLIKELY</EnumItem>
+            <EnumItem>LIKELY</EnumItem>
+            <EnumItem>VERYPOSSIBLE</EnumItem>
+            <EnumItem>POSSIBLE</EnumItem>
+            <EnumItem>SOMEWHATPOSSIBLE</EnumItem>
+            <EnumItem>UNLIKELY</EnumItem>
+            <EnumItem>VERYUNLIKELY</EnumItem>
+            <EnumItem>RARE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>ALMOSTCERTAIN</Name>
+              <NameAliases>
+                <NameAlias lang="en">Almost Certain</NameAlias>
+                <NameAlias lang="ru-RU">Почти наверняка</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VERYLIKELY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Very Likely</NameAlias>
+                <NameAlias lang="ru-RU">Высоко вероятный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LIKELY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Likely</NameAlias>
+                <NameAlias lang="ru-RU">Вероятный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VERYPOSSIBLE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Very Possible</NameAlias>
+                <NameAlias lang="ru-RU">Весьма возможный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>POSSIBLE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Possible</NameAlias>
+                <NameAlias lang="ru-RU">Возможный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SOMEWHATPOSSIBLE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Somewhat Possible</NameAlias>
+                <NameAlias lang="ru-RU">В некоторой степени возможный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNLIKELY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Unlikely</NameAlias>
+                <NameAlias lang="ru-RU">Маловероятный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VERYUNLIKELY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Very Unlikely</NameAlias>
+                <NameAlias lang="ru-RU">Крайне маловероятный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RARE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Rare</NameAlias>
+                <NameAlias lang="ru-RU">Редкий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Assessment Of Risk</NameAlias>
+        <NameAlias lang="ru-RU">Оценка риска</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Вероятность наступления рискового события. Обратите внимание, что оценка риска зачастую может быть связана с физическим местоположением объекта, в отношении которого оценивается данный риск.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="44dd9c80d20111e1800000215ad4efdf">
+      <Name>RiskConsequence</Name>
+      <Definition>Indicates the level of severity of the consequences that the risk would have in case it happens.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_RiskConsequence">
+            <EnumItem>CATASTROPHIC</EnumItem>
+            <EnumItem>SEVERE</EnumItem>
+            <EnumItem>MAJOR</EnumItem>
+            <EnumItem>CONSIDERABLE</EnumItem>
+            <EnumItem>MODERATE</EnumItem>
+            <EnumItem>SOME</EnumItem>
+            <EnumItem>MINOR</EnumItem>
+            <EnumItem>VERYLOW</EnumItem>
+            <EnumItem>INSIGNIFICANT</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>CATASTROPHIC</Name>
+              <NameAliases>
+                <NameAlias lang="en">Catastrophic</NameAlias>
+                <NameAlias lang="ru-RU">Катастофические</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SEVERE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Severe</NameAlias>
+                <NameAlias lang="ru-RU">Тяжелые</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MAJOR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Major</NameAlias>
+                <NameAlias lang="ru-RU">Серьезные</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONSIDERABLE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Considerable</NameAlias>
+                <NameAlias lang="ru-RU">Значительные</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MODERATE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Moderate</NameAlias>
+                <NameAlias lang="ru-RU">Умеренные</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SOME</Name>
+              <NameAliases>
+                <NameAlias lang="en">Some</NameAlias>
+                <NameAlias lang="ru-RU">Некоторые</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MINOR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Minor</NameAlias>
+                <NameAlias lang="ru-RU">Небольшие</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VERYLOW</Name>
+              <NameAliases>
+                <NameAlias lang="en">Very Low</NameAlias>
+                <NameAlias lang="ru-RU">Крайне небольшие</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INSIGNIFICANT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Insignificant</NameAlias>
+                <NameAlias lang="ru-RU">Незначительные</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Risk Consequence</NameAlias>
+        <NameAlias lang="ru-RU">Последствия риска</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Указывает уровень тяжести последствий, которые повлек бы за собой данный риск в случае наступления рискового события.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="5aeb5d00d20111e1800000215ad4efdf">
+      <Name>RiskRating</Name>
+      <Definition>A general rating of the risk that may be determined from a combination of the risk assessment and risk consequence.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_RiskRating">
+            <EnumItem>CRITICAL</EnumItem>
+            <EnumItem>VERYHIGH</EnumItem>
+            <EnumItem>HIGH</EnumItem>
+            <EnumItem>CONSIDERABLE</EnumItem>
+            <EnumItem>MODERATE</EnumItem>
+            <EnumItem>SOME</EnumItem>
+            <EnumItem>LOW</EnumItem>
+            <EnumItem>VERYLOW</EnumItem>
+            <EnumItem>INSIGNIFICANT</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>CRITICAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Critical</NameAlias>
+                <NameAlias lang="ru-RU">Критическая</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VERYHIGH</Name>
+              <NameAliases>
+                <NameAlias lang="en">Veryhigh</NameAlias>
+                <NameAlias lang="ru-RU">Очень высокая</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>HIGH</Name>
+              <NameAliases>
+                <NameAlias lang="en">High</NameAlias>
+                <NameAlias lang="ru-RU">Высокий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONSIDERABLE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Considerable</NameAlias>
+                <NameAlias lang="ru-RU">Значительная</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MODERATE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Moderate</NameAlias>
+                <NameAlias lang="ru-RU">Умеренная</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SOME</Name>
+              <NameAliases>
+                <NameAlias lang="en">Some</NameAlias>
+                <NameAlias lang="ru-RU">Некоторая</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LOW</Name>
+              <NameAliases>
+                <NameAlias lang="en">Low</NameAlias>
+                <NameAlias lang="ru-RU">Низкий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VERYLOW</Name>
+              <NameAliases>
+                <NameAlias lang="en">Verylow</NameAlias>
+                <NameAlias lang="ru-RU">Крайне низкая</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INSIGNIFICANT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Insignificant</NameAlias>
+                <NameAlias lang="ru-RU">Незначительная</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Risk Rating</NameAlias>
+        <NameAlias lang="ru-RU">Степень риска</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Общая степень риска, которая определяется на основе сочетания оценки риска и последствий риска.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7191b400d20111e1800000215ad4efdf">
+      <Name>RiskOwner</Name>
+      <Definition>A determination of who is the owner of the risk by reference to principal roles of organizations within a project. Determination of the specific organization should be by reference to instances of IfcActorRole assigned to instances of IfcOrganization (if assigned).</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_RiskOwner">
+            <EnumItem>DESIGNER</EnumItem>
+            <EnumItem>SPECIFIER</EnumItem>
+            <EnumItem>CONSTRUCTOR</EnumItem>
+            <EnumItem>INSTALLER</EnumItem>
+            <EnumItem>MAINTAINER</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>DESIGNER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Designer</NameAlias>
+                <NameAlias lang="ru-RU">Проектировщик</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SPECIFIER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Specifier</NameAlias>
+                <NameAlias lang="ru-RU">Разработчик спецификации</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONSTRUCTOR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Constructor</NameAlias>
+                <NameAlias lang="ru-RU">Строитель</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INSTALLER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Installer</NameAlias>
+                <NameAlias lang="ru-RU">Монтажер</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MAINTAINER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Maintainer</NameAlias>
+                <NameAlias lang="ru-RU">Специалист по обслуживанию</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Risk Owner</NameAlias>
+        <NameAlias lang="ru-RU">Владелец риска</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Определение владельца риска путем отсылки к основным ролям организаций в рамках проекта. Конкретная организация определяется с помощью ссылки на экземпляры IfcActorRole, приписанные экземплярам IfcOrganization (при наличии).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="81a99380d20111e1800000215ad4efdf">
+      <Name>AffectsSurroundings</Name>
+      <Definition>Indicates wether the risk affects only to the person assigned to that task (FALSE) or if it can also affect to the people in the surroundings (TRUE).
+
+For example, the process of painting would affect all the people in the vicinity of the process.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Affects Surroundings</NameAlias>
+        <NameAlias lang="ru-RU">Воздействие на окружающую среду</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Указывает, влияет ли данный риск только на лицо, назначенное для выполнения данного задания (FALSE (ЛОЖНО)) или также распространяется на других людей вокруг (TRUE (ИСТИННО)). Например, процесс покраски будет влиять на всех лиц, находящихся в непосредственной близости от зоны реализации данного процесса.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="88d0a180d20111e1800000215ad4efdf">
+      <Name>PreventiveMeassures</Name>
+      <Definition>Identifies preventive measures to be taken to mitigate risk.</Definition>
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcText" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Preventive Meassures</NameAlias>
+        <NameAlias lang="ru-RU">Профилактические меры</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Определяет профилактические меры, которые следует принять для снижения данного риска.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Указание на подверженность несчастным случаям, рискам, угрозам, опасным факторам или гибели. ИСТОРИЯ: Расширено в IFC2x3. Существуют различные типы рисков, с которыми можно столкнуться, и с экземпляром IfcProcess могут быть связаны несколько экземпляров Pset_Risk. Спецификация данного набора свойств включает в себя значения матрицы анализа рисков Incom (удовлетворяющих AS/NZS 4360) наряду с указанием дополнительных требований.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

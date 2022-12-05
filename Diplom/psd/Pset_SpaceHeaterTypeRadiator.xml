@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="8cb4f180d20a11e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_SpaceHeaterTypeRadiator</Name>
+  <Definition>Space heater type radiator attributes.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcSpaceHeater/RADIATOR</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSpaceHeater/RADIATOR</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="9179a580d20a11e1800000215ad4efdf">
+      <Name>RadiatorType</Name>
+      <Definition>Indicates the type of radiator.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SpaceHeaterRadiatorType">
+            <EnumItem>FINNEDTUBE</EnumItem>
+            <EnumItem>PANEL</EnumItem>
+            <EnumItem>SECTIONAL</EnumItem>
+            <EnumItem>TUBULAR</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FINNEDTUBE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Finned Tube</NameAlias>
+                <NameAlias lang="ru-RU">Оребренный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PANEL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Panel</NameAlias>
+                <NameAlias lang="ru-RU">Панельный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SECTIONAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Sectional</NameAlias>
+                <NameAlias lang="ru-RU">Секционный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TUBULAR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Tubular</NameAlias>
+                <NameAlias lang="ru-RU">Трубчатый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Radiator Type</NameAlias>
+        <NameAlias lang="ja-JP">ラジエータータイプ</NameAlias>
+        <NameAlias lang="ru-RU">Тип радиатора</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">ラジエーターの種類</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Указывает тип радиатора.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a0f8ee80d20a11e1800000215ad4efdf">
+      <Name>TubingLength</Name>
+      <Definition>Water tube length inside the component.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Tubing Length</NameAlias>
+        <NameAlias lang="ja-JP">チューブの長さ</NameAlias>
+        <NameAlias lang="ru-RU">Длина трубной обвязки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">構成要素における水管の長さ</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Длина трубной обвязки внутри компонента.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a9512980d20a11e1800000215ad4efdf">
+      <Name>WaterContent</Name>
+      <Definition>Weight of water content within the heater.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcMassMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Water Content</NameAlias>
+        <NameAlias lang="ja-JP">水含量</NameAlias>
+        <NameAlias lang="ru-RU">Содержание воды</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">ヒーター内部の水分の重み</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Вес воды в обогревателе.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">暖房用ヒーターラジエーター属性</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Атрибуты радиатора типа отопительного прибора.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

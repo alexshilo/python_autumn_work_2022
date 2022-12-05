@@ -1,0 +1,799 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="5b6b0000d1cf11e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_CoolingTowerTypeCommon</Name>
+  <Definition>Cooling tower type common attributes.
+WaterRequirement attribute unit type modified in IFC2x2 Pset Addendum.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcCoolingTower</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcCoolingTower</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="6160e100d1cf11e1800000215ad4efdf">
+      <Name>Reference</Name>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), provided, if there is no classification reference to a recognized classification system used.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Reference</NameAlias>
+        <NameAlias lang="ja-JP">参照記号</NameAlias>
+        <NameAlias lang="ru-RU">Ссылка</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Ссылочный идентификатор для указанного типа в данном проекте (например, тип 'A-1'), который предоставляется в случае, если отсутствует классификационная ссылка на признанную используемую систему классификации.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="66be2b80d1cf11e1800000215ad4efdf">
+      <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>NEW</Name>
+              <Definition>element designed as new addition</Definition>
+              <NameAliases>
+                <NameAlias lang="en">New</NameAlias>
+                <NameAlias lang="ru-RU">Новый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент создан как новая пристройка</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXISTING</Name>
+              <Definition>element exists and is to remain</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Existing</NameAlias>
+                <NameAlias lang="ru-RU">Существующий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует и останется без изменений</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DEMOLISH</Name>
+              <Definition>element exists but is to be demolished</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Demolish</NameAlias>
+                <NameAlias lang="ru-RU">Подлежит сносу</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует, но подлежит сносу</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TEMPORARY</Name>
+              <Definition>element will exist only temporarily (such as a temporary support structure)</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Temporary</NameAlias>
+                <NameAlias lang="ru-RU">Временный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент будет существовать только временно (например, временная опорная конструкция)</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Status</NameAlias>
+        <NameAlias lang="ja-JP">状態</NameAlias>
+        <NameAlias lang="ru-RU">Статус</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">要素（主にリノベーションまたは改修プロジェクトにおいて）の状態。 状態は、「新規(New)」－新しく追加される要素。「既存」－要素は存在し、かつ残りもの。「破壊」－要素は存在したが、廃棄されるもの。「一時的」－一時的に存在する要素（一時的にサポートしている構造のようなもの）。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Статус элемента, который преимущественно используется в проектах по реновации или реконструкции. Возможные значения статуса — "Новый" (элемент считается добавленным), "Существующий" — элемент существует и останется неизменным, "Подлежит сносу" — элемент существует, но должен быть уничтожен,  "Временный" — элемент будет существовать только временно (как временная опорная конструкция).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="75a4de00d1cf11e1800000215ad4efdf">
+      <Name>NominalCapacity</Name>
+      <Definition>Nominal cooling tower capacity in terms of heat transfer rate of the cooling tower between air stream and water stream at nominal conditions.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Capacity</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная производительность</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Номинальная производительность башенной градирни, выраженная через скорость теплообмена в башенной градирне между потоком воздуха и потоком воды при номинальных условиях.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7b022880d1cf11e1800000215ad4efdf">
+      <Name>CircuitType</Name>
+      <Definition>OpenCircuit: Exposes water directly to the cooling atmosphere.
+CloseCircuit: The fluid is separated from the atmosphere by a heat exchanger.
+Wet: The air stream or the heat exchange surface is evaporatively cooled.
+Dry: No evaporation into the air stream.
+DryWet: A combination of a dry tower and a wet tower.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CoolingTowerCircuitType">
+            <EnumItem>OPENCIRCUIT</EnumItem>
+            <EnumItem>CLOSEDCIRCUITWET</EnumItem>
+            <EnumItem>CLOSEDCIRCUITDRY</EnumItem>
+            <EnumItem>CLOSEDCIRCUITDRYWET</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>OPENCIRCUIT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Open Circuit</NameAlias>
+                <NameAlias lang="ru-RU">Незамкнутый контур</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CLOSEDCIRCUITWET</Name>
+              <NameAliases>
+                <NameAlias lang="en">Closed Circuit Wet</NameAlias>
+                <NameAlias lang="ru-RU">Замкнутый контур, мокрая градирня</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CLOSEDCIRCUITDRY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Closed Circuit Dry</NameAlias>
+                <NameAlias lang="ru-RU">Замкнутый контур, сухая градирня</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CLOSEDCIRCUITDRYWET</Name>
+              <NameAliases>
+                <NameAlias lang="en">Closed Circuit Dry Wet</NameAlias>
+                <NameAlias lang="ru-RU">Замкнутый контур, мокрая/сухая градирня</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Circuit Type</NameAlias>
+        <NameAlias lang="ru-RU">Тип контура</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">OpenCircuit: вода поступает непосредственно в охлаждающую атмосферу. CloseCircuit: жидкость отделена от атмосферы теплообменником.Wet: воздушный поток или поверхность теплообмена охлаждается путем испарения. Dry: испарение в воздушный поток отсутствует. DryWet: сочетание сухой и мокрой градирен.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="89504480d1cf11e1800000215ad4efdf">
+      <Name>FlowArrangement</Name>
+      <Definition>CounterFlow: Air and water flow enter in different directions.
+CrossFlow: Air and water flow are perpendicular.
+ParallelFlow: air and water flow enter in same directions.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CoolingTowerFlowArrangement">
+            <EnumItem>COUNTERFLOW</EnumItem>
+            <EnumItem>CROSSFLOW</EnumItem>
+            <EnumItem>PARALLELFLOW</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>COUNTERFLOW</Name>
+              <NameAliases>
+                <NameAlias lang="en">Counter Flow</NameAlias>
+                <NameAlias lang="ru-RU">Противоточный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CROSSFLOW</Name>
+              <NameAliases>
+                <NameAlias lang="en">Cross Flow</NameAlias>
+                <NameAlias lang="ru-RU">Прямоточное</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PARALLELFLOW</Name>
+              <NameAliases>
+                <NameAlias lang="en">Parallel Flow</NameAlias>
+                <NameAlias lang="ru-RU">Прямоточный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Flow Arrangement</NameAlias>
+        <NameAlias lang="ru-RU">Расположение потока</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">CounterFlow: потоки воздуха и воды направлены в разные стороны. CrossFlow: потоки воздуха и воды перпендикулярны. ParallelFlow: потоки воздуха и воды имеют одинаковое направление.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="95d49d00d1cf11e1800000215ad4efdf">
+      <Name>SprayType</Name>
+      <Definition>SprayFilled: Water is sprayed into airflow.
+SplashTypeFill: water cascades over successive rows of splash bars.
+FilmTypeFill: water flows in a thin layer over closely spaced sheets.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CoolingTowerSprayType">
+            <EnumItem>SPRAYFILLED</EnumItem>
+            <EnumItem>SPLASHTYPEFILL</EnumItem>
+            <EnumItem>FILMTYPEFILL</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>SPRAYFILLED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Spray Filled</NameAlias>
+                <NameAlias lang="ru-RU">Орошаемая насадка</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SPLASHTYPEFILL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Splash Type Fill</NameAlias>
+                <NameAlias lang="ru-RU">Насадка капельного типа</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FILMTYPEFILL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Film Type Fill</NameAlias>
+                <NameAlias lang="ru-RU">Насадка пленочного типа</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Spray Type</NameAlias>
+        <NameAlias lang="ru-RU">Тип распыления</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">SprayFilled: вода распыляется в воздушный поток.SplashTypeFill: вода подается на последовательно расположенные ряды разбрызгивающих розеток.FilmTypeFill: вода стекает тонкой сплошной пленкой по орошаемым поверхностям, расположенным близко друг к другу.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a553e600d1cf11e1800000215ad4efdf">
+      <Name>CapacityControl</Name>
+      <Definition>FanCycling: Fan is cycled on and off to control duty.
+TwoSpeedFan: Fan is switched between low and high speed to control duty.
+VariableSpeedFan: Fan speed is varied to control duty.
+DampersControl: Dampers modulate the air flow to control duty.
+BypassValveControl: Bypass valve modulates the water flow to control duty.
+MultipleSeriesPumps: Turn on/off multiple series pump to control duty.
+TwoSpeedPump: Switch between high/low pump speed to control duty.
+VariableSpeedPump: vary pump speed to control duty.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CoolingTowerCapacityControl">
+            <EnumItem>FANCYCLING</EnumItem>
+            <EnumItem>TWOSPEEDFAN</EnumItem>
+            <EnumItem>VARIABLESPEEDFAN</EnumItem>
+            <EnumItem>DAMPERSCONTROL</EnumItem>
+            <EnumItem>BYPASSVALVECONTROL</EnumItem>
+            <EnumItem>MULTIPLESERIESPUMPS</EnumItem>
+            <EnumItem>TWOSPEEDPUMP</EnumItem>
+            <EnumItem>VARIABLESPEEDPUMP</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FANCYCLING</Name>
+              <NameAliases>
+                <NameAlias lang="en">Fan Cycling</NameAlias>
+                <NameAlias lang="ru-RU">Вентилятор с цикличным режимом работы</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TWOSPEEDFAN</Name>
+              <NameAliases>
+                <NameAlias lang="en">Two-Speed Fan</NameAlias>
+                <NameAlias lang="ru-RU">Двухскоростной вентилятор</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VARIABLESPEEDFAN</Name>
+              <NameAliases>
+                <NameAlias lang="en">Variable Speed Fan</NameAlias>
+                <NameAlias lang="ru-RU">Вентилятор с регулируемой скоростью</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DAMPERSCONTROL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Dampers Control</NameAlias>
+                <NameAlias lang="ru-RU">Дроссельное регулирование</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BYPASSVALVECONTROL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Bypass Valve Control</NameAlias>
+                <NameAlias lang="ru-RU">Управление с помощью перепускного клапана</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MULTIPLESERIESPUMPS</Name>
+              <NameAliases>
+                <NameAlias lang="en">Multiple Series Pumps</NameAlias>
+                <NameAlias lang="ru-RU">Последовательно соединенные насосы</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TWOSPEEDPUMP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Two-Speed Pump</NameAlias>
+                <NameAlias lang="ru-RU">Двухскоростной насос</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VARIABLESPEEDPUMP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Variable Speed Pump</NameAlias>
+                <NameAlias lang="ru-RU">Насос с регулируемой скоростью</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Capacity Control</NameAlias>
+        <NameAlias lang="ru-RU">Регулирование производительности</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">FanCycling: включение и выключение цикличного режима работы вентилятора для управления его работой.TwoSpeedFan: переключение между режимами работы вентилятора с высокой и низкой скоростью для управления его работой.VariableSpeedFan: регулирование скорости вращения вентилятора для управления его работой.DampersControl: регулирование расхода воздуха с помощью управляющих клапанов для управления работой вентилятора.BypassValveControl: регулирование расхода воды с помощью перепускного клапана для управления работой вентилятора.MultipleSeriesPumps: включение/выключение последовательно-параллельного соединения насосов для управления их работой.TwoSpeedPump: переключение между режимами работы насоса с высокой и низкой скоростью для управления его работой.VariableSpeedPump: регулирование скорости вращения насоса для управления его работой.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="c583a500d1cf11e1800000215ad4efdf">
+      <Name>ControlStrategy</Name>
+      <Definition>FixedExitingWaterTemp: The capacity is controlled to maintain a fixed exiting water temperature.
+WetBulbTempReset: The set-point is reset based on the wet-bulb temperature.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_CoolingTowerControlStrategy">
+            <EnumItem>FIXEDEXITINGWATERTEMP</EnumItem>
+            <EnumItem>WETBULBTEMPRESET</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FIXEDEXITINGWATERTEMP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Fixed Exiting Water Temp</NameAlias>
+                <NameAlias lang="ru-RU">Поддержка постоянной температуры воды на выходе</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WETBULBTEMPRESET</Name>
+              <NameAliases>
+                <NameAlias lang="en">Wet Bulb Temp Reset</NameAlias>
+                <NameAlias lang="ru-RU">Сброс в зависимости от температуры влажного термометра</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Control Strategy</NameAlias>
+        <NameAlias lang="ru-RU">Метод управления</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">FixedExitingWaterTemp: регулирование производительности для поддержания постоянной температуры воды на выходе.WetBulbTempReset: сброс заданного значения в зависимости от температуры влажного термометра.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d0d6d080d1cf11e1800000215ad4efdf">
+      <Name>NumberOfCells</Name>
+      <Definition>Number of cells in one cooling tower unit.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Number Of Cells</NameAlias>
+        <NameAlias lang="ru-RU">Количество ячеек</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Количество ячеек в одной башенной градирне.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d6341b00d1cf11e1800000215ad4efdf">
+      <Name>BasinReserveVolume</Name>
+      <Definition>Volume between operating and overflow levels in cooling tower basin.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumeMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Basin Reserve Volume</NameAlias>
+        <NameAlias lang="ru-RU">Резервный объем бассейна</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Объем между рабочим уровнем и уровнем перелива в бассейне башенной градирни.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="db916580d1cf11e1800000215ad4efdf">
+      <Name>LiftElevationDifference</Name>
+      <Definition>Elevation difference between cooling tower sump and the top of the tower.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Lift Elevation Difference</NameAlias>
+        <NameAlias lang="ru-RU">Разность высот</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Разность высот между отстойником башенной градирни и верхней частью башни.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e0561980d1cf11e1800000215ad4efdf">
+      <Name>WaterRequirement</Name>
+      <Definition>Make-up water requirements.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Water Requirement</NameAlias>
+        <NameAlias lang="ru-RU">Потребность в воде</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Требования к подпиточной воде.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e51acd80d1cf11e1800000215ad4efdf">
+      <Name>OperationTemperatureRange</Name>
+      <Definition>Allowable operation ambient air temperature range.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Operation Temperature Range</NameAlias>
+        <NameAlias lang="ru-RU">Диапазон рабочих температур</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Диапазон допустимых рабочих температур окружающего воздуха.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e9df8180d1cf11e1800000215ad4efdf">
+      <Name>AmbientDesignDryBulbTemperature</Name>
+      <Definition>Ambient design dry bulb temperature used for selecting the cooling tower.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Ambient Design Dry Bulb Temperature</NameAlias>
+        <NameAlias lang="ru-RU">Расчетная температура воздуха по сухому термометру в тени</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Расчетная температура воздуха по сухому термометру в тени, используемая для выбора башенной градирни.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="ef3ccc00d1cf11e1800000215ad4efdf">
+      <Name>AmbientDesignWetBulbTemperature</Name>
+      <Definition>Ambient design wet bulb temperature used for selecting the cooling tower.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Ambient Design Wet Bulb Temperature</NameAlias>
+        <NameAlias lang="ru-RU">Расчетная температура воздуха по влажному термометру</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Расчетная температура воздуха по влажному термометру, используемая для выбора башенной градирни.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Общие атрибуты типа башенной градирни.Тип единицы атрибута WaterRequirement изменен в дополнении IFC2x2 Pset.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

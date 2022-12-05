@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="6564c70dfdb54a1281d0163ad146bbfc" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_ElementComponentCommon</Name>
+  <Definition>Set of common properties of component elements (especially discrete accessories, but also fasteners, reinforcement elements, or other types of components).</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcElementComponent</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcElementComponent</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="7525c67c0faa44ba995f99d07b72dd31">
+      <Name>Reference</Name>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), Also referred to as "construction type". It should be provided as an alternative to the name of the "object type", if the software does not support object types.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Reference</NameAlias>
+        <NameAlias lang="ja-JP">参照記号</NameAlias>
+        <NameAlias lang="ru-RU">Ссылка</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">具体的な参照ID（例えば、“WWS/VS1/400/001”はWWS系統、VS1/400サブシステム001番部品）。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Заданный ссылочный идентификатор для данного конкретного типа в данном проекте (например, тип 'A-1'). Также указывается как "тип строительства". Указывается в качестве альтернативы для названия "типа объекта", если программное обеспечение не поддерживает типы объектов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="56f08e40f4ec44468b85b83294b65e5f">
+      <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>NEW</Name>
+              <Definition>element designed as new addition</Definition>
+              <NameAliases>
+                <NameAlias lang="en">New</NameAlias>
+                <NameAlias lang="ru-RU">Новый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент создан как новая пристройка</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXISTING</Name>
+              <Definition>element exists and is to remain</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Existing</NameAlias>
+                <NameAlias lang="ru-RU">Существующий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует и останется без изменений</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DEMOLISH</Name>
+              <Definition>element exists but is to be demolished</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Demolish</NameAlias>
+                <NameAlias lang="ru-RU">Подлежит сносу</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует, но подлежит сносу</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TEMPORARY</Name>
+              <Definition>element will exist only temporarily (such as a temporary support structure)</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Temporary</NameAlias>
+                <NameAlias lang="ru-RU">Временный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент будет существовать только временно (например, временная опорная конструкция)</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Status</NameAlias>
+        <NameAlias lang="ja-JP">状態</NameAlias>
+        <NameAlias lang="ru-RU">Статус</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">要素（主にリノベーションまたは改修プロジェクトにおいて）の状態。 状態は、「新規(New)」－新しく追加される要素。「既存」－要素は存在し、かつ残りもの。「破壊」－要素は存在したが、廃棄されるもの。「一時的」－一時的に存在する要素（一時的にサポートしている構造のようなもの）。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Статус элемента, который преимущественно используется в проектах по реновации или реконструкции. Возможные значения статуса — "Новый" (элемент считается добавленным), "Существующий" — элемент существует и останется неизменным, "Подлежит сносу" — элемент существует, но должен быть уничтожен,  "Временный" — элемент будет существовать только временно (как временная опорная конструкция).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="292f5db4336e4b319ebdd91a1ab594ab">
+      <Name>DeliveryType</Name>
+      <Definition>Determines how the accessory will be delivered to the site.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementComponentDeliveryType">
+            <EnumItem>CAST_IN_PLACE</EnumItem>
+            <EnumItem>WELDED_TO_STRUCTURE</EnumItem>
+            <EnumItem>LOOSE</EnumItem>
+            <EnumItem>ATTACHED_FOR_DELIVERY</EnumItem>
+            <EnumItem>PRECAST</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>CAST_IN_PLACE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Cast In Place</NameAlias>
+                <NameAlias lang="ru-RU">Монолитный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WELDED_TO_STRUCTURE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Welded To Structure</NameAlias>
+                <NameAlias lang="ru-RU">Приваренный к конструкции</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LOOSE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Loose</NameAlias>
+                <NameAlias lang="ru-RU">Свободный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ATTACHED_FOR_DELIVERY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Attached For Delivery</NameAlias>
+                <NameAlias lang="ru-RU">Приписанный к доставке</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PRECAST</Name>
+              <NameAliases>
+                <NameAlias lang="en">Precast</NameAlias>
+                <NameAlias lang="ru-RU">Сборный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+                <NameAlias lang="ru-RU">Неопределенный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Delivery Type</NameAlias>
+        <NameAlias lang="ru-RU">Тип доставки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Определяет, как комплектующая деталь будет доставлена на площадку.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f7b199ec69184e05b9a8d4dc3a89f6d7">
+      <Name>CorrosionTreatment</Name>
+      <Definition>Determines corrosion treatment for metal components. This property is provided if the requirement needs to be expressed (a) independently of a material specification and (b) as a mere requirements statement rather than a workshop design/ processing feature.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementComponentCorrosionTreatment">
+            <EnumItem>PAINTED</EnumItem>
+            <EnumItem>EPOXYCOATED</EnumItem>
+            <EnumItem>GALVANISED</EnumItem>
+            <EnumItem>STAINLESS</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>NOTDEFINED</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>PAINTED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Painted</NameAlias>
+                <NameAlias lang="ru-RU">Окрашенная</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EPOXYCOATED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Epoxy Coated</NameAlias>
+                <NameAlias lang="ru-RU">С эпоксидным покрытием</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GALVANISED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Galvanised</NameAlias>
+                <NameAlias lang="ru-RU">Оцинкованный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>STAINLESS</Name>
+              <NameAliases>
+                <NameAlias lang="en">Stainless</NameAlias>
+                <NameAlias lang="ru-RU">Нержавеющий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+                <NameAlias lang="ru-RU">Нет</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTDEFINED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Notdefined</NameAlias>
+                <NameAlias lang="ru-RU">Неопределенный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Corrosion Treatment</NameAlias>
+        <NameAlias lang="ru-RU">С антикоррозионной обработкой</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Определяет антикоррозионную обработку для металлических деталей. Данное свойство указывается, если требование необходимо выразить (a) отдельно от спецификации материала и (b) как простой перечень требований, а не рабочий чертеж/свойство обработки.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Набор общих свойств элементов компонентов (в особенности, комплектующих деталей, а также крепежей, элементов арматуры или иных типов деталей).</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

@@ -1,0 +1,526 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="882d1080d1eb11e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_LightFixtureTypeCommon</Name>
+  <Definition>Common data for light fixtures.
+History: IFC4 - Article number and manufacturer specific information deleted. Use Pset_ManufacturerTypeInformation. ArticleNumber instead.   Load properties moved from Pset_LightFixtureTypeThermal (deleted).</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcLightFixture</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcLightFixture</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="8ebb8800d1eb11e1800000215ad4efdf">
+      <Name>Reference</Name>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), provided, if there is no classification reference to a recognized classification system used.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Reference</NameAlias>
+        <NameAlias lang="ja-JP">参照</NameAlias>
+        <NameAlias lang="ru-RU">Ссылка</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">当該プロジェクトで定義する形式の参照ID（例：A-1)、承認された分類に存在しないときに使用される。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Ссылочный идентификатор для указанного типа в данном проекте (например, тип 'A-1'), который предоставляется в случае, если отсутствует классификационная ссылка на признанную используемую систему классификации.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="9549ff80d1eb11e1800000215ad4efdf">
+      <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>NEW</Name>
+              <Definition>element designed as new addition</Definition>
+              <NameAliases>
+                <NameAlias lang="en">New</NameAlias>
+                <NameAlias lang="ru-RU">Новый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент создан как новая пристройка</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXISTING</Name>
+              <Definition>element exists and is to remain</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Existing</NameAlias>
+                <NameAlias lang="ru-RU">Существующий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует и останется без изменений</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DEMOLISH</Name>
+              <Definition>element exists but is to be demolished</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Demolish</NameAlias>
+                <NameAlias lang="ru-RU">Подлежит сносу</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует, но подлежит сносу</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TEMPORARY</Name>
+              <Definition>element will exist only temporarily (such as a temporary support structure)</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Temporary</NameAlias>
+                <NameAlias lang="ru-RU">Временный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент будет существовать только временно (например, временная опорная конструкция)</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Status</NameAlias>
+        <NameAlias lang="ja-JP">状態</NameAlias>
+        <NameAlias lang="ru-RU">Статус</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">要素（主にリノベーションまたは改修プロジェクトにおいて）の状態。 状態は、「新規(New)」－新しく追加される要素。「既存」－要素は存在し、かつ残りもの。「破壊」－要素は存在したが、廃棄されるもの。「一時的」－一時的に存在する要素（一時的にサポートしている構造のようなもの）。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Статус элемента, который преимущественно используется в проектах по реновации или реконструкции. Возможные значения статуса — "Новый" (элемент считается добавленным), "Существующий" — элемент существует и останется неизменным, "Подлежит сносу" — элемент существует, но должен быть уничтожен,  "Временный" — элемент будет существовать только временно (как временная опорная конструкция).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a4c94880d1eb11e1800000215ad4efdf">
+      <Name>NumberOfSources</Name>
+      <Definition>Number of sources .</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Number Of Sources</NameAlias>
+        <NameAlias lang="ja-JP">電球数</NameAlias>
+        <NameAlias lang="ko-KR">전구수</NameAlias>
+        <NameAlias lang="ru-RU">Количество источников</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">電球数。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">전구수</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Количество источников.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="aa269300d1eb11e1800000215ad4efdf">
+      <Name>TotalWattage</Name>
+      <Definition>Wattage on whole lightfitting device with all sources intact.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Total Wattage</NameAlias>
+        <NameAlias lang="ja-JP">総ワット数</NameAlias>
+        <NameAlias lang="ko-KR">총 와트</NameAlias>
+        <NameAlias lang="ru-RU">Суммарная мощность </NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">全ての照明器具のワット数。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">모든 조명기구 와트.</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Мощность в ваттах всей осветительной арматуры, все источники которой находятся в исправном состоянии.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="af83dd80d1eb11e1800000215ad4efdf">
+      <Name>LightFixtureMountingType</Name>
+      <Definition>A list of the available types of mounting for light fixtures from which that required may be selected.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_LightFixtureMountingType">
+            <EnumItem>CABLESPANNED</EnumItem>
+            <EnumItem>FREESTANDING</EnumItem>
+            <EnumItem>POLE_SIDE</EnumItem>
+            <EnumItem>POLE_TOP</EnumItem>
+            <EnumItem>RECESSED</EnumItem>
+            <EnumItem>SURFACE</EnumItem>
+            <EnumItem>SUSPENDED</EnumItem>
+            <EnumItem>TRACKMOUNTED</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>CABLESPANNED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Cable Spanned</NameAlias>
+                <NameAlias lang="ru-RU">Размещение на кабеле</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FREESTANDING</Name>
+              <NameAliases>
+                <NameAlias lang="en">Freestanding</NameAlias>
+                <NameAlias lang="ru-RU">Отдельно стоящий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>POLE_SIDE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Pole Side</NameAlias>
+                <NameAlias lang="ru-RU">Сбоку столба</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>POLE_TOP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Pole Top</NameAlias>
+                <NameAlias lang="ru-RU">Верхняя часть столба</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RECESSED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Recessed</NameAlias>
+                <NameAlias lang="ru-RU">Утопленное</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SURFACE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Surface</NameAlias>
+                <NameAlias lang="ru-RU">Поверхностное</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SUSPENDED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Suspended</NameAlias>
+                <NameAlias lang="ru-RU">Подвесной</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TRACKMOUNTED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Track Mounted</NameAlias>
+                <NameAlias lang="ru-RU">Трековый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Light Fixture Mounting Type</NameAlias>
+        <NameAlias lang="ja-JP">照明器具取付方法</NameAlias>
+        <NameAlias lang="ko-KR">조명기구 설치방법</NameAlias>
+        <NameAlias lang="ru-RU">Тип установки осветительной арматуры</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">照明器具の取付方法をリストから選択。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">조명기구의 설치 방법을 목록에서 선택합니다.</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Перечень возможных типов установки осветительной арматуры, из которых можно выбрать необходимый.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="c5919e00d1eb11e1800000215ad4efdf">
+      <Name>LightFixturePlacingType</Name>
+      <Definition>A list of the available types of placing specification for light fixtures from which that required may be selected.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_LightFixturePlacingType">
+            <EnumItem>CEILING</EnumItem>
+            <EnumItem>FLOOR</EnumItem>
+            <EnumItem>FURNITURE</EnumItem>
+            <EnumItem>POLE</EnumItem>
+            <EnumItem>WALL</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>CEILING</Name>
+              <NameAliases>
+                <NameAlias lang="en">Ceiling</NameAlias>
+                <NameAlias lang="ru-RU">Потолок</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FLOOR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Floor</NameAlias>
+                <NameAlias lang="ru-RU">Пол</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FURNITURE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Furniture</NameAlias>
+                <NameAlias lang="ru-RU">Мебель</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>POLE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Pole</NameAlias>
+                <NameAlias lang="ru-RU">Столб</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WALL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Wall</NameAlias>
+                <NameAlias lang="ru-RU">Настенный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Light Fixture Placing Type</NameAlias>
+        <NameAlias lang="ja-JP">照明器具取付場所</NameAlias>
+        <NameAlias lang="ko-KR">조명기구 설치 장소</NameAlias>
+        <NameAlias lang="ru-RU">Типы размещения осветительной арматуры</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">照明器具の取付場所をリストから選択。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">조명기구의 설치 장소를 목록에서 선택합니다.</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Перечень возможных типов спецификаций по размещению осветительной арматуры из которых можно выбрать необходимый.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d80bd780d1eb11e1800000215ad4efdf">
+      <Name>MaintenanceFactor</Name>
+      <Definition>The arithmetical allowance made for depreciation of lamps and reflective equipment from their initial values due to dirt, fumes, or age.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Maintenance Factor</NameAlias>
+        <NameAlias lang="ja-JP">保守率</NameAlias>
+        <NameAlias lang="ko-KR">보수 비율</NameAlias>
+        <NameAlias lang="ru-RU">Коэффициент обслуживания</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">汚れ、煙、年数による初期からのランプや反射装置の低減許容計算。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">먼지, 연기, 연수의 초기부터 램프와 반사 장치의 저감 허용 계산.</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Допустимое арифметическое отклонение, предусмотренное для износа ламп и светоотражающего оборудования, от их исходных значений в связи с грязью, испарениями или старением.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="de01b880d1eb11e1800000215ad4efdf">
+      <Name>MaximumPlenumSensibleLoad</Name>
+      <Definition>Maximum or Peak sensible thermal load contributed to return air plenum by the light fixture.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Maximum Plenum Sensible Load</NameAlias>
+        <NameAlias lang="ru-RU">Максимальная ощутимая нагрузка в смесительной камере</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Максимальная или пиковая ощутимая тепловая нагрузка, участвующая в смесительной камере возвратного воздуха с помощью осветительной арматуры. </DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e528c680d1eb11e1800000215ad4efdf">
+      <Name>MaximumSpaceSensibleLoad</Name>
+      <Definition>Maximum or Peak sensible thermal load contributed to the conditioned space by the light fixture.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Maximum Space Sensible Load</NameAlias>
+        <NameAlias lang="ru-RU">Максимальная ощутимая нагрузка в помещении</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Максимальная или пиковая ощутимая тепловая нагрузка, участвующая в кондиционируемом помещении с помощью осветительной арматуры.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="ea861100d1eb11e1800000215ad4efdf">
+      <Name>SensibleLoadToRadiant</Name>
+      <Definition>Percent of sensible thermal load to radiant heat.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Sensible Load To Radiant</NameAlias>
+        <NameAlias lang="ru-RU">Ощутимая нагрузка на теплоту излучения</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Процент ощутимой тепловой нагрузки на теплоту излучения.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">照明器具の共通データ。
+IFC4でArticleNumberは削除されました。代わりにPset_ManufacturerTypeInformationを使用してください。</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Общие данные осветительной арматуры.История: IFC4 - удалены артикульный номер и спецификация производителя. Используйте вместо этого  Pset_ManufacturerTypeInformation. ArticleNumber   Свойства нагрузки перенесены из  Pset_LightFixtureTypeThermal  (удалено).</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

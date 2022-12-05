@@ -1,0 +1,612 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="5fddeb80d1c411e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_BoilerTypeCommon</Name>
+  <Definition>Boiler type common attributes.
+SoundLevel attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead. PrimaryEnergySource and AuxiliaryEnergySource attributes deleted in IFC2x2 Pset Addendum: Use IfcEnergyProperties, IfcFuelProperties, etc. instead.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcBoiler</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcBoiler</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="64a29f80d1c411e1800000215ad4efdf">
+      <Name>Reference</Name>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1'), provided, if there is no classification reference to a recognized classification system used.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Reference</NameAlias>
+        <NameAlias lang="fr-FR">Référence</NameAlias>
+        <NameAlias lang="ja-JP">参照記号</NameAlias>
+        <NameAlias lang="ru-RU">Ссылка</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Identification de référence pour ce type spécifique à ce projet, c'est-à-dire type'A-1', fourni à partir du moment où, s'il n'y a pas de référence de classification par rapport à un système de classification reconnu et en usage.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Ссылочный идентификатор для указанного типа в данном проекте (например, тип 'A-1'), который предоставляется в случае, если отсутствует классификационная ссылка на признанную используемую систему классификации.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="68cebd00d1c411e1800000215ad4efdf">
+      <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>NEW</Name>
+              <Definition>element designed as new addition</Definition>
+              <NameAliases>
+                <NameAlias lang="en">New</NameAlias>
+                <NameAlias lang="ru-RU">Новый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент создан как новая пристройка</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXISTING</Name>
+              <Definition>element exists and is to remain</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Existing</NameAlias>
+                <NameAlias lang="ru-RU">Существующий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует и останется без изменений</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DEMOLISH</Name>
+              <Definition>element exists but is to be demolished</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Demolish</NameAlias>
+                <NameAlias lang="ru-RU">Подлежит сносу</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует, но подлежит сносу</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TEMPORARY</Name>
+              <Definition>element will exist only temporarily (such as a temporary support structure)</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Temporary</NameAlias>
+                <NameAlias lang="ru-RU">Временный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент будет существовать только временно (например, временная опорная конструкция)</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Status</NameAlias>
+        <NameAlias lang="fr-FR">Etat</NameAlias>
+        <NameAlias lang="ja-JP">状態</NameAlias>
+        <NameAlias lang="ru-RU">Статус</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Etat de l'élément, utilisé avant tout pour les projets de rénovation et réaménagement. L'état assigné peut être "Nouveau" - l'élément prévu pour du neuf, "Existant" - l'élément existait et est maintenu, "Démoli" - l'élément existait mais doit être démoli/supprimé, "Provisoire" - l'élément existera à titre provisoire seulement (comme un support structurel par exemple).</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">要素（主にリノベーションまたは改修プロジェクトにおいて）の状態。 状態は、「新規(New)」－新しく追加される要素。「既存」－要素は存在し、かつ残りもの。「破壊」－要素は存在したが、廃棄されるもの。「一時的」－一時的に存在する要素（一時的にサポートしている構造のようなもの）。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Статус элемента, который преимущественно используется в проектах по реновации или реконструкции. Возможные значения статуса — "Новый" (элемент считается добавленным), "Существующий" — элемент существует и останется неизменным, "Подлежит сносу" — элемент существует, но должен быть уничтожен,  "Временный" — элемент будет существовать только временно (как временная опорная конструкция).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="75ebac00d1c411e1800000215ad4efdf">
+      <Name>PressureRating</Name>
+      <Definition>Nominal pressure rating of the boiler as rated by the agency having jurisdiction.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Pressure Rating</NameAlias>
+        <NameAlias lang="fr-FR">PressionAdmissibleNominale</NameAlias>
+        <NameAlias lang="ja-JP">常用圧力</NameAlias>
+        <NameAlias lang="ru-RU">Расчетное давление</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Pression nominale admissible de la chaudière comme classée par l'organisme qui fait autorité.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">管轄組織により設定されたボイラの常用圧力</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальное расчетное давление бойлера, рассчитанное агентством, имеющим юрисдикцию.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7a17c980d1c411e1800000215ad4efdf">
+      <Name>OperatingMode</Name>
+      <Definition>Identifies the operating mode of the boiler.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_BoilerOperatingMode">
+            <EnumItem>FIXED</EnumItem>
+            <EnumItem>TWOSTEP</EnumItem>
+            <EnumItem>MODULATING</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FIXED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Fixed</NameAlias>
+                <NameAlias lang="ru-RU">Постоянная</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TWOSTEP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Two Step</NameAlias>
+                <NameAlias lang="ru-RU">Двухступенчатое</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MODULATING</Name>
+              <NameAliases>
+                <NameAlias lang="en">Modulating</NameAlias>
+                <NameAlias lang="ru-RU">Плавного регулирования</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Operating Mode</NameAlias>
+        <NameAlias lang="fr-FR">ModeFonctionnement</NameAlias>
+        <NameAlias lang="ja-JP">動作モード</NameAlias>
+        <NameAlias lang="ru-RU">Рабочий режим</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Identifie le mode de fonctionnement de la chaudière.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">ボイラの動作モードのID　（固定、２段階、比例．．．）</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Определяет рабочий режим бойлера.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="84d25e80d1c411e1800000215ad4efdf">
+      <Name>HeatTransferSurfaceArea</Name>
+      <Definition>Total heat transfer area of the vessel.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcAreaMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Heat Transfer Surface Area</NameAlias>
+        <NameAlias lang="fr-FR">SurfaceEchangeChaleur</NameAlias>
+        <NameAlias lang="ja-JP">伝熱面積</NameAlias>
+        <NameAlias lang="ru-RU">Площадь поверхности теплообмена</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Surface totale d'échange de chaleur du foyer</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">容器の伝熱部面積の合計</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Суммарная площадь поверхности теплообмена корпуса.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="89971280d1c411e1800000215ad4efdf">
+      <Name>NominalPartLoadRatio</Name>
+      <Definition>Allowable part load ratio range.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcReal" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Part Load Ratio</NameAlias>
+        <NameAlias lang="fr-FR">PlageNominaleChargePartielle</NameAlias>
+        <NameAlias lang="ja-JP">設計部分負荷比率</NameAlias>
+        <NameAlias lang="ru-RU">Номинальное соотношение частичной нагрузки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Plage de charge partielle admissible</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">許容部分負荷比範囲</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Допустимый диапазон соотношения частичной нагрузки.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="8ef45d00d1c411e1800000215ad4efdf">
+      <Name>WaterInletTemperatureRange</Name>
+      <Definition>Allowable water inlet temperature range.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Water Inlet Temperature Range</NameAlias>
+        <NameAlias lang="fr-FR">PlageTempératureAlimentationEau</NameAlias>
+        <NameAlias lang="ja-JP">入口水温範囲</NameAlias>
+        <NameAlias lang="ru-RU">Температурный диапазон впуска воды</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Plage de température de l'alimentation en eau admissible</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">入口水温範囲</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Допустимый температурный диапазон впуска воды.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="9451a780d1c411e1800000215ad4efdf">
+      <Name>WaterStorageCapacity</Name>
+      <Definition>Water storage capacity.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumeMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Water Storage Capacity</NameAlias>
+        <NameAlias lang="fr-FR">CapacitéRéservoirEau</NameAlias>
+        <NameAlias lang="ja-JP">缶内水量</NameAlias>
+        <NameAlias lang="ru-RU">Емкость водохранилища</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Capacité de réserve en eau</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">缶内水量</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Емкость водохранилища.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="987dc500d1c411e1800000215ad4efdf">
+      <Name>IsWaterStorageHeater</Name>
+      <Definition>This is used to identify if the boiler has storage capacity (TRUE). If FALSE, then there is no storage capacity built into the boiler, such as an instantaneous hot water heater.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Is Water Storage Heater</NameAlias>
+        <NameAlias lang="fr-FR">AvoirChauffeEau</NameAlias>
+        <NameAlias lang="ja-JP">給湯タンク有無</NameAlias>
+        <NameAlias lang="ru-RU">Имеет емкостный водонагреватель</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Utilisé pour identifier si la chaudière une capacité de réserve en eau (VRAI). Si FAUX, alors il n'y a pas de capacité de réserve intégrée dans la chaudière, tel qu'un chauffe-eau instantané.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">給湯用の缶体があればTRUE、（瞬間湯沸かし器のように）ボイラにタンクがなければFALSE</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Используется для того, чтобы определить, имеет ли бойлер емкость водохранилища (TRUE (ИСТИННО)). В случае FALSE (ЛОЖНО), бойлер не имеет вмонтированной емкости водохранилища, такой как водонагреватель мгновенного действия.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="9ca9e280d1c411e1800000215ad4efdf">
+      <Name>PartialLoadEfficiencyCurves</Name>
+      <Definition>Boiler efficiency as a function of the partial load factor; E = f (partialLaodfactor).</Definition>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression />
+          <DefiningValue>
+            <DataType type="IfcPositiveRatioMeasure" />
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcNormalisedRatioMeasure" />
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Partial Load Efficiency Curves</NameAlias>
+        <NameAlias lang="fr-FR">CourbesEfficacitéChargePartielle</NameAlias>
+        <NameAlias lang="ja-JP">部分負荷効率曲線</NameAlias>
+        <NameAlias lang="ru-RU">Кривые эффективности частичной нагрузки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Rendement de la chaudière en fonction de la facteur de charge partielle; E= f(FacteurChargePartielle).</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">部分負荷係数の関数としてのボイラ効率　　E=f(部分負荷率）</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Эффективность бойлера в зависимости от коэффициента частичной нагрузки; E = f (partialLaodfactor).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a3d0f080d1c411e1800000215ad4efdf">
+      <Name>OutletTemperatureRange</Name>
+      <Definition>Allowable outlet temperature of either the water or the steam.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Outlet Temperature Range</NameAlias>
+        <NameAlias lang="fr-FR">PlageTempératureSortie</NameAlias>
+        <NameAlias lang="ja-JP">出口温度範囲</NameAlias>
+        <NameAlias lang="ru-RU">Диапазон температур на выходе</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Température admissible de sortie de l'eau ou de la vapeur</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">水または蒸気のどちらかの許容出口温度</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Допустимая температура воды или пара на выходе.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a9c6d180d1c411e1800000215ad4efdf">
+      <Name>NominalEnergyConsumption</Name>
+      <Definition>Nominal fuel consumption rate required to produce the total boiler heat output.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Energy Consumption</NameAlias>
+        <NameAlias lang="fr-FR">Consommation nominale d'energie</NameAlias>
+        <NameAlias lang="ja-JP">設計エネルギー消費量</NameAlias>
+        <NameAlias lang="ru-RU">Номинальное потребление энергии</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Consommation nominale de combustible correspondant à la production nominale totale de la chaudière.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">ボイラ最大能力時の設計燃料消費量</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальное потребление топлива, необходимое для производства суммарной тепловой мощности бойлера.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="adf2ef00d1c411e1800000215ad4efdf">
+      <Name>EnergySource</Name>
+      <Definition>Enumeration defining the energy source or fuel cumbusted to generate heat.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_EnergySource">
+            <EnumItem>COAL</EnumItem>
+            <EnumItem>COAL_PULVERIZED</EnumItem>
+            <EnumItem>ELECTRICITY</EnumItem>
+            <EnumItem>GAS</EnumItem>
+            <EnumItem>OIL</EnumItem>
+            <EnumItem>PROPANE</EnumItem>
+            <EnumItem>WOOD</EnumItem>
+            <EnumItem>WOOD_CHIP</EnumItem>
+            <EnumItem>WOOD_PELLET</EnumItem>
+            <EnumItem>WOOD_PULVERIZED</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>COAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Coal</NameAlias>
+                <NameAlias lang="ru-RU">Уголь</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>COAL_PULVERIZED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Coal Pulverized</NameAlias>
+                <NameAlias lang="ru-RU">Угольная пыль</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ELECTRICITY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Electricity</NameAlias>
+                <NameAlias lang="ru-RU">Электричество</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GAS</Name>
+              <NameAliases>
+                <NameAlias lang="en">Gas</NameAlias>
+                <NameAlias lang="ru-RU">Газ</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OIL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Oil</NameAlias>
+                <NameAlias lang="ru-RU">Нефть</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PROPANE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Propane</NameAlias>
+                <NameAlias lang="ru-RU">Пропан</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WOOD</Name>
+              <NameAliases>
+                <NameAlias lang="en">Wood</NameAlias>
+                <NameAlias lang="ru-RU">Древесина</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WOOD_CHIP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Wood Chip</NameAlias>
+                <NameAlias lang="ru-RU">Древесная стружка</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WOOD_PELLET</Name>
+              <NameAliases>
+                <NameAlias lang="en">Wood Pellet</NameAlias>
+                <NameAlias lang="ru-RU">Древесные гранулы</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WOOD_PULVERIZED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Wood Pulverized</NameAlias>
+                <NameAlias lang="ru-RU">Древесная пыль</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Energy Source</NameAlias>
+        <NameAlias lang="fr-FR">SourceEnergie</NameAlias>
+        <NameAlias lang="ja-JP">エネルギ種別</NameAlias>
+        <NameAlias lang="ru-RU">Источник энергии</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Liste définissant les sources d'énergie ou combustibles pour générer la chaleur.</DefinitionAlias>
+        <DefinitionAlias lang="ja-JP">加熱に使用する燃料のエネルギ種類　（石炭、石炭粉末、電気、ガス、油、プロパン、木材、木材チップ、木材ペレット、木粉、他）</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Перечисление, определяющее источник энергии или сжигаемое топливо для образования тепла.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">ボイラ型共通属性を設定します。
+SoundLevel属性はIFC2x2 psetの付録で削除された：IfcSoundPropertiesを代わりに使用します。
+一次エネルギ源と補助エネルギ源属性はIFC2x2 psetの付録で削除された：IfcEnergyProperties,IfcFuelProperties等を代わりに使用</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Общие атрибуты типов бойлера. Атрибут SoundLevel удален в Дополнении IFC2x2 Pset: вместо него следует использовать IfcSoundProperties. Атрибуты PrimaryEnergySource и AuxiliaryEnergySource удалены в Дополнении IFC2x2 Pset: вместо них следует использовать IfcEnergyProperties, IfcFuelProperties и другие.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

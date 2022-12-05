@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="f1148880d1eb11e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_LightFixtureTypeSecurityLighting</Name>
+  <Definition>Properties that characterize security lighting.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcLightFixture/SECURITYLIGHTING</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcLightFixture/SECURITYLIGHTING</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="f5d93c80d1eb11e1800000215ad4efdf">
+      <Name>SecurityLightingType</Name>
+      <Definition>The type of security lighting.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_LightFixtureSecurityLightingType">
+            <EnumItem>SAFETYLIGHT</EnumItem>
+            <EnumItem>WARNINGLIGHT</EnumItem>
+            <EnumItem>EMERGENCYEXITLIGHT</EnumItem>
+            <EnumItem>BLUEILLUMINATION</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>SAFETYLIGHT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Safety Light</NameAlias>
+                <NameAlias lang="ru-RU">Световой индикатор «безопасно»</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WARNINGLIGHT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Warning Light</NameAlias>
+                <NameAlias lang="ru-RU">Предупредительная световая сигнализация</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EMERGENCYEXITLIGHT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Emergency Exit Light</NameAlias>
+                <NameAlias lang="ru-RU">Освещение аварийного выхода</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BLUEILLUMINATION</Name>
+              <NameAliases>
+                <NameAlias lang="en">Blue Illumination</NameAlias>
+                <NameAlias lang="ru-RU">Освещение синим цветом</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Security Lighting Type</NameAlias>
+        <NameAlias lang="ja-JP">防犯灯</NameAlias>
+        <NameAlias lang="ko-KR">방범등</NameAlias>
+        <NameAlias lang="ru-RU">Тип охранного освещения</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">防犯灯のタイプ。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">방범등 유형</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Тип охранного освещения.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="05588580d1ec11e1800000215ad4efdf">
+      <Name>FixtureHeight</Name>
+      <Definition>The height of the fixture, such as the text height of an exit sign.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Fixture Height</NameAlias>
+        <NameAlias lang="ja-JP">器具の高さ</NameAlias>
+        <NameAlias lang="ko-KR">기구의 높이</NameAlias>
+        <NameAlias lang="ru-RU">Высота закрепленной детали</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">出口標識などの器具の高さ。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">출구 표지판 등의기구의 높이</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Высота закрепленной детали, например, высота текста на указателе выхода.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="0d182a00d1ec11e1800000215ad4efdf">
+      <Name>SelfTestFunction</Name>
+      <Definition>The type of self test function.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_SelfTestType">
+            <EnumItem>CENTRAL</EnumItem>
+            <EnumItem>LOCAL</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>CENTRAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Central</NameAlias>
+                <NameAlias lang="ru-RU">Центральная</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LOCAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Local</NameAlias>
+                <NameAlias lang="ru-RU">Локальная</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+                <NameAlias lang="ru-RU">Нет</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Self Test Function</NameAlias>
+        <NameAlias lang="ja-JP">自己診断機能</NameAlias>
+        <NameAlias lang="ko-KR">자기 진단 기능</NameAlias>
+        <NameAlias lang="ru-RU">Функция автотестирования</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">自己診断機能のタイプ。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">자기 진단 기능의 유형</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Тип функции автотестирования.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="1a351900d1ec11e1800000215ad4efdf">
+      <Name>BackupSupplySystem</Name>
+      <Definition>The type of backup supply system.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_BackupSupplySystemType">
+            <EnumItem>LOCALBATTERY</EnumItem>
+            <EnumItem>CENTRALBATTERY</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>LOCALBATTERY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Local Battery</NameAlias>
+                <NameAlias lang="ru-RU">Автономная батарея</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CENTRALBATTERY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Central Battery</NameAlias>
+                <NameAlias lang="ru-RU">Центральная батарея</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Backup Supply System</NameAlias>
+        <NameAlias lang="ja-JP">電源バックアップシステム</NameAlias>
+        <NameAlias lang="ko-KR">전원백업 시스템</NameAlias>
+        <NameAlias lang="ru-RU">Система резервного питания</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">電源バックアップシステムのタイプ。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">전원 백업 시스템 유형</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Тип системы резервного питания.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="28833500d1ec11e1800000215ad4efdf">
+      <Name>PictogramEscapeDirection</Name>
+      <Definition>The direction of escape pictogram.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_PictogramEscapeDirectionType">
+            <EnumItem>RIGHTARROW</EnumItem>
+            <EnumItem>LEFTARROW</EnumItem>
+            <EnumItem>DOWNARROW</EnumItem>
+            <EnumItem>UPARROW</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>RIGHTARROW</Name>
+              <NameAliases>
+                <NameAlias lang="en">Right Arrow</NameAlias>
+                <NameAlias lang="ru-RU">Стрелка вправо</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LEFTARROW</Name>
+              <NameAliases>
+                <NameAlias lang="en">Left Arrow</NameAlias>
+                <NameAlias lang="ru-RU">Стрелка влево</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DOWNARROW</Name>
+              <NameAliases>
+                <NameAlias lang="en">Down Arrow</NameAlias>
+                <NameAlias lang="ru-RU">Стрелка вниз</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UPARROW</Name>
+              <NameAliases>
+                <NameAlias lang="en">Up Arrow</NameAlias>
+                <NameAlias lang="ru-RU"> стрелка вверх</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Pictogram Escape Direction</NameAlias>
+        <NameAlias lang="ja-JP">避難標識の向き</NameAlias>
+        <NameAlias lang="ko-KR">피난 표지판 방향</NameAlias>
+        <NameAlias lang="ru-RU">Направление пиктограммы аварийного выхода</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">避難標識の向き。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">피난 표지판 방향</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Направление пиктограммы аварийного выхода.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="35a02400d1ec11e1800000215ad4efdf">
+      <Name>Addressablility</Name>
+      <Definition>The type of addressability.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_AddressabilityType">
+            <EnumItem>IMPLEMENTED</EnumItem>
+            <EnumItem>UPGRADEABLETO</EnumItem>
+            <EnumItem>NOTIMPLEMENTED</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>IMPLEMENTED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Implemented</NameAlias>
+                <NameAlias lang="ru-RU">Используемое</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UPGRADEABLETO</Name>
+              <NameAliases>
+                <NameAlias lang="en">Upgradeable To</NameAlias>
+                <NameAlias lang="ru-RU">С возможностью обновления до</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTIMPLEMENTED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Not Implemented</NameAlias>
+                <NameAlias lang="ru-RU">Не используемое</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Addressablility</NameAlias>
+        <NameAlias lang="ja-JP">アドレス指定能力</NameAlias>
+        <NameAlias lang="ko-KR">주소 지정 능력</NameAlias>
+        <NameAlias lang="ru-RU">Адресуемость</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">アドレス指定能力のタイプ。</DefinitionAlias>
+        <DefinitionAlias lang="ko-KR">주소 지정 능력 타입</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Тип адресуемости.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">防犯灯の特徴プロパティ。</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Свойства, характеризующие охранное освещение.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

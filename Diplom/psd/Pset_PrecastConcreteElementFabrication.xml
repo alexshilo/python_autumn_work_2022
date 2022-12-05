@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="376de580d1f411e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_PrecastConcreteElementFabrication</Name>
+  <Definition>Production and manufacturing related properties common to different types of precast concrete elements. The Pset applies to manufactured pieces. It can be used by a number of subtypes of IfcBuildingElement. If the precast concrete ele</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcBeam</ClassName>
+    <ClassName>IfcBuildingElementProxy</ClassName>
+    <ClassName>IfcChimney</ClassName>
+    <ClassName>IfcColumn</ClassName>
+    <ClassName>IfcFooting</ClassName>
+    <ClassName>IfcMember</ClassName>
+    <ClassName>IfcPile</ClassName>
+    <ClassName>IfcPlate</ClassName>
+    <ClassName>IfcRamp</ClassName>
+    <ClassName>IfcRampFlight</ClassName>
+    <ClassName>IfcRoof</ClassName>
+    <ClassName>IfcSlab</ClassName>
+    <ClassName>IfcStair</ClassName>
+    <ClassName>IfcStairFlight</ClassName>
+    <ClassName>IfcWall</ClassName>
+    <ClassName>IfcCivilElement</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcBeam,IfcBuildingElementProxy,IfcChimney,IfcColumn,IfcFooting,IfcMember,IfcPile,IfcPlate,IfcRamp,IfcRampFlight,IfcRoof,IfcSlab,IfcStair,IfcStairFlight,IfcWall,IfcCivilElement</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="3d63c680d1f411e1800000215ad4efdf">
+      <Name>TypeDesignator</Name>
+      <Definition>Type designator for the precast concrete element. The content depends on local standards. For instance in Finland it usually a one-letter acronym, e.g. P=Column, K=reinforced concrete beam,etc.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Type Designator</NameAlias>
+        <NameAlias lang="ru-RU">Указатель типа</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Указатель типа для сборного железобетонного элемента. Содержание зависит от национальных стандартов. Например, в Финляндии это обычно однобуквенное сокращение, например P=колонна, K=железобетонная балка и т. д.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="4359a780d1f411e1800000215ad4efdf">
+      <Name>ProductionLotId</Name>
+      <Definition>The manufacturer's production lot identifier.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Production Lot Id</NameAlias>
+        <NameAlias lang="ru-RU">Идентификатор партии продукции</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Идентификатор партии продукции производителя.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="48b6f200d1f411e1800000215ad4efdf">
+      <Name>SerialNumber</Name>
+      <Definition>The manufacturer's serial number for the precast concrete element.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Serial Number</NameAlias>
+        <NameAlias lang="ru-RU">Серийный номер</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Серийный номер производителя для сборного железобетонного элемента.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="608e7600d1f411e1800000215ad4efdf">
+      <Name>PieceMark</Name>
+      <Definition>Defines a unique piece for production purposes. All pieces with the same piece mark value are identical and interchangeable. The piece mark may be composed of sub-parts that have specific locally defined meaning (e.g. B-1A may denote a beam, of generic type ‘1’ and specific shape ‘A’).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Piece Mark</NameAlias>
+        <NameAlias lang="ru-RU">Метка части</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Определяет уникальную часть для производственных целей.Все части с одной меткой идентичны и взаимозаменяемы. Метка части может состоять из подчастей, которые имеют особое локально определяемое значение (например, B-1A может означать балку универсального типа ‘1’ и особой формы ‘A’).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="671ced80d1f411e1800000215ad4efdf">
+      <Name>AsBuiltLocationNumber</Name>
+      <Definition>Defines a unique location within a structure, the ‘slot’ into which the piece was installed. Where pieces share the same piece mark, they can be interchanged. The value is only known after erection.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">As Built Location Number</NameAlias>
+        <NameAlias lang="ru-RU">Номер расположения при строительстве</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Определяет уникальное местоположение в конструкции, где установлена эта часть. Части с одной меткой взаимозаменяемы. Значение возникает только после монтажа конструкции.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="6dab6500d1f411e1800000215ad4efdf">
+      <Name>ActualProductionDate</Name>
+      <Definition>Production date (stripped from form).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDateTime" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Actual Production Date</NameAlias>
+        <NameAlias lang="ru-RU">Фактическая дата производства</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Дата производства (распалубки).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="72701900d1f411e1800000215ad4efdf">
+      <Name>ActualErectionDate</Name>
+      <Definition>Date erected.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDateTime" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Actual Erection Date</NameAlias>
+        <NameAlias lang="ru-RU">Фактическая дата монтажа</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Дата монтажа.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Свойства, относящиеся к продукции и производству, общие для различных типов сборных железобетонных элементов. Pset применяется к произведенным частям. Может использоваться в ряде подтипов IfcBuildingElement. Если сборный железобетонный элемент</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

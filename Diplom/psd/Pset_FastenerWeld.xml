@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="bd823000d1e411e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_FastenerWeld</Name>
+  <Definition>Properties related to welded connections.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcFastener/WELD</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcFastener/WELD</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="c541d480d1e411e1800000215ad4efdf">
+      <Name>Type1</Name>
+      <Definition>Type of weld seam according to ISO 2553.  Note, combined welds are given by two corresponding symbols in the direction of the normal axis of the coordinate system.  For example, an X weld is specified by Type1 = 'V' and Type2 = 'V'.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Type1</NameAlias>
+        <NameAlias lang="ru-RU">Type1</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Тип сварного шва в соответствии с ISO 2553.  Примечание. Комбинированные швы задаются двумя соответствующими символами по направлению к вертикальной оси системы координат.  Например, шов X определяется Type1 = 'V' и Type2 = 'V'.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="cc68e280d1e411e1800000215ad4efdf">
+      <Name>Type2</Name>
+      <Definition>See Type1.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Type2</NameAlias>
+        <NameAlias lang="ru-RU">Type2</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">См. Type1.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d25ec380d1e411e1800000215ad4efdf">
+      <Name>Surface1</Name>
+      <Definition>Aspect of weld seam surface, i.e. 'plane', 'curved' or 'hollow'.  Combined welds are given by two corresponding symbols analogous to Type1 and Type2.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Surface1</NameAlias>
+        <NameAlias lang="ru-RU">Surface1</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Особенность поверхности сварного шва, например, "ровная", "кривая" или "полая".  Комбинированные швы задаются двумя соответствующими символами, аналогично Type1 и Type2.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d854a480d1e411e1800000215ad4efdf">
+      <Name>Surface2</Name>
+      <Definition>See Surface1.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Surface2</NameAlias>
+        <NameAlias lang="ru-RU">Surface2</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">См. Surface1.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="df7bb280d1e411e1800000215ad4efdf">
+      <Name>Process</Name>
+      <Definition>Reference number of the welding process according to ISO 4063, an up to three digits long code</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Process</NameAlias>
+        <NameAlias lang="ru-RU">Process</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Ссылочный номер метода сварки в соответствии с ISO 4063, длина кода - до трех цифр.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e4d8fd00d1e411e1800000215ad4efdf">
+      <Name>ProcessName</Name>
+      <Definition>Name of the welding process.  Alternative to the numeric Process property.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Process Name</NameAlias>
+        <NameAlias lang="ru-RU">Наименование метода</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Наименование метода сварки.  Альтернатива числовому свойству Process.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="eacede00d1e411e1800000215ad4efdf">
+      <Name>a</Name>
+      <Definition>Measure a according to ISO 2553</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">a</NameAlias>
+        <NameAlias lang="ru-RU">a</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Единица измерения a в соответсвии с ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f3271900d1e411e1800000215ad4efdf">
+      <Name>c</Name>
+      <Definition>Measure c according to ISO 2553</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">c</NameAlias>
+        <NameAlias lang="ru-RU">c</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Единица измерения c в соответсвии с ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f9b59080d1e411e1800000215ad4efdf">
+      <Name>d</Name>
+      <Definition>Measure d according to ISO 2553</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">d</NameAlias>
+        <NameAlias lang="ru-RU">d</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Единица измерения d в соответсвии с ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="00dc9e80d1e511e1800000215ad4efdf">
+      <Name>e</Name>
+      <Definition>Measure e according to ISO 2553</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">e</NameAlias>
+        <NameAlias lang="ru-RU">e</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Единица измерения e в соответсвии с ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="076b1600d1e511e1800000215ad4efdf">
+      <Name>l</Name>
+      <Definition>Measure l according to ISO 2553</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">l</NameAlias>
+        <NameAlias lang="ru-RU">l</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Единица измерения l в соответсвии с ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="0e922400d1e511e1800000215ad4efdf">
+      <Name>n</Name>
+      <Definition>Count n according to ISO 2553</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">n</NameAlias>
+        <NameAlias lang="ru-RU">н</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Число n в соответствии с ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="1356d800d1e511e1800000215ad4efdf">
+      <Name>s</Name>
+      <Definition>Measure s according to ISO 2553</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">s</NameAlias>
+        <NameAlias lang="ru-RU">с</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Единица измерения s в соответсвии с ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="1a7de600d1e511e1800000215ad4efdf">
+      <Name>z</Name>
+      <Definition>Measure z according to ISO 2553</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">z</NameAlias>
+        <NameAlias lang="ru-RU">z</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Единица измерения z в соответсвии с ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="21a4f400d1e511e1800000215ad4efdf">
+      <Name>Intermittent</Name>
+      <Definition>If fillet weld, intermittent or not</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Intermittent</NameAlias>
+        <NameAlias lang="ru-RU">Intermittent</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Если это угловой сварной шов, то является ли он прерывистым он или нет</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="28336b80d1e511e1800000215ad4efdf">
+      <Name>Staggered</Name>
+      <Definition>If intermittent weld, staggered or not</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Staggered</NameAlias>
+        <NameAlias lang="ru-RU">Staggered</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Если шов - прерывистый, то является ли он шахматным или нет</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Свойства, связанные со сварными соединениями.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

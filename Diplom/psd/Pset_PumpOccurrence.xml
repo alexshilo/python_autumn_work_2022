@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="786af780d1fe11e1800000215ad4efdf" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_PumpOccurrence</Name>
+  <Definition>Pump occurrence attributes attached to an instance of IfcPump.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcPump</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcPump</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="7dc84200d1fe11e1800000215ad4efdf">
+      <Name>ImpellerDiameter</Name>
+      <Definition>Diameter of pump impeller - used to scale performance of geometrically similar pumps.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Impeller Diameter</NameAlias>
+        <NameAlias lang="ja-JP">羽根直径</NameAlias>
+        <NameAlias lang="ru-RU">Диаметр рабочего колеса</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">幾何学的に似たポンプの性能を予測するのに使われる。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Диаметр рабочего колеса насоса используется для измерения эксплуатационных показателей геометрически подобных насосов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="8587e680d1fe11e1800000215ad4efdf">
+      <Name>BaseType</Name>
+      <Definition>Defines general types of pump bases.
+
+FRAME: Frame. 
+BASE: Base. 
+NONE: There is no pump base, such as an inline pump. 
+OTHER: Other type of pump base.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_PumpBaseType">
+            <EnumItem>FRAME</EnumItem>
+            <EnumItem>BASE</EnumItem>
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>FRAME</Name>
+              <NameAliases>
+                <NameAlias lang="en">Frame</NameAlias>
+                <NameAlias lang="ru-RU">Рама</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Frame</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Рама</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BASE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Base</NameAlias>
+                <NameAlias lang="ru-RU">Опора</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Base</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Опора</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+                <NameAlias lang="ru-RU">Нет</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">There is no pump base, such as an inline pump</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Опорная поверхность насоса отсутствует, как например, в линейном насосе.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Base Type</NameAlias>
+        <NameAlias lang="ja-JP">基礎タイプ</NameAlias>
+        <NameAlias lang="ru-RU">Тип опоры</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">ポンプ基礎の一般的な型を定義する(フレーム、(コンクリ)基礎、なし、その他)</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Определяет общие типы опорных поверхностей насоса. FRAME: Рама. BASE: Опора. NONE: Опорная поверхность насоса отсутствует, как например, в линейном насосе. OTHER: Другой тип опорной поверхности насоса.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="92a4d580d1fe11e1800000215ad4efdf">
+      <Name>DriveConnectionType</Name>
+      <Definition>The way the pump drive mechanism is connected to the pump.
+
+DIRECTDRIVE: Direct drive. 
+BELTDRIVE: Belt drive. 
+COUPLING: Coupling. 
+OTHER: Other type of drive connection.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_PumpDriveConnectionType">
+            <EnumItem>DIRECTDRIVE</EnumItem>
+            <EnumItem>BELTDRIVE</EnumItem>
+            <EnumItem>COUPLING</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>DIRECTDRIVE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Direct Drive</NameAlias>
+                <NameAlias lang="ru-RU">Прямой привод</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Direct drive</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Прямой привод</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BELTDRIVE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Belt Drive</NameAlias>
+                <NameAlias lang="ru-RU">Ременный привод</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Belt drive</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Ременный привод</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>COUPLING</Name>
+              <NameAliases>
+                <NameAlias lang="en">Coupling</NameAlias>
+                <NameAlias lang="ru-RU">Муфта</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Coupling</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Муфта</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Drive Connection Type</NameAlias>
+        <NameAlias lang="ja-JP">駆動接続タイプ</NameAlias>
+        <NameAlias lang="ru-RU">Тип подключения привода</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">ポンプの動力機械がポンプに接続される方法(直動、ベルト、カップリング、その他)</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Способ подключения механизма привода насоса к насосу. DIRECTDRIVE: Прямой привод. BELTDRIVE: Ременный привод. COUPLING: Муфта. OTHER: Другой тип подключения привода.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Атрибуты объектов реализации насоса, приписанные экземпляру IfcPump.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

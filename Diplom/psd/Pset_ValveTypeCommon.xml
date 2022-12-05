@@ -1,0 +1,713 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="1e752c80d21411e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_ValveTypeCommon</Name>
+  <Definition>Valve type common attributes.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcValve</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcValve</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="2208b380d21411e1800000215ad4efdf">
+      <Name>Reference</Name>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1').</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Reference</NameAlias>
+        <NameAlias lang="ja-JP">参照記号</NameAlias>
+        <NameAlias lang="ru-RU">Ссылка</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Ссылочный идентификатор данного конкретного типа в настоящем проекте  (например, тип «A-1»).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="103808cf5fe64d589e7317c7493147b5">
+      <Name>Status</Name>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+          <ConstantList>
+            <ConstantDef>
+              <Name>NEW</Name>
+              <Definition>element designed as new addition</Definition>
+              <NameAliases>
+                <NameAlias lang="en">New</NameAlias>
+                <NameAlias lang="ru-RU">Новый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент создан как новая пристройка</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXISTING</Name>
+              <Definition>element exists and is to remain</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Existing</NameAlias>
+                <NameAlias lang="ru-RU">Существующий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует и останется без изменений</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DEMOLISH</Name>
+              <Definition>element exists but is to be demolished</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Demolish</NameAlias>
+                <NameAlias lang="ru-RU">Подлежит сносу</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует, но подлежит сносу</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TEMPORARY</Name>
+              <Definition>element will exist only temporarily (such as a temporary support structure)</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Temporary</NameAlias>
+                <NameAlias lang="ru-RU">Временный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент будет существовать только временно (например, временная опорная конструкция)</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="27fe9480d21411e1800000215ad4efdf">
+      <Name>ValvePattern</Name>
+      <Definition>The configuration of the ports of a valve according to either the linear route taken by a fluid flowing through the valve or by the number of ports where:
+
+SINGLEPORT: Valve that has a single entry port from the system that it serves, the exit port being to the surrounding environment.
+ANGLED_2_PORT: Valve in which the direction of flow is changed through 90 degrees.
+STRAIGHT_2_PORT: Valve in which the flow is straight through.
+STRAIGHT_3_PORT: Valve with three separate ports.
+CROSSOVER_4_PORT: Valve with 4 separate ports.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ValvePattern">
+            <EnumItem>SINGLEPORT</EnumItem>
+            <EnumItem>ANGLED_2_PORT</EnumItem>
+            <EnumItem>STRAIGHT_2_PORT</EnumItem>
+            <EnumItem>STRAIGHT_3_PORT</EnumItem>
+            <EnumItem>CROSSOVER_4_PORT</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>SINGLEPORT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Single Port</NameAlias>
+                <NameAlias lang="ru-RU">Одно отверстие</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Valve that has a single entry port from the system that it serves, the exit port being to the surrounding environment</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Клапан с одним входным отверстием из системы, которую он обслуживает, и выходным отверстием в окружающую среду.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>ANGLED_2_PORT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Angled 2 Port</NameAlias>
+                <NameAlias lang="ru-RU">Угловой с 2 отверстиями</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Valve in which the direction of flow is changed through 90 degrees</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Клапан, направление потока в котором изменяется на 90 градусов.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>STRAIGHT_2_PORT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Straight 2 Port</NameAlias>
+                <NameAlias lang="ru-RU">Прямой с 2 отверстиями</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Valve in which the flow is straight through</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Клапан, в котором поток протекает прямо.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>STRAIGHT_3_PORT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Straight 3 Port</NameAlias>
+                <NameAlias lang="ru-RU">Прямой с 3 отверстиями</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Valve with three separate ports</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Клапан с тремя отдельными отверстиями.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CROSSOVER_4_PORT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Crossover 4 Port</NameAlias>
+                <NameAlias lang="ru-RU">Перепускной с 4 отверстиями</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Valve with 4 separate ports</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Клапан с 4 отдельными отверстиями.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Valve Pattern</NameAlias>
+        <NameAlias lang="ja-JP">弁の形</NameAlias>
+        <NameAlias lang="ru-RU">Модель клапана</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">単一ポートSINGLEPORT()=システムで単一入口ポートを持ち、出口ポートは周囲環境である　2ポート直角型(ANGLED_2_PORT)＝中で流れ方向が完全に90度変わる弁　2ポート直行型(STRAIGHT_2_PORT)＝中で流れが真っ直ぐな弁　3ポート直行型(STRAIGHT_3_PORT)＝3つの別々のポートを持つ　4ポート交差型(CROSSOVER_4_PORT)＝4つの別々のポートを持つ</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Конфигурация отверстий клапана в соответствии с линейным маршрутом, принимаемым потоком жидкости, протекающей через клапан, или количеством отверстий, где: SINGLEPORT: Клапан с одним входным отверстием из системы, которую он обслуживает, и выходным отверстием в окружающую среду. ANGLED_2_PORT: Клапан, в котором направление потока изменяется на 90 градусов. STRAIGHT_2_PORT: Клапан, в котором поток протекает прямо. STRAIGHT_3_PORT: Клапан с тремя отдельными отверстиями.CROSSOVER_4_PORT: Клапан с четырьмя отдельными отверстиями.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="38167400d21411e1800000215ad4efdf">
+      <Name>ValveOperation</Name>
+      <Definition>The method of valve operation where:
+
+DROPWEIGHT: A valve that is closed by the action of a weighted lever being released, the weight normally being prevented from dropping by being held by a wire, the closure normally being made by the action of heat on a fusible link in the wire
+FLOAT: A valve that is opened and closed by the action of a float that rises and falls with water level. The float may be a ball attached to a lever or other mechanism
+HYDRAULIC: A valve that is opened and closed by hydraulic actuation
+LEVER: A valve that is opened and closed by the action of a lever rotating the gate within the valve.
+LOCKSHIELD: A valve that requires the use of a special lockshield key for opening and closing, the operating mechanism being protected by a shroud during normal operation.
+MOTORIZED: A valve that is opened and closed by the action of an electric motor on an actuator
+PNEUMATIC: A valve that is opened and closed by pneumatic actuation
+SOLENOID: A valve that is normally held open by a magnetic field in a coil acting on the gate but that is closed immediately if the electrical current generating the magnetic field is removed. 
+SPRING: A valve that is normally held in position by the pressure of a spring on a plate but that may be caused to open if the pressure of the fluid is sufficient to overcome the spring pressure. 
+THERMOSTATIC: A valve in which the ports are opened or closed to maintain a required predetermined temperature.
+WHEEL: A valve that is opened and closed by the action of a wheel moving the gate within the valve.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+          <ConstantList>
+            <ConstantDef>
+              <Name>DROPWEIGHT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Drop Weight</NameAlias>
+                <NameAlias lang="ru-RU">Падающий груз</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve that is closed by the action of a weighted lever being released, the weight normally being prevented from dropping by being held by a wire, the closure normally being made by the action of heat on a fusible link in the wire</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Клапан, закрывающийся под действием рычага с противовесом, причем падение веса обычно предотвращается с помощью удерживающего провода, а закрытие обычно осуществляется под воздействием тепла на плавкую связь в проводе.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FLOAT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Float</NameAlias>
+                <NameAlias lang="ru-RU">Поплавковый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve that is opened and closed by the action of a float that rises and falls with water level</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Клапан, который открывается и закрывается действием поплавка, который в свою очередь поднимается и опускается с уровнем воды.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>HYDRAULIC</Name>
+              <NameAliases>
+                <NameAlias lang="en">Hydraulic</NameAlias>
+                <NameAlias lang="ru-RU">Гидравлический</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve that is opened and closed by hydraulic actuation</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Клапан, который открывается и закрывается гидравлическим приводом.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LEVER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Lever</NameAlias>
+                <NameAlias lang="ru-RU">Рычажный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve that is opened and closed by the action of a lever rotating the gate within the valve</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль, который открывается и закрывается при помощи рычага, поворачивающего затвор в клапане.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LOCKSHIELD</Name>
+              <NameAliases>
+                <NameAlias lang="en">Lock Shield</NameAlias>
+                <NameAlias lang="ru-RU">Замковый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve that requires the use of a special lockshield key for opening and closing, the operating mechanism being protected by a shroud during normal operation</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль, защищенный замком, который открывается и закрывается специальным ключом, при этом рабочий механизм защищается кожухом во время эксплуатации в обычном режиме.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>MOTORIZED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Motorized</NameAlias>
+                <NameAlias lang="ru-RU">С двигателем</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve that is opened and closed by the action of an electric motor on an actuator</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль, который открывается и закрывается электрическим двигателем с приводом</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PNEUMATIC</Name>
+              <NameAliases>
+                <NameAlias lang="en">Pneumatic</NameAlias>
+                <NameAlias lang="ru-RU">Пневматический</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve that is opened and closed by pneumatic actuation</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль, который открывается и закрывается пневматическим приводом</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SOLENOID</Name>
+              <NameAliases>
+                <NameAlias lang="en">Solenoid</NameAlias>
+                <NameAlias lang="ru-RU">Соленоидный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve that is normally held open by a magnetic field in a coil acting on the gate but that is closed immediately if the electrical current generating the magnetic field is removed</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль, который в обычном режиме удерживается в открытом положении с помощью магнитного поля термоизолированного нагревательного элемента, действующего на затвор, но закрывается сразу после исчезновения электрического тока, генерирующего магнитное поле.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SPRING</Name>
+              <NameAliases>
+                <NameAlias lang="en">Spring</NameAlias>
+                <NameAlias lang="ru-RU">Пружинный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve that is normally held in position by the pressure of a spring on a plate but that may be caused to open if the pressure of the fluid is sufficient to overcome the spring pressure</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль, который в обычном режиме удерживается в открытом положении под воздействием пружины на пластине, но который может быть открыт, если давление жидкости достаточно для преодоления давления пружины.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>THERMOSTATIC</Name>
+              <NameAliases>
+                <NameAlias lang="en">Thermostatic</NameAlias>
+                <NameAlias lang="ru-RU">Термостатический</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve in which the ports are opened or closed to maintain a required predetermined temperature</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль, порты в котором открыты или закрыты для поддержания требуемой заданной температуры.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WHEEL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Wheel</NameAlias>
+                <NameAlias lang="ru-RU">С маховиком</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">A valve that is opened and closed by the action of a wheel moving the gate within the valve</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль, открывающийся и закрывающийся под действием маховика, перемещающего затвор в клапане.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Valve Operation</NameAlias>
+        <NameAlias lang="ja-JP">弁操作</NameAlias>
+        <NameAlias lang="ru-RU">Приведение вентиля в действие</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">The method of valve operation where:弁操作方法は以下の通り：
+おもり(DROPWEIGHT)＝おもりを付けられたレバーが外される動作で閉まる弁　浮き(FLOAT)＝水位と共に上下する浮きの動作で開閉する弁。浮きはレバーに付けたボール又は他の機構　水力(HYDRAULIC)＝水力アクチュエータで開閉する弁　レバー(LEVER)＝弁内のゲートを回転させるレバーの動作で開閉する弁　ロックシールド(LOCKSHIELD)＝開閉のために特別のロックシールドキーの使用を要求する弁。操作機構は通常の操作の間は覆いで保護されている　電動化(MOTORIZED)＝アクチュエータに付けられた電動モータの動作で開閉する弁　空気圧(PNEUMATIC)＝圧縮空気で動くアクチュエータで開閉する弁　筒型コイル(SOLENOID)＝ゲートに付けられ作動しているコイルの磁界で通常は開に保たれている弁。しかし、もし磁界を発生している電流が消されたらただちに閉まる　ばね(SPRING)＝板に付けられたばねの圧力で、通常は位置を保たれている弁。しかし、もし流体の圧力が、ばねの圧力より十分大きければ開いてしまう。　自動温度調節(THERMOSTATIC)＝前もって決められた要求温度を維持するために、中のポートが開閉する弁　ハンドル(WHEEL)＝弁内のゲートを動かすハンドルの動作で開閉する弁</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Метод приведения вентиля в действие, где:DROPWEIGHT: вентиль, закрывающийся под действием рычага с противовесом, причем падение веса, обычно предотвращается удерживанием проводом, а закрытие обычно осуществляется в результате нагрева плавкой вставки в проводе FLOAT: вентиль, который открывается и закрывается действием поплавка, который в свою очередь поднимается и опускается с уровнем воды. Поплавок может представлять собой шар, прикрепленный к рычагу или другому механизму HYDRAULIC: вентиль, который открывается и закрывается гидравлическим приводомLEVER: вентиль, который открывается и закрывается при помощи рычага, вращающего затвор в вентиле.LOCKSHIELD: вентиль, защищенный замком, который открывается и закрывается специальным ключом, при этом рабочий механизм защищается кожухом во время эксплуатации в обычном режиме.MOTORIZED: вентиль, который открывается и закрывается электрическим двигателем с приводомPNEUMATIC: вентиль, который открывается и закрывается пневматическим приводомSOLENOID: Вентиль, который в обычном режиме удерживается в открытом положении с помощью магнитного поля термоизолированного нагревательного элемента, действующего на затвор, но закрывается сразу после исчезновения электрического тока, генерирующего магнитное поле. SPRING: Вентиль, который обычно удерживается в положении под давлением пружины на пластине, но может быть открыт, если давления жидкости достаточно для преодоления давления пружины. THERMOSTATIC: вентиль, порты в котором открыты или закрыты для поддержания требуемой заданной температуры.WHEEL: вентиль, открывающийся и закрывающийся под действием маховика, перемещающего затвор в вентиле.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="51b7bb80d21411e1800000215ad4efdf">
+      <Name>ValveMechanism</Name>
+      <Definition>The mechanism by which the valve function is achieved where:
+
+BALL: Valve that has a ported ball that can be turned relative to the body seat ports.
+BUTTERFLY: Valve in which a streamlined disc pivots about a diametric axis.
+CONFIGUREDGATE: Screwdown valve in which the closing gate is shaped in a configured manner to have a more precise control of pressure and flow change across the valve.
+GLAND: Valve with a tapered seating, in which a rotatable plug is retained by means of a gland and gland packing.
+GLOBE: Screwdown valve that has a spherical body.
+LUBRICATEDPLUG: Plug valve in which a lubricant is injected under pressure between the plug face and the body.
+NEEDLE: Valve for regulating the flow in or from a pipe, in which a slender cone moves along the axis of flow to close against a fixed conical seat.
+PARALLELSLIDE: Screwdown valve that has a machined plate that slides in formed grooves to form a seal.
+PLUG: Valve that has a ported plug that can be turned relative to the body seat ports.
+WEDGEGATE: Screwdown valve that has a wedge shaped plate fitting into tapered guides to form a seal.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+          <ConstantList>
+            <ConstantDef>
+              <Name>BALL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Ball</NameAlias>
+                <NameAlias lang="ru-RU">Шаровой</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Valve that has a ported ball that can be turned relative to the body seat ports</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль со встроенным шаром, который можно поворачивать относительно портов корпуса.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BUTTERFLY</Name>
+              <NameAliases>
+                <NameAlias lang="en">Butterfly</NameAlias>
+                <NameAlias lang="ru-RU">Дроссельный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Valve in which a streamlined disc pivots about a diametric axis</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль, в котором обтекаемый диск вращается вокруг диаметральной оси.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONFIGUREDGATE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Configured Gate</NameAlias>
+                <NameAlias lang="ru-RU">Регулируемый затвор</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Screwdown valve in which the closing gate is shaped in a configured manner to have a more precise control of pressure and flow change across the valve</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Нажимной вентиль, в котором форма закрывающего затвора регулируется с целью повышения уровня контроля изменения давления и потока на клапане.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GLAND</Name>
+              <NameAliases>
+                <NameAlias lang="en">Gland</NameAlias>
+                <NameAlias lang="ru-RU">Сальниковый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Valve with a tapered seating, in which a rotatable plug is retained by means of a gland and gland packing</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль с конической уплотняющей поверхностью, в котором поворотная пробка удерживается сальником и сальниковым уплотнителем.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>GLOBE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Globe</NameAlias>
+                <NameAlias lang="ru-RU">Сферический</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Screwdown valve that has a spherical body</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Нажимной вентиль со сферическим корпусом</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LUBRICATEDPLUG</Name>
+              <NameAliases>
+                <NameAlias lang="en">Lubricated Plug</NameAlias>
+                <NameAlias lang="ru-RU">Вентиль со смазкой</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Plug valve in which a lubricant is injected under pressure between the plug face and the body</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Конический вентиль, в котором смазка вводится под давлением между поверхностью конуса и корпусом.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NEEDLE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Needle</NameAlias>
+                <NameAlias lang="ru-RU">Игольчатый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Valve for regulating the flow in or from a pipe, in which a slender cone moves along the axis of flow to close against a fixed conical seat</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Вентиль для регулирования потока в трубе, в котором конус с малым углом разворота перемещается вдоль оси потока, перекрывая его упором в неподвижный конический вкладыш.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PARALLELSLIDE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Parallel Slide</NameAlias>
+                <NameAlias lang="ru-RU">Параллельная задвижка</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Screwdown valve that has a machined plate that slides in formed grooves to form a seal</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Нажимной вентиль с обработанной пластиной, которая скользит в сформированных канавках для образования уплотнения.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PLUG</Name>
+              <NameAliases>
+                <NameAlias lang="en">Plug</NameAlias>
+                <NameAlias lang="ru-RU">Заглушка</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Plug valve in which a lubricant is injected under pressure between the plug face and the body</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Конический вентиль, в котором смазка вводится под давлением между поверхностью конуса и корпусом.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WEDGEGATE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Wedge Gate</NameAlias>
+                <NameAlias lang="ru-RU">Клиновая задвижка</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Screwdown valve that has a wedge shaped plate fitting into tapered guides to form a seal</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Нажимной вентиль с клиновидной пластиной, прикрепленной к коническим направляющим для образования уплотнения.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Valve Mechanism</NameAlias>
+        <NameAlias lang="ja-JP">弁機構</NameAlias>
+        <NameAlias lang="ru-RU">Механизм вентиля</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">機構により可能な弁機能は以下の通り：
+ボール弁(BALL valve)＝本体のシートポートに関連して回転できるポートボールを持つ弁　バタフライ弁(BUTTERFLY valve)＝直径軸あたりに流線型の円板の旋回軸のある弁　CONFIGUREDスクリュー弁(CONFIGUREDGATE Screwdown valve)＝閉鎖ゲートを持つねじ回し式弁。その弁は、弁を通過する時圧力と流量変更をより正確に制御できる方法で形づけられている　グランド弁(GLAND Valve)＝テーパーのついたシートを持った弁。その中に回転プラグがグランドとグランドパッキンによって保持されている　グローブスクリュー弁(GLOBE Screwdown valve)＝ 球形の本体を持つねじ回し式弁　滑プラグ弁(LUBRICATEDPLUG Plug valve)＝プラグ表面と本体との間の圧力を下げるために潤滑油が注入された弁　ニードル弁(NEEDLE Valve)＝管内外の流量を調節する弁。その中に固定した円錐形のシートを閉止ために、流れの軸に沿って動く細長いコーンを持っている　平行スライドスクリュー弁(PARALLELSLIDE Screwdown valve)＝機械加工されたプレートを持つねじ回し式弁。そのプレートはシールを形成するために溝の中を滑る　プラグ弁(PLUG Valve)＝本体のシートポートと関連して回転できる、ポートしたプラグを持つ弁　くさびゲートスクリュー弁(WEDGEGATE Screwdown valve)＝シールを形成するためにテーパーの付いたガイドの中をくさび状の板部品を持つねじ回し式弁</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Механизм, с помощью которого осуществляется функция вентиля, где:BALL: вентиль со встроенным шаром, который можно поворачивать относительно портов корпуса.BUTTERFLY: вентиль, в котором обтекаемый диск вращается вокруг диаметральной оси.CONFIGUREDGATE: нажимной вентиль, в котором форма закрывающего затвора регулируется с целью повышения уровня контроля изменения давления и потока на вентиле.GLAND: вентиль с конической уплотняющей поверхностью, в котором поворотная пробка удерживается сальником и сальниковым уплотнителем.GLOBE: нажимной вентиль со сферическим корпусом.LUBRICATEDPLUG: конический вентиль, в котором смазка вводится под давлением между поверхностью конуса и корпусом.NEEDLE: вентиль для регулирования потока в трубе, в котором конус с малым углом разворота перемещается вдоль оси потока, перекрывая его упором в неподвижный конический вкладыш.PARALLELSLIDE: нажимной вентиль с обработанной пластиной, которая скользит в сформированных канавках для образования уплотнения.PLUG: вентиль с колесными секретками, которые можно поворачивать относительно портов корпуса.WEDGEGATE: нажимной вентиль, имеющий клиновидную пластину, прикрепленную к коническим направляющим для образования уплотнения.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="6a27d600d21411e1800000215ad4efdf">
+      <Name>Size</Name>
+      <Definition>The size of the connection to the valve (or to each connection for faucets, mixing valves, etc.).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Size</NameAlias>
+        <NameAlias lang="ja-JP">サイズ</NameAlias>
+        <NameAlias lang="ru-RU">Размер</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">弁（又は、水栓、混合弁等の接続）接続サイズ</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Размер соединения, идущего к вентилю (или к каждому соединению для раструбных кранов, смесителей и т. д.).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7875f200d21411e1800000215ad4efdf">
+      <Name>TestPressure</Name>
+      <Definition>The maximum pressure to which the valve has been subjected under test.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Test Pressure</NameAlias>
+        <NameAlias lang="ja-JP">試験圧力</NameAlias>
+        <NameAlias lang="ru-RU">Испытательное давление</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">試験の時、掛けられる最高圧力</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Предельное давление, на которое был испытан вентиль.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7e6bd300d21411e1800000215ad4efdf">
+      <Name>WorkingPressure</Name>
+      <Definition>The normally expected maximum working pressure of the valve.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Working Pressure</NameAlias>
+        <NameAlias lang="ja-JP">運転圧力</NameAlias>
+        <NameAlias lang="ru-RU">Рабочее давление</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">バルブの通常予想される最高運転圧力</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Обычное ожидаемое предельное рабочее давление вентиля.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="8461b400d21411e1800000215ad4efdf">
+      <Name>FlowCoefficient</Name>
+      <Definition>Flow coefficient (the quantity of fluid that passes through a fully open valve at unit pressure drop), typically expressed as the Kv or Cv value for the valve.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Flow Coefficient</NameAlias>
+        <NameAlias lang="ja-JP">流出係数</NameAlias>
+        <NameAlias lang="ru-RU">Коэффициент расхода</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">流出係数（全開のバルブを通過する単位圧力損失当たりの流体の量）一般的にバルブのKv又はCv値で表される</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Коэффициент расхода (количество жидкости, которая проходит через полностью открытый клапан при перепаде давления единицы), обычно выражающийся как значение Kv или Cv для вентиля.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="8a579500d21411e1800000215ad4efdf">
+      <Name>CloseOffRating</Name>
+      <Definition>Close off rating.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Close Off Rating</NameAlias>
+        <NameAlias lang="ja-JP">クローズオフレーティング</NameAlias>
+        <NameAlias lang="ru-RU">Класс блокировки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">クローズオフレーティング</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Класс блокировки.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">弁タイプ共通プロパティ属性設定。</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Общие атрибуты типа клапана.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

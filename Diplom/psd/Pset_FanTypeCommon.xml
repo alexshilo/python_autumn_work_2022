@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="3f258e00d1e411e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_FanTypeCommon</Name>
+  <Definition>Fan type common attributes.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcFan</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcFan</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="43ea4200d1e411e1800000215ad4efdf">
+      <Name>Reference</Name>
+      <Definition>Reference ID for this specified type in this project (e.g. type 'A-1').</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Reference</NameAlias>
+        <NameAlias lang="ja-JP">参照記号</NameAlias>
+        <NameAlias lang="ru-RU">Ссылка</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">このプロジェクトにおける参照記号(例：A-1)。分類コードではなく内部で使用されるプロジェクトタイプとして使用されるもの。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Ссылочный идентификатор данного конкретного типа в настоящем проекте  (например, тип «A-1»).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="4b115000d1e411e1800000215ad4efdf">
+      <Name>Status</Name>
+      <Definition>Status of the element, predominately used in renovation or retrofitting projects. The status can be assigned to as "New" - element designed as new addition, "Existing" - element exists and remains, "Demolish" - element existed but is to be demolished,  "Temporary" - element will exists only temporary (like a temporary support structure).</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ElementStatus">
+            <EnumItem>NEW</EnumItem>
+            <EnumItem>EXISTING</EnumItem>
+            <EnumItem>DEMOLISH</EnumItem>
+            <EnumItem>TEMPORARY</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>NEW</Name>
+              <Definition>element designed as new addition</Definition>
+              <NameAliases>
+                <NameAlias lang="en">New</NameAlias>
+                <NameAlias lang="ru-RU">Новый</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент создан как новая пристройка</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXISTING</Name>
+              <Definition>element exists and is to remain</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Existing</NameAlias>
+                <NameAlias lang="ru-RU">Существующий</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует и останется без изменений</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DEMOLISH</Name>
+              <Definition>element exists but is to be demolished</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Demolish</NameAlias>
+                <NameAlias lang="ru-RU">Подлежит сносу</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент существует, но подлежит сносу</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TEMPORARY</Name>
+              <Definition>element will exist only temporarily (such as a temporary support structure)</Definition>
+              <NameAliases>
+                <NameAlias lang="en">Temporary</NameAlias>
+                <NameAlias lang="ru-RU">Временный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+                <DefinitionAlias lang="ru-RU">элемент будет существовать только временно (например, временная опорная конструкция)</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Status</NameAlias>
+        <NameAlias lang="ja-JP">状態</NameAlias>
+        <NameAlias lang="ru-RU">Статус</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">要素（主にリノベーションまたは改修プロジェクトにおいて）の状態。 状態は、「新規(New)」－新しく追加される要素。「既存」－要素は存在し、かつ残りもの。「破壊」－要素は存在したが、廃棄されるもの。「一時的」－一時的に存在する要素（一時的にサポートしている構造のようなもの）。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Статус элемента, который преимущественно используется в проектах по реновации или реконструкции. Возможные значения статуса — "Новый" (элемент считается добавленным), "Существующий" — элемент существует и останется неизменным, "Подлежит сносу" — элемент существует, но должен быть уничтожен,  "Временный" — элемент будет существовать только временно (как временная опорная конструкция).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="5b292f80d1e411e1800000215ad4efdf">
+      <Name>MotorDriveType</Name>
+      <Definition>Motor drive type:
+DIRECTDRIVE: Direct drive. 
+BELTDRIVE: Belt drive. 
+COUPLING: Coupling. 
+OTHER: Other type of motor drive. 
+UNKNOWN: Unknown motor drive type.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FanMotorConnectionType">
+            <EnumItem>DIRECTDRIVE</EnumItem>
+            <EnumItem>BELTDRIVE</EnumItem>
+            <EnumItem>COUPLING</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>DIRECTDRIVE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Direct Drive</NameAlias>
+                <NameAlias lang="ru-RU">Прямой привод</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Direct drive</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Прямой привод</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BELTDRIVE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Belt Drive</NameAlias>
+                <NameAlias lang="ru-RU">Ременный привод</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Belt drive</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Ременный привод</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>COUPLING</Name>
+              <NameAliases>
+                <NameAlias lang="en">Coupling</NameAlias>
+                <NameAlias lang="ru-RU">Муфта</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Coupling</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Муфта</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Motor Drive Type</NameAlias>
+        <NameAlias lang="ja-JP">モーター駆動種類</NameAlias>
+        <NameAlias lang="ru-RU">Тип электропривода</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">モーター駆動種類
+DIRECTDRIVE: ダイレクトドライブ
+BELTDRIVE: ベルトドライブ
+COUPLING: カップリング
+OTHER: その他</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Тип электропривода:DIRECTDRIVE: Прямой привод. BELTDRIVE: Ременный привод. COUPLING: Муфта. OTHER: Другой тип электропривода. UNKNOWN: Неизвестный тип электропривода.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="6a0fe200d1e411e1800000215ad4efdf">
+      <Name>CapacityControlType</Name>
+      <Definition>InletVane: Control by adjusting inlet vane.
+VariableSpeedDrive: Control by variable speed drive. 
+BladePitchAngle: Control by adjusting blade pitch angle.
+TwoSpeed: Control by switch between high and low speed.
+DischargeDamper: Control by modulating discharge damper.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FanCapacityControlType">
+            <EnumItem>INLETVANE</EnumItem>
+            <EnumItem>VARIABLESPEEDDRIVE</EnumItem>
+            <EnumItem>BLADEPITCHANGLE</EnumItem>
+            <EnumItem>TWOSPEED</EnumItem>
+            <EnumItem>DISCHARGEDAMPER</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>INLETVANE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Inlet Vane</NameAlias>
+                <NameAlias lang="ru-RU">Входная лопатка</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VARIABLESPEEDDRIVE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Variable Speed Drive</NameAlias>
+                <NameAlias lang="ru-RU">Регулируемый электропривод</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BLADEPITCHANGLE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Blade Pitch Angle</NameAlias>
+                <NameAlias lang="ru-RU">Угол наклона лопасти</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TWOSPEED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Two Speed</NameAlias>
+                <NameAlias lang="ru-RU">С двумя скоростями</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DISCHARGEDAMPER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Discharge Damper</NameAlias>
+                <NameAlias lang="ru-RU">Выпускной клапан</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Capacity Control Type</NameAlias>
+        <NameAlias lang="ja-JP">容量制御方式</NameAlias>
+        <NameAlias lang="ru-RU">Тип элемента управления производительностью</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">InletVane: インレットベーン
+VariableSpeedDrive: 変速駆動 
+BladePitchAngle: 羽根ピッチ制御
+TwoSpeed: 二速制御
+DischargeDamper: 吐出ダンパ制御</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">InletVane: Контроль путем регулировки входной лопатки.VariableSpeedDrive: Управление регулируемым электроприводом. BladePitchAngle: Контроль путем регулировки угла наклона лопасти.TwoSpeed: Контроль путем переключения между высокой и низкой скоростью.DischargeDamper: Контроль путем регулирования выпускного клапана.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7ac05800d1e411e1800000215ad4efdf">
+      <Name>OperationTemperatureRange</Name>
+      <Definition>Allowable operation ambient air temperature range.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcThermodynamicTemperatureMeasure" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Operation Temperature Range</NameAlias>
+        <NameAlias lang="ja-JP">動作温度範囲</NameAlias>
+        <NameAlias lang="ru-RU">Диапазон рабочих температур</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">許容動作周囲温度範囲</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Диапазон допустимых рабочих температур окружающего воздуха.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="83189300d1e411e1800000215ad4efdf">
+      <Name>NominalAirFlowRate</Name>
+      <Definition>Nominal air flow rate.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcVolumetricFlowRateMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Air Flow Rate</NameAlias>
+        <NameAlias lang="ja-JP">設計風量</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная скорость воздушного потока</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">設計風量</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальная скорость воздушного потока.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="890e7400d1e411e1800000215ad4efdf">
+      <Name>NominalTotalPressure</Name>
+      <Definition>Nominal total pressure rise across the fan.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Total Pressure</NameAlias>
+        <NameAlias lang="ja-JP">設計全圧</NameAlias>
+        <NameAlias lang="ru-RU">Номинальное общее давление</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">ファンでの設計全圧上昇</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальное повышение общего давления на вентиляторе.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="90ce1880d1e411e1800000215ad4efdf">
+      <Name>NominalStaticPressure</Name>
+      <Definition>The static pressure within the air stream that the fan must overcome to insure designed circulation of air.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPressureMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Static Pressure</NameAlias>
+        <NameAlias lang="ja-JP">設計静圧</NameAlias>
+        <NameAlias lang="ru-RU">Номинальное статическое давление</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">設計空気循環量を保証するためにファンが克服しなければならない気流中の静圧</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Статическое давление внутри воздушного потока, которое должен преодолевать вентилятор, чтобы обеспечить надлежащую циркуляцию воздуха.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="96c3f980d1e411e1800000215ad4efdf">
+      <Name>NominalRotationSpeed</Name>
+      <Definition>Nominal fan wheel speed.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcRotationalFrequencyMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Rotation Speed</NameAlias>
+        <NameAlias lang="ja-JP">設計回転速度</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная скорость вращения</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">設計ホイール速度</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальная частота вращения рабочего колеса вентилятора.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="9b88ad80d1e411e1800000215ad4efdf">
+      <Name>NominalPowerRate</Name>
+      <Definition>Nominal fan power rate.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPowerMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Power Rate</NameAlias>
+        <NameAlias lang="ja-JP">設計動力</NameAlias>
+        <NameAlias lang="ru-RU">Номинальное значение мощности </NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">設計動力</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальное значение мощности вентилятора.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a0e5f800d1e411e1800000215ad4efdf">
+      <Name>OperationalCriteria</Name>
+      <Definition>Time of operation at maximum operational ambient air temperature.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcTimeMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Operational Criteria</NameAlias>
+        <NameAlias lang="ja-JP">動作環境</NameAlias>
+        <NameAlias lang="ru-RU">Рабочее условие </NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">最大動作周囲温度での動作の時間</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Время работы при предельной рабочей температуре окружающего воздуха.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a6dbd900d1e411e1800000215ad4efdf">
+      <Name>PressureCurve</Name>
+      <Definition>Pressure rise = f (flow rate).</Definition>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression />
+          <DefiningValue>
+            <DataType type="IfcVolumetricFlowRateMeasure" />
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcPressureMeasure" />
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Pressure Curve</NameAlias>
+        <NameAlias lang="ru-RU">Кривая давления</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Повышение давления = f (скорость потока).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="b22f0480d1e411e1800000215ad4efdf">
+      <Name>EfficiencyCurve</Name>
+      <Definition>Fan efficiency =f (flow rate).</Definition>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression />
+          <DefiningValue>
+            <DataType type="IfcVolumetricFlowRateMeasure" />
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcNormalisedRatioMeasure" />
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Efficiency Curve</NameAlias>
+        <NameAlias lang="ru-RU">Кривая эффективности</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Эффективность вентилятора =f (скорость потока).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">Fanタイプ共通属性</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Общие атрибуты типа вентилятора.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

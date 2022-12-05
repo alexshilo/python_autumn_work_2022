@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="7f2b4780d1c911e1800000215ad4efdf" templatetype="PSET_PERFORMANCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_CoilPHistory</Name>
+  <Definition>Coil performance history common attributes.
+Sound attribute deleted in IFC2x2 Pset Addendum: Use IfcSoundProperties instead.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcCoil</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcCoil</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="84889200d1c911e1800000215ad4efdf">
+      <Name>AtmosphericPressure</Name>
+      <Definition>Ambient atmospheric pressure.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Atmospheric Pressure</NameAlias>
+        <NameAlias lang="fr-FR">Pression atmosphérique</NameAlias>
+        <NameAlias lang="ru-RU">Атмосферное давление</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Pression atmosphérique ambiante.</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Давление окружающей атмосферы.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="87838280d1c911e1800000215ad4efdf">
+      <Name>AirPressureDropCurve</Name>
+      <Definition>Air pressure drop curve, pressure drop – flow rate curve, AirPressureDrop = f (AirflowRate).</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Air Pressure Drop Curve</NameAlias>
+        <NameAlias lang="fr-FR">CourbePerteDeChargeAir</NameAlias>
+        <NameAlias lang="ru-RU">Кривая перепада давления воздуха</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Courbe de perte de charge aéraulique, courbe perte de charge/débit.</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Кривая падения давления воздуха, падение давления – кривая скорости потока, AirPressureDrop = f (AirflowRate).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="8b170980d1c911e1800000215ad4efdf">
+      <Name>SoundCurve</Name>
+      <Definition>Regenerated sound versus air-flow rate.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Sound Curve</NameAlias>
+        <NameAlias lang="fr-FR">CourbeSon</NameAlias>
+        <NameAlias lang="ru-RU">Кривая шума</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Son généré par rapport au débit aéraulique.</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Потоковый шум по сравнению со скоростью воздушного потока.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="8e11fa00d1c911e1800000215ad4efdf">
+      <Name>FaceVelocity</Name>
+      <Definition>Air velocity through the coil.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Face Velocity</NameAlias>
+        <NameAlias lang="fr-FR">VitesseFace</NameAlias>
+        <NameAlias lang="ru-RU">Фронтальная скорость</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="fr-FR">Vitesse de l'air à travers la batterie.</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Скорость прохождения воздуха через змеевик.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Общие атрибуты истории эксплуатации змеевика.Атрибут шума в Дополнении IFC2x2 Pset удален: вместо него следует использовать IfcSoundProperties.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

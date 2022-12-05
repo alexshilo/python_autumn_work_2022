@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="c412a680d1e811e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_FurnitureTypeChair</Name>
+  <Definition>A set of specific properties for furniture type chair. HISTORY: First issued in IFC Release R1.5. Renamed from Pset_Chair</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcFurniture/CHAIR</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcFurniture/CHAIR</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="caa11e00d1e811e1800000215ad4efdf">
+      <Name>SeatingHeight</Name>
+      <Definition>The value of seating height if the chair height is not adjustable.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Seating Height</NameAlias>
+        <NameAlias lang="ru-RU">Высоты посадки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Значение высоты посадки, если высота стула не регулируется.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d096ff00d1e811e1800000215ad4efdf">
+      <Name>HighestSeatingHeight</Name>
+      <Definition>The value of seating height of high level if the chair height is adjustable.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Highest Seating Height</NameAlias>
+        <NameAlias lang="ru-RU">Максимальная высота посадки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Значение максимальной высоты посадки, если высота стула регулируется.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e0164800d1e811e1800000215ad4efdf">
+      <Name>LowestSeatingHeight</Name>
+      <Definition>The value of seating height of low level if the chair height is adjustable.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Lowest Seating Height</NameAlias>
+        <NameAlias lang="ru-RU">Минимальная высота посадки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Значение минимальной высоты посадки, если высота стула регулируется.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Набор конкретных свойств для типа мебели стул. ИСТОРИЯ: Впервые использовано в выпуске R1.5 IFC. Ранее именовалось Pset_Chair</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

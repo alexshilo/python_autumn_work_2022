@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="b7348980d1cd11e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_ControllerTypeProportional</Name>
+  <Definition>Properties for signal handling for an proportional controller taking setpoint and feedback inputs and creating a single valued output. HISTORY: In IFC4, SignalFactor1, SignalFactor2 and SignalFactor3 changed to ProportionalConstant, IntegralConstant and DerivativeConstant.  SignalTime1 and SignalTime2 changed to SignalTimeIncrease and SignalTimeDecrease.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcController/PROPORTIONAL</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcController/PROPORTIONAL</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="bd2a6a80d1cd11e1800000215ad4efdf">
+      <Name>ControlType</Name>
+      <Definition>The type of signal modification.
+PROPORTIONAL: Output is proportional to the control error. The gain of a proportional control (Kp) will have the effect of reducing the rise time and reducing , but never eliminating, the steady-state error of the variable controlled. 
+PROPORTIONALINTEGRAL: Part of the output is proportional to the control error and part is proportional to the time integral of the control error. Adding the gain of an integral control (Ki) will have the effect of eliminating the steady-state error of the variable controlled, but it may make the transient response worse. 
+PROPORTIONALINTEGRALDERIVATIVE: Part of the output is proportional to the control error, part is proportional to the time integral of the control error and part is proportional to the time derivative of the control error. Adding the gain of a derivative control (Kd) will have the effect of increasing the stability of the system, reducing the overshoot, and improving the transient response of the variable controlled.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ControllerProportionalType">
+            <EnumItem>PROPORTIONAL</EnumItem>
+            <EnumItem>PROPORTIONALINTEGRAL</EnumItem>
+            <EnumItem>PROPORTIONALINTEGRALDERIVATIVE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>PROPORTIONAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Proportional</NameAlias>
+                <NameAlias lang="ru-RU">Пропорциональный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Output is proportional to the control error</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Выходной сигнал пропорционален ошибке управления.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PROPORTIONALINTEGRAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Proportional Integral</NameAlias>
+                <NameAlias lang="ru-RU">Пропорциональный/интеграл</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Part of the output is proportional to the control error and part is proportional to the time integral of the control error</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Часть выходного сигнала пропорциональна ошибке в контроле, а часть пропорциональна интегралу во времени ошибки управления.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>PROPORTIONALINTEGRALDERIVATIVE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Proportional Integral Derivative</NameAlias>
+                <NameAlias lang="ru-RU">Производный/пропорциональный/интеграл</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Part of the output is proportional to the control error, part is proportional to the time integral of the control error and part is proportional to the time derivative of the control error</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Часть выходного сигнала пропорциональна ошибке управления в контроле, часть пропорциональна интегралу во времени ошибки управления, а часть пропорциональна временной производной ошибки управления.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Control Type</NameAlias>
+        <NameAlias lang="ko-KR">PROPORTIONAL 유형</NameAlias>
+        <NameAlias lang="ru-RU">Тип механизма управления</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ko-KR">신호 변경 유형   P (비례), I (적분), D (미분)의 조합 PROPORTIONAL :   P (비례) 제어 PROPORTIONALINTEGRAL :   PI (비례 적분) 제어 PROPORTIONALINTEGRALDERIVATIVE :   PID (비례 적분 미분) 제어</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Тип преобразования сигнала.PROPORTIONAL: Выходной сигнал пропорционален ошибке управления. Коэффициент пропорционального регулирования усиления (Kp) будет иметь эффект уменьшения времени нарастания, но никогда не устранения установившейся ошибки управляемой переменной. PROPORTIONALINTEGRAL: Часть выходного сигнала пропорциональна ошибке в контроле, а часть пропорциональна интегралу во времени ошибки управления. Добавление коэффициента усиления интегрального управления (Ki) приведет к устранению установившейся ошибки управляемой переменной, но это может ухудшить переходные характеристики. PROPORTIONALINTEGRALDERIVATIVE: Часть выходного сигнала пропорциональна ошибке управления в контроле, часть пропорциональна интегралу во времени ошибки управления, а часть пропорциональна временной производной ошибки управления.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="cc111d00d1cd11e1800000215ad4efdf">
+      <Name>Labels</Name>
+      <Definition>Table mapping values to labels, where such labels indicate transition points such as 'Hi', 'Lo', 'HiHi', or 'LoLo'.</Definition>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression />
+          <DefiningValue>
+            <DataType type="IfcReal" />
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel" />
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Labels</NameAlias>
+        <NameAlias lang="ru-RU">Метки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Значения отображения таблиц с метками, где такие метки обозначают точки перехода, такие как 'Hi', 'Lo', 'HiHi' или 'LoLo'.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d4695800d1cd11e1800000215ad4efdf">
+      <Name>Range</Name>
+      <Definition>The physical range of values.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcReal" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Range</NameAlias>
+        <NameAlias lang="ru-RU">Диапазон</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Физический диапазон значений.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="da5f3900d1cd11e1800000215ad4efdf">
+      <Name>Value</Name>
+      <Definition>The expected range and default value.  While the property data type is IfcReal (to support all cases including when the units are unknown), a unit may optionally be provided to indicate the measure and unit.</Definition>
+      <PropertyType>
+        <TypePropertyBoundedValue>
+          <DataType type="IfcReal" />
+        </TypePropertyBoundedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Value</NameAlias>
+        <NameAlias lang="ru-RU">Значение</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Ожидаемый диапазон и значение по умолчанию. Когда тип данных свойства — IfcReal (во всех случаях, в том числе, когда единицы неизвестны), единица может быть предоставлена дополнительно для указания меры и единицы.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e1864700d1cd11e1800000215ad4efdf">
+      <Name>ProportionalConstant</Name>
+      <Definition>The proportional gain factor of the controller (usually referred to as Kp).</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Proportional Constant</NameAlias>
+        <NameAlias lang="ko-KR">비례 게인 (Kp)</NameAlias>
+        <NameAlias lang="ru-RU">Пропорциональный/постоянный</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ko-KR">비례 게인 (Kp)</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Коэффициент пропорционального усиления контроллера (обычно называемый Kp).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e6e39180d1cd11e1800000215ad4efdf">
+      <Name>IntegralConstant</Name>
+      <Definition>The integral gain factor of the controller (usually referred to as Ki).  Asserted where ControlType is PROPORTIONALINTEGRAL or PROPORTIONALINTEGRALDERIVATIVE.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Integral Constant</NameAlias>
+        <NameAlias lang="ko-KR">적분 게인 (Ki)</NameAlias>
+        <NameAlias lang="ru-RU">Интеграл/постоянный</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ko-KR">적분 게인 (Ki)</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Интегральный коэффициент усиления регулятора (обычно называемый Ki). Задается, если ControlType имеет тип PROPORTIONALINTEGRAL или PROPORTIONALINTEGRALDERIVATIVE.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="eba84580d1cd11e1800000215ad4efdf">
+      <Name>DerivativeConstant</Name>
+      <Definition>The derivative gain factor of the controller (usually referred to as Kd).  Asserted where ControlType is PROPORTIONALINTEGRALDERIVATIVE.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcReal" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Derivative Constant</NameAlias>
+        <NameAlias lang="ko-KR">미분 게인 (Kd)</NameAlias>
+        <NameAlias lang="ru-RU">Производный/постоянный</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ko-KR">미분 게인 (Kd)</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Производный коэффициент усиления контроллера (обычно называемый Kd). Задается, если ControlType имеет тип PROPORTIONALINTEGRALDERIVATIVE.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f236bd00d1cd11e1800000215ad4efdf">
+      <Name>SignalTimeIncrease</Name>
+      <Definition>Time factor used for exponential increase.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcTimeMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Signal Time Increase</NameAlias>
+        <NameAlias lang="ko-KR">적분 시간 (Ti)</NameAlias>
+        <NameAlias lang="ru-RU">Увеличение времени сигнала</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ko-KR">적분 시간 (Ti)</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Временной коэффициент, используемый для обозначения экспоненциального роста.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f7940780d1cd11e1800000215ad4efdf">
+      <Name>SignalTimeDecrease</Name>
+      <Definition>Time factor used for exponential decrease.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcTimeMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Signal Time Decrease</NameAlias>
+        <NameAlias lang="ko-KR">미분 시간 (Td)</NameAlias>
+        <NameAlias lang="ru-RU">Уменьшение времени сигнала</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ko-KR">미분 시간 (Td)</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Временной коэффициент, используемый для обозначения экспоненциального снижения.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Свойства для обработки сигналов для пропорционального контроллера, принимающего заданные значения и сигналы обратной связи на входе с однозадачным выходом. ИСТОРИЯ: В IFC4 SignalFactor1, SignalFactor2 и SignalFactor3 были заменены на ProportionalConstant, IntegralConstant и DerivativeConstant. SignalTime1 и SignalTime2 изменены на SignalTimeIncrease и SignalTimeDecrease.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

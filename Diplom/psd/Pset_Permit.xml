@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="58cdd200d1f211e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_Permit</Name>
+  <Definition>A permit is a document that allows permission to gain access to an area or carry out work in a situation where security or other access restrictions apply.
+HISTORY: IFC4 EndDate added. PermitType, PermitDuration, StartTime and EndTime are deleted.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcPermit</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcPermit</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="5d928600d1f211e1800000215ad4efdf">
+      <Name>EscortRequirement</Name>
+      <Definition>Indicates whether or not an escort is required to accompany persons carrying out a work order at or to/from the place of work (= TRUE) or not (= FALSE).
+
+NOTE - There are many instances where escorting is required, particularly in a facility that has a high security rating. Escorting may require that persons are escorted to and from the place of work. Alternatively, it may involve the escort remaining at the place of work at all times.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Escort Requirement</NameAlias>
+        <NameAlias lang="ru-RU">Требование по сопровождению</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Указывает, требуется ли сопровождение для лиц, выполняющих наряд, в месте выполнения работ либо в пути (= TRUE) или нет (= FALSE).ПРИМЕЧАНИЕ. Сопровождение необходимо во множестве случаев, в особенности на объектах с повышенными требованиями к безопасности. Сопровождении может потребоваться по пути на место выполнения работ или с места выполнения работ. Кроме того, возможно требование к постоянному пребыванию сопровождающих лиц в месте проведения работ</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="63886700d1f211e1800000215ad4efdf">
+      <Name>StartDate</Name>
+      <Definition>Date and time from which the permit becomes valid.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDateTime" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Start Date</NameAlias>
+        <NameAlias lang="ru-RU">Дата начала</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Дата и время начала действия разрешения.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="697e4800d1f211e1800000215ad4efdf">
+      <Name>EndDate</Name>
+      <Definition>Date and time at which the permit ceases to be valid.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcDateTime" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">End Date</NameAlias>
+        <NameAlias lang="ru-RU">Дата окончания</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Дата и время окончания действия разрешения.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="6e42fc00d1f211e1800000215ad4efdf">
+      <Name>SpecialRequirements</Name>
+      <Definition>Any additional special requirements that need to be included in the permit to work.
+
+NOTE - Additional permit requirements may be imposed according to the nature of the facility at which the work is carried out. For instance, in clean areas, special clothing may be required whilst in corrective institutions, it may be necessary to check in and check out tools that will be used for work as a safety precaution.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Special Requirements</NameAlias>
+        <NameAlias lang="ru-RU">Особые требования</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Любые дополнительные особые требования, которые необходимо включить в разрешение на работу.ПРИМЕЧАНИЕ. К разрешению на работу могут предъявляться дополнительные требования в зависимости от характера объекта, на котором ведутся работы.К примеру, в чистых зонах может потребоваться специальная одежда, а в исправительно-трудовых учреждениях в качестве меры предосторожности может потребоваться регистрация и снятие с регистрации рабочих инструментов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Разрешение является документом, который предоставляет право на доступ в определенную зону или на выполнение работ в ситуации, когда доступ ограничен по соображениям безопасности или другим.ИСТОРИЯ: в IFC4 доавлено EndDate. PermitType, PermitDuration, StartTime и EndTime удалены.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

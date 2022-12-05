@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="e8608a00d1cc11e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_ConstructionResource</Name>
+  <Definition>Properties for tracking resource usage over time.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcConstructionResource</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcConstructionResource</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="ee566b00d1cc11e1800000215ad4efdf">
+      <Name>ScheduleWork</Name>
+      <Definition>The scheduled work on behalf of the resource allocation.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Schedule Work</NameAlias>
+        <NameAlias lang="ja-JP">予定作業時間</NameAlias>
+        <NameAlias lang="ru-RU">Запланированная работа</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">資源配分のための予定された作業。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Запланированная работа в интересах распределения ресурсов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f1515b80d1cc11e1800000215ad4efdf">
+      <Name>ActualWork</Name>
+      <Definition>The actual work on behalf of the resource allocation.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Actual Work</NameAlias>
+        <NameAlias lang="ja-JP">実績作業時間</NameAlias>
+        <NameAlias lang="ru-RU">Фактическая работа</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">資源配分のための実績の作業。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Фактическая работа в интересах распределения ресурсов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f3b3b580d1cc11e1800000215ad4efdf">
+      <Name>RemainingWork</Name>
+      <Definition>The remaining work on behalf of the resource allocation.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Remaining Work</NameAlias>
+        <NameAlias lang="ja-JP">残存作業時間</NameAlias>
+        <NameAlias lang="ru-RU">Оставшаяся работа</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">資源配分のための残存している作業。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Оставшаяся работа в интересах распределения ресурсов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f6aea600d1cc11e1800000215ad4efdf">
+      <Name>ScheduleCost</Name>
+      <Definition>The budgeted cost on behalf of the resource allocation.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Schedule Cost</NameAlias>
+        <NameAlias lang="ja-JP">予定コスト</NameAlias>
+        <NameAlias lang="ru-RU">Запланированная стоимость</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">資源配分のための予定されているコスト。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Сметная стоимость в интересах распределения ресурсов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f9110000d1cc11e1800000215ad4efdf">
+      <Name>ActualCost</Name>
+      <Definition>The actual cost on behalf of the resource allocation.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Actual Cost</NameAlias>
+        <NameAlias lang="ja-JP">実績コスト</NameAlias>
+        <NameAlias lang="ru-RU">Фактическая стоимость</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">資源配分のための実績のコスト。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Фактическая стоимость в интересах распределения ресурсов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="fb735a00d1cc11e1800000215ad4efdf">
+      <Name>RemainingCost</Name>
+      <Definition>The remaining cost on behalf of the resource allocation.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Remaining Cost</NameAlias>
+        <NameAlias lang="ja-JP">残存コスト</NameAlias>
+        <NameAlias lang="ru-RU">Оставшаяся стоимость</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">資源配分のための残存しているコスト。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Оставшаяся стоимость в интересах распределения ресурсов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="fe6e4a80d1cc11e1800000215ad4efdf">
+      <Name>ScheduleCompletion</Name>
+      <Definition>The scheduled completion percentage of the allocation.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Schedule Completion</NameAlias>
+        <NameAlias lang="ja-JP">予定完了率</NameAlias>
+        <NameAlias lang="ru-RU">Запланированное завершение</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">予定された完了率。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Процент запланированного завершения распределения.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="00d0a480d1cd11e1800000215ad4efdf">
+      <Name>ActualCompletion</Name>
+      <Definition>The actual completion percentage of the allocation.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Actual Completion</NameAlias>
+        <NameAlias lang="ja-JP">実績完了率</NameAlias>
+        <NameAlias lang="ru-RU">Фактическое завершение</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">実績の完了率。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Процент фактического завершения распределения.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Свойства, предназначенные для отслеживания использования ресурсов по ходу времени.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

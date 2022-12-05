@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="be10cb80d1d011e1800000215ad4efdf" templatetype="PSET_PERFORMANCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_DamperPHistory</Name>
+  <Definition>Damper performance history attributes.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcDamper</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcDamper</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="c36e1600d1d011e1800000215ad4efdf">
+      <Name>AirFlowRate</Name>
+      <Definition>Air flow rate.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Air Flow Rate</NameAlias>
+        <NameAlias lang="ru-RU">Скорость воздушного потока</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Скорость воздушного потока.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="c7019d00d1d011e1800000215ad4efdf">
+      <Name>Leakage</Name>
+      <Definition>Air leakage rate.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Leakage</NameAlias>
+        <NameAlias lang="ru-RU">Утечка</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Скорость утечки воздуха.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="c9fc8d80d1d011e1800000215ad4efdf">
+      <Name>PressureDrop</Name>
+      <Definition>Pressure drop.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Pressure Drop</NameAlias>
+        <NameAlias lang="ru-RU">Падение давления</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Падение давления.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="cc5ee780d1d011e1800000215ad4efdf">
+      <Name>BladePositionAngle</Name>
+      <Definition>Blade position angle; angle between the blade and flow direction ( 0 - 90).</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Blade Position Angle</NameAlias>
+        <NameAlias lang="ru-RU">Угол наклона заслонки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Угол наклона заслонки; угол между заслонкой и направлением потока (0 - 90).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="cff26e80d1d011e1800000215ad4efdf">
+      <Name>DamperPosition</Name>
+      <Definition>Damper position (0-1); damper position ( 0=closed=90deg position angle, 1=open=0deg position angle.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Damper Position</NameAlias>
+        <NameAlias lang="ru-RU">Положение клапана</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Положение регулирующего клапана (0-1); угол положения регулирующего  клапана ( 0=закрыт=90 градусов, 1=открыт=0 градусов).</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d2ed5f00d1d011e1800000215ad4efdf">
+      <Name>PressureLossCoefficient</Name>
+      <Definition>Pressure loss coefficient.</Definition>
+      <PropertyType>
+        <TypePropertyReferenceValue reftype="IfcTimeSeries" />
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Pressure Loss Coefficient</NameAlias>
+        <NameAlias lang="ru-RU">Коэффициент потерь давления</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Коэффициент потерь давления.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Атрибуты истории эксплуатации регулирующего клапана.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

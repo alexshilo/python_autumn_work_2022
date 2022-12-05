@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="7f9eff00d21811e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_WasteTerminalTypeWasteTrap</Name>
+  <Definition>Pipe fitting, set adjacent to a sanitary terminal, that retains liquid to prevent the passage of foul air.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcWasteTerminal/WASTETRAP</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcWasteTerminal/WASTETRAP</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="83cb1c80d21811e1800000215ad4efdf">
+      <Name>WasteTrapType</Name>
+      <Definition>Identifies the predefined types of trap from which the type required may be set.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_TrapType">
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>P_TRAP</EnumItem>
+            <EnumItem>Q_TRAP</EnumItem>
+            <EnumItem>S_TRAP</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+                <NameAlias lang="ru-RU">Нет</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>P_TRAP</Name>
+              <NameAliases>
+                <NameAlias lang="en">P Trap</NameAlias>
+                <NameAlias lang="ru-RU">P-образный сифон</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>Q_TRAP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Q Trap</NameAlias>
+                <NameAlias lang="ru-RU">Q-образный сифон</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>S_TRAP</Name>
+              <NameAliases>
+                <NameAlias lang="en">S Trap</NameAlias>
+                <NameAlias lang="ru-RU">S-образный сифон</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Waste Trap Type</NameAlias>
+        <NameAlias lang="ja-JP">廃棄物防臭弁種類</NameAlias>
+        <NameAlias lang="ru-RU">Тип водоотводного слива</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">必要とされるタイプがセットされる防臭弁の定義されたタイプを確認してください。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Указывает предварительно определенные типы трапов, из которых можно выбрать нужный.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="904f7500d21811e1800000215ad4efdf">
+      <Name>OutletConnectionSize</Name>
+      <Definition>Size of the outlet connection from the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Outlet Connection Size</NameAlias>
+        <NameAlias lang="ja-JP">排出口接続口サイズ</NameAlias>
+        <NameAlias lang="ru-RU">Размер выпускного соединения</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">要素からの接続口サイズ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Размер выпускного соединения объекта.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="980f1980d21811e1800000215ad4efdf">
+      <Name>InletConnectionSize</Name>
+      <Definition>Size of the inlet connection(s), where used, of the inlet connections.
+
+Note that all inlet connections are assumed to be the same size.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Inlet Connection Size</NameAlias>
+        <NameAlias lang="ja-JP">吸気口接続口サイズ</NameAlias>
+        <NameAlias lang="ru-RU">Размер впускного соединения</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">吸気口接続口のサイズ。
+
+注意：同サイズの吸気口接続口がないものとします。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Размер впускных соединений, если они используются..Предполагается, что все входные соединения имеют одинаковый размер.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">液体を溜めて汚れた空気の通過を防ぐよう衛生機器に隣接して設置させた配管。</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Оконцовка трубы, прилегающая к сантехническому отверстию, удерживающая жидкость для блокировки прохождения грязного воздуха.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

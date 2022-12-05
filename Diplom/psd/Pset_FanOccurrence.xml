@@ -1,0 +1,568 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="bad30b00d1e311e1800000215ad4efdf" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_FanOccurrence</Name>
+  <Definition>Fan occurrence attributes attached to an instance of IfcFan.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcFan</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcFan</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="beff2880d1e311e1800000215ad4efdf">
+      <Name>DischargeType</Name>
+      <Definition>Defines the type of connection at the fan discharge.
+
+Duct: Discharge into ductwork.
+Screen: Discharge into screen outlet.
+Louver: Discharge into a louver.
+Damper: Discharge into a damper.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FanDischargeType">
+            <EnumItem>DUCT</EnumItem>
+            <EnumItem>SCREEN</EnumItem>
+            <EnumItem>LOUVER</EnumItem>
+            <EnumItem>DAMPER</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>DUCT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Duct</NameAlias>
+                <NameAlias lang="ru-RU">Канал</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SCREEN</Name>
+              <NameAliases>
+                <NameAlias lang="en">Screen</NameAlias>
+                <NameAlias lang="ru-RU">Решетка</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LOUVER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Louver</NameAlias>
+                <NameAlias lang="ru-RU">Жалюзи</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DAMPER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Damper</NameAlias>
+                <NameAlias lang="ru-RU">Клапан</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Discharge Type</NameAlias>
+        <NameAlias lang="ja-JP">吐出形式</NameAlias>
+        <NameAlias lang="ru-RU">Тип сброса</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">送風機出口の接続形式定義
+Duct：ダクトへの吐き出し
+Screen:SCREEN内への吐き出し
+Louver:ルーバーへの吐き出し</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Определяет тип соединения в точке сброса вентилятора. Канал: Сброс в систему каналов. Решетка: Сброс в выходное отверстие решетки. Жалюзи: Сброс в жалюзи.Клапан: Сброс в клапан.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="cfaf9e80d1e311e1800000215ad4efdf">
+      <Name>ApplicationOfFan</Name>
+      <Definition>The functional application of the fan.
+
+SupplyAir: Supply air fan. 
+ReturnAir: Return air fan. 
+ExhaustAir: Exhaust air fan. 
+Other: Other type of application not defined above.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FanApplicationType">
+            <EnumItem>SUPPLYAIR</EnumItem>
+            <EnumItem>RETURNAIR</EnumItem>
+            <EnumItem>EXHAUSTAIR</EnumItem>
+            <EnumItem>COOLINGTOWER</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>SUPPLYAIR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Supply Air</NameAlias>
+                <NameAlias lang="ru-RU">Приточный воздух</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>RETURNAIR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Return Air</NameAlias>
+                <NameAlias lang="ru-RU">Возвратный воздух</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>EXHAUSTAIR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Exhaust Air</NameAlias>
+                <NameAlias lang="ru-RU">Вытяжной воздух</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>COOLINGTOWER</Name>
+              <NameAliases>
+                <NameAlias lang="en">Cooling Tower</NameAlias>
+                <NameAlias lang="ru-RU">Градирня</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Application Of Fan</NameAlias>
+        <NameAlias lang="ja-JP">Fan用途</NameAlias>
+        <NameAlias lang="ru-RU">Применение вентилятора</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">Fanの系統
+SUPPLYAIR, RETURNAIR, EXHAUSTAIR, COOLINGTOWER, OTHER</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Функциональное применение вентилятора. SupplyAir: Приточный вентилятор. ReturnAir: Вентилятор возвратного воздуха. ExhaustAir: Вытяжной вентилятор. Other: Другой, не определенный выше тип применения.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e0601480d1e311e1800000215ad4efdf">
+      <Name>CoilPosition</Name>
+      <Definition>Defines the relationship between a fan and a coil.
+
+DrawThrough: Fan located downstream of the coil.
+BlowThrough: Fan located upstream of the coil.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FanCoilPosition">
+            <EnumItem>DRAWTHROUGH</EnumItem>
+            <EnumItem>BLOWTHROUGH</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>DRAWTHROUGH</Name>
+              <NameAliases>
+                <NameAlias lang="en">Draw Through</NameAlias>
+                <NameAlias lang="ru-RU">Вентиляторная система с элементами оборудования на стороне всасывания</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BLOWTHROUGH</Name>
+              <NameAliases>
+                <NameAlias lang="en">Blow Through</NameAlias>
+                <NameAlias lang="ru-RU">Вентиляторная система с элементами оборудования на стороне нагнетания</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Coil Position</NameAlias>
+        <NameAlias lang="ja-JP">コイル位置</NameAlias>
+        <NameAlias lang="ru-RU">Положение термоизолированного нагревательного элемента</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">Fanとコイル間の関係定義
+DwawThrough:ファンはコイルの下流に位置
+BlowThrough:ファンはコイルの上流に位置</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Определяет связь между вентилятором и термоизолированным нагревательным элементом. DrawThrough: Вентилятор расположен ниже термоизолированного нагревательного элемента.  BlowThrough: Вентилятор расположен выше термоизолированного нагревательного элемента.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="ece46d00d1e311e1800000215ad4efdf">
+      <Name>MotorPosition</Name>
+      <Definition>Defines the location of the motor relative to the air stream.
+
+InAirStream: Fan motor is in the air stream.
+OutOfAirStream: Fan motor is out of the air stream.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FanMotorPosition">
+            <EnumItem>INAIRSTREAM</EnumItem>
+            <EnumItem>OUTOFAIRSTREAM</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>INAIRSTREAM</Name>
+              <NameAliases>
+                <NameAlias lang="en">In Air Stream</NameAlias>
+                <NameAlias lang="ru-RU">В воздушном потоке</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OUTOFAIRSTREAM</Name>
+              <NameAliases>
+                <NameAlias lang="en">Out of Air Stream</NameAlias>
+                <NameAlias lang="ru-RU">Вне воздушного потока </NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Motor Position</NameAlias>
+        <NameAlias lang="ja-JP">モーター位置</NameAlias>
+        <NameAlias lang="ru-RU">Расположение двигателя</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">空気流路と相対的なモーターの位置定義
+流路内、流路外　その他</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Определяет расположение двигателя относительно воздушного потока. InAirStream: Двигатель вентилятора находится в воздушном потоке. OutOfAirStream: Двигатель вентилятора находится вне воздушного потока.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="fa015c00d1e311e1800000215ad4efdf">
+      <Name>FanMountingType</Name>
+      <Definition>Defines the method of mounting the fan in the building.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_FanMountingType">
+            <EnumItem>MANUFACTUREDCURB</EnumItem>
+            <EnumItem>FIELDERECTEDCURB</EnumItem>
+            <EnumItem>CONCRETEPAD</EnumItem>
+            <EnumItem>SUSPENDED</EnumItem>
+            <EnumItem>WALLMOUNTED</EnumItem>
+            <EnumItem>DUCTMOUNTED</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>MANUFACTUREDCURB</Name>
+              <NameAliases>
+                <NameAlias lang="en">Manufactured Curb</NameAlias>
+                <NameAlias lang="ru-RU">Готовый ограничитель</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>FIELDERECTEDCURB</Name>
+              <NameAliases>
+                <NameAlias lang="en">Field Erected Curb</NameAlias>
+                <NameAlias lang="ru-RU">Ограничитель, устанавливаемый на месте</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CONCRETEPAD</Name>
+              <NameAliases>
+                <NameAlias lang="en">Concrete Pad</NameAlias>
+                <NameAlias lang="ru-RU">Бетонная площадка</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>SUSPENDED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Suspended</NameAlias>
+                <NameAlias lang="ru-RU">Подвесной</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>WALLMOUNTED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Wall Mounted</NameAlias>
+                <NameAlias lang="ru-RU">Настенного типа</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>DUCTMOUNTED</Name>
+              <NameAliases>
+                <NameAlias lang="en">Duct Mounted</NameAlias>
+                <NameAlias lang="ru-RU">Монтируемый в канале</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Fan Mounting Type</NameAlias>
+        <NameAlias lang="ja-JP">Fan設置タイプ</NameAlias>
+        <NameAlias lang="ru-RU">Тип монтажа вентилятора</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">建物へのFan設置方法定義
+MANUFACTUREDCURB, FIELDERECTEDCURB, CONCRETEPAD, SUSPENDED, WALLMOUNTED, DUCTMOUNTED</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Определяет тип монтажа вентилятора в здании.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="0d142c00d1e411e1800000215ad4efdf">
+      <Name>FractionOfMotorHeatToAirStream</Name>
+      <Definition>Fraction of the motor heat released into the fluid flow.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcNormalisedRatioMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Fraction Of Motor Heat To Air Stream</NameAlias>
+        <NameAlias lang="ja-JP">モーター排熱</NameAlias>
+        <NameAlias lang="ru-RU">Часть теплоты двигателя, выделяемая в воздушный поток</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">流体中にモーター発熱が放出される場合にTRUE</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Часть теплоты двигателя, которая выделяется в поток жидкости.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="12717680d1e411e1800000215ad4efdf">
+      <Name>ImpellerDiameter</Name>
+      <Definition>Diameter of fan wheel - used to scale performance of geometrically similar fans.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Impeller Diameter</NameAlias>
+        <NameAlias lang="ja-JP">羽根径</NameAlias>
+        <NameAlias lang="ru-RU">Диаметр рабочего колеса</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">ファンホイールの直径　-　幾何学的に類似したファンの性能を基準化するために使用。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Диаметр рабочего колеса вентилятора используется для измерения эксплуатационных показателей геометрически подобных вентиляторов.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">IfcFanの値に付け加えられたFan属性</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Атрибуты образца вентилятора, приписанные экземпляру IfcFan.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

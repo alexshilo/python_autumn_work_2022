@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="21bde780d21711e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_WasteTerminalTypeGullySump</Name>
+  <Definition>Pipe fitting or assembly of fittings to receive surface water or waste water, fitted with a grating or sealed cover.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcWasteTerminal/GULLYSUMP</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcWasteTerminal/GULLYSUMP</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="26829b80d21711e1800000215ad4efdf">
+      <Name>NominalSumpLength</Name>
+      <Definition>Nominal or quoted length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the sump.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Sump Length</NameAlias>
+        <NameAlias lang="ja-JP">汚水槽長さ</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная длина сточного колодца</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">局所座標系のX軸に沿うか半径（円状の形の場合）で測定された、汚水槽の長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальная или приведенная длина, измеренная по оси x в локальной системе координат, или радиус (в случае круглой формы в плане) сточного колодца.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="300c0380d21711e1800000215ad4efdf">
+      <Name>NominalSumpWidth</Name>
+      <Definition>Nominal or quoted length measured along the y-axis in the local coordinate system of the sump.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Sump Width</NameAlias>
+        <NameAlias lang="ja-JP">汚水槽幅</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная ширина сточного колодца</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">局所座標系のY軸に沿う形で測定され汚水槽の長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальная или приведенная длина сточного колодца, измеренная по оси y в локальной системе координат.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="38643e80d21711e1800000215ad4efdf">
+      <Name>NominalSumpDepth</Name>
+      <Definition>Nominal or quoted length measured along the z-axis in the local coordinate system of the sump.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Nominal Sump Depth</NameAlias>
+        <NameAlias lang="ja-JP">汚水槽深さ</NameAlias>
+        <NameAlias lang="ru-RU">Номинальная глубина сточного колодца</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">局所座標系のZ軸に沿う形で測定され汚水槽の長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Номинальная или приведенная длина сточного колодца, измеренная по оси z в локальной системе координат.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="431ed380d21711e1800000215ad4efdf">
+      <Name>GullyType</Name>
+      <Definition>Identifies the predefined types of gully from which the type required may be set.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_GullyType">
+            <EnumItem>VERTICAL</EnumItem>
+            <EnumItem>BACKINLET</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>VERTICAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Vertical</NameAlias>
+                <NameAlias lang="ru-RU">Вертикаль</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>BACKINLET</Name>
+              <NameAliases>
+                <NameAlias lang="en">Backinlet</NameAlias>
+                <NameAlias lang="ru-RU">Задний впуск</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Gully Type</NameAlias>
+        <NameAlias lang="ja-JP">溝種類</NameAlias>
+        <NameAlias lang="ru-RU">Тип водоприемного колодца</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">必要とされるタイプがセットされる溝の定義されたタイプを確認してください。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Указывает заранее установленные типы водоприемных колодцев, из которых можно выбрать необходимый.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="503bc280d21711e1800000215ad4efdf">
+      <Name>TrapType</Name>
+      <Definition>Identifies the predefined types of trap from which the type required may be set.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_TrapType">
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>P_TRAP</EnumItem>
+            <EnumItem>Q_TRAP</EnumItem>
+            <EnumItem>S_TRAP</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+                <NameAlias lang="ru-RU">Нет</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>P_TRAP</Name>
+              <NameAliases>
+                <NameAlias lang="en">P Trap</NameAlias>
+                <NameAlias lang="ru-RU">P-образный сифон</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>Q_TRAP</Name>
+              <NameAliases>
+                <NameAlias lang="en">Q Trap</NameAlias>
+                <NameAlias lang="ru-RU">Q-образный сифон</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>S_TRAP</Name>
+              <NameAliases>
+                <NameAlias lang="en">S Trap</NameAlias>
+                <NameAlias lang="ru-RU">S-образный сифон</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Trap Type</NameAlias>
+        <NameAlias lang="ja-JP">防臭弁種類</NameAlias>
+        <NameAlias lang="ru-RU">Тип сифона</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">必要とされるタイプがセットされる防臭弁の定義されたタイプを確認してください。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Указывает предварительно определенные типы трапов, из которых можно выбрать нужный.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="6053a200d21711e1800000215ad4efdf">
+      <Name>OutletConnectionSize</Name>
+      <Definition>Size of the outlet connection from the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Outlet Connection Size</NameAlias>
+        <NameAlias lang="ja-JP">排気口接続口</NameAlias>
+        <NameAlias lang="ru-RU">Размер выпускного соединения</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">要素からの排気口接続口のサイズ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Размер выпускного соединения объекта.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="69dd0a00d21711e1800000215ad4efdf">
+      <Name>BackInletPatternType</Name>
+      <Definition>Identifies the pattern of inlet connections to a gully trap.
+
+A gulley trap may have 0,1,2,3 or 4 inlet connections and the pattern of their arrangement may vary. The enumeration makes the convention that an outlet is either vertical or is placed at the bottom (south side) of the gully trap (when viewed in plan). Position 1 is to the left (west), position 2 is to the top (north), position 3 is to the right (east) and position 4 is to the bottom (south).
+
+               2
+               |
+   ----------------
+   !                       |
+1-|                       |-3
+   !                       |
+   ----------------
+               |
+              4</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_BackInletPatternType">
+            <EnumItem>NONE</EnumItem>
+            <EnumItem>1</EnumItem>
+            <EnumItem>2</EnumItem>
+            <EnumItem>3</EnumItem>
+            <EnumItem>4</EnumItem>
+            <EnumItem>12</EnumItem>
+            <EnumItem>13</EnumItem>
+            <EnumItem>14</EnumItem>
+            <EnumItem>23</EnumItem>
+            <EnumItem>24</EnumItem>
+            <EnumItem>34</EnumItem>
+            <EnumItem>123</EnumItem>
+            <EnumItem>124</EnumItem>
+            <EnumItem>134</EnumItem>
+            <EnumItem>234</EnumItem>
+            <EnumItem>1234</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>NONE</Name>
+              <NameAliases>
+                <NameAlias lang="en">None</NameAlias>
+                <NameAlias lang="ru-RU">Нет</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>1</Name>
+              <NameAliases>
+                <NameAlias lang="en">1</NameAlias>
+                <NameAlias lang="ru-RU">1</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>2</Name>
+              <NameAliases>
+                <NameAlias lang="en">2</NameAlias>
+                <NameAlias lang="ru-RU">2</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>3</Name>
+              <NameAliases>
+                <NameAlias lang="en">3</NameAlias>
+                <NameAlias lang="ru-RU">3</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>4</Name>
+              <NameAliases>
+                <NameAlias lang="en">4</NameAlias>
+                <NameAlias lang="ru-RU">4</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>12</Name>
+              <NameAliases>
+                <NameAlias lang="en">12</NameAlias>
+                <NameAlias lang="ru-RU">12</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>13</Name>
+              <NameAliases>
+                <NameAlias lang="en">13</NameAlias>
+                <NameAlias lang="ru-RU">13</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>14</Name>
+              <NameAliases>
+                <NameAlias lang="en">14</NameAlias>
+                <NameAlias lang="ru-RU">14</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>23</Name>
+              <NameAliases>
+                <NameAlias lang="en">23</NameAlias>
+                <NameAlias lang="ru-RU">23</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>24</Name>
+              <NameAliases>
+                <NameAlias lang="en">24</NameAlias>
+                <NameAlias lang="ru-RU">24</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>34</Name>
+              <NameAliases>
+                <NameAlias lang="en">34</NameAlias>
+                <NameAlias lang="ru-RU">34</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>123</Name>
+              <NameAliases>
+                <NameAlias lang="en">123</NameAlias>
+                <NameAlias lang="ru-RU">123</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>124</Name>
+              <NameAliases>
+                <NameAlias lang="en">124</NameAlias>
+                <NameAlias lang="ru-RU">124</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>134</Name>
+              <NameAliases>
+                <NameAlias lang="en">134</NameAlias>
+                <NameAlias lang="ru-RU">134</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>234</Name>
+              <NameAliases>
+                <NameAlias lang="en">234</NameAlias>
+                <NameAlias lang="ru-RU">234</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>1234</Name>
+              <NameAliases>
+                <NameAlias lang="en">1234</NameAlias>
+                <NameAlias lang="ru-RU">1234</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Back Inlet Pattern Type</NameAlias>
+        <NameAlias lang="ja-JP">背部接続口種類</NameAlias>
+        <NameAlias lang="ru-RU">Тип с впуском сзади</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">溝防臭弁の吸気口パターンを確認してください。
+
+一つの溝防臭弁に0.1.2.3.4.の吸気口接続口とパターンがあるときは変化する可能性があります。表記されるときは、接続口が垂直である様子か、防臭弁の底（南）におかれます。位置1は左(西)に、位置2は上方(北)に、位置3は右(東)に、位置4は下方(南）になります。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Определяет схему впускных соединений слива.Слив может иметь 0, 1, 2, 3 или 4 впускных соединения, схема их расположения может отличаться. Перечисление предусматривает, что выходное отверстие расположено либо вертикально, либо на дне (на южной стороне) смотрового трапа (в плане). Положение 1 - слева (запад), положение 2 - сверху (север), положение 3 - справа (восток), и положение 4 - внизу (юг).                2               |   ----------------   !                       |1-|                       |-3   !                       |   ----------------               |              4</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="87aa6f00d21711e1800000215ad4efdf">
+      <Name>InletConnectionSize</Name>
+      <Definition>Size of the inlet connection(s), where used, of the inlet connections.
+
+Note that all inlet connections are assumed to be the same size.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Inlet Connection Size</NameAlias>
+        <NameAlias lang="ja-JP">吸気口接続口サイズ</NameAlias>
+        <NameAlias lang="ru-RU">Размер впускного соединения</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">吸気口接続口のサイズ。
+
+注意：同サイズの吸気口接続口がないものとします。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Размер впускных соединений, если они используются..Предполагается, что все входные соединения имеют одинаковый размер.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="909b4080d21711e1800000215ad4efdf">
+      <Name>CoverLength</Name>
+      <Definition>The length measured along the x-axis in the local coordinate system or the radius (in the case of a circular shape in plan) of the cover of the gully trap.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Cover Length</NameAlias>
+        <NameAlias lang="ja-JP">カバーの長さ</NameAlias>
+        <NameAlias lang="ru-RU">Длина крышки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">局所座標系のX軸に沿うか、半径（円状の形の場合）で測定された溝防臭弁カバーの長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Длина, измеренная по оси x в локальной системе координат, или радиус (в случае круглой формы в плане) крышки сточного колодца.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="9abd3f00d21711e1800000215ad4efdf">
+      <Name>CoverWidth</Name>
+      <Definition>The length measured along the y-axis in the local coordinate system of the cover of the gully trap.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Cover Width</NameAlias>
+        <NameAlias lang="ja-JP">カバーの幅</NameAlias>
+        <NameAlias lang="ru-RU">Ширина крышки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">局所座標系のY軸で測定された溝防臭弁カバーの長さ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Длина, измеренная по оси y в локальной системе координат крышки смотрового трапа.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">地表水や廃水を受けるためのグレーチングシールカバーに取り付けられる、取付器具や配管。</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Трубная оконцовка или сборка оконцовок для приема поверхностных или сточных вод, оборудованные решеткой или герметичной крышкой.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

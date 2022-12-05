@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="021cc400d20311e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_SanitaryTerminalTypeShower</Name>
+  <Definition>Installation or waste water appliance that emits a spray of water to wash the human body (BS6100). HISTORY: In IFC4, Material and MaterialThickness properties removed. Use materials capabilities from IfcMaterialsResource schema. Datatype of color changed to IfcLabel (still a string value)</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcSanitaryTerminal/SHOWER</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcSanitaryTerminal/SHOWER</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="06e17800d20311e1800000215ad4efdf">
+      <Name>ShowerType</Name>
+      <Definition>Selection of the type of shower from the enumerated list of types where:-
+
+Drench:  	Shower that rapidly gives a thorough soaking in an emergency.
+Individual: 	Shower unit that is typically enclosed and is for the use of one person at a time.
+Tunnel: 	Shower that has a succession of shower heads or spreaders that operate simultaneously along its length.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ShowerType">
+            <EnumItem>DRENCH</EnumItem>
+            <EnumItem>INDIVIDUAL</EnumItem>
+            <EnumItem>TUNNEL</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>DRENCH</Name>
+              <NameAliases>
+                <NameAlias lang="en">Drench</NameAlias>
+                <NameAlias lang="ru-RU">Аварийный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INDIVIDUAL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Individual</NameAlias>
+                <NameAlias lang="ru-RU">Индивидуальный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>TUNNEL</Name>
+              <NameAliases>
+                <NameAlias lang="en">Tunnel</NameAlias>
+                <NameAlias lang="ru-RU">Туннельный</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Shower Type</NameAlias>
+        <NameAlias lang="ja-JP">シャワータイプ</NameAlias>
+        <NameAlias lang="ru-RU">Тип душа</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">場所からのシャワータイプの選択：
+
+・水浸性：緊急時には素早く水に浸れるシャワー
+・独立性：一度に一人が使え、区切られているシャワーユニット
+・トンネル：シャワーヘッドの連続で設置されているか長さ方向に同時操作となる水散布機型のシャワー</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Выбор типа душа из пронумерованного списка типов, где: Drench: Душ высокого напора с быстрым запуском для смывания вредных веществ при аварийной ситуации. Individual:  Душевая кабина, как правило, закрытого типа, предназначенная для индивидуального использования.Tunnel: Душ, представляющий собой ряд душевых головок или распылителей, которые работают одновременно.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="15c82a80d20311e1800000215ad4efdf">
+      <Name>HasTray</Name>
+      <Definition>Indicates whether the shower has a separate receptacle that catches the water in a shower and directs it to a waste outlet.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Has Tray</NameAlias>
+        <NameAlias lang="ru-RU">С лотком</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Указывает на то, имеется ли в душе отдельный приемник, который улавливает воду в душе и направляет ее в выходное отверстие-сток.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="3bedca80d20311e1800000215ad4efdf">
+      <Name>ShowerHeadDescription</Name>
+      <Definition>A description of the shower head(s) that emit the spray of water.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcText" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Shower Head Description</NameAlias>
+        <NameAlias lang="ja-JP">シャワーヘッド表現</NameAlias>
+        <NameAlias lang="ru-RU">Описание душевой головки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">シャワーヘッドが排出する水の放射の表現。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Описание душевой головки или головок, которые распыляют воду.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="427c4200d20311e1800000215ad4efdf">
+      <Name>DrainSize</Name>
+      <Definition>The size of the drain outlet connection from the object.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Drain Size</NameAlias>
+        <NameAlias lang="ja-JP">管口径</NameAlias>
+        <NameAlias lang="ru-RU">Размер сливного отверстия</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ja-JP">要素の排水口接続口サイズ。</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Размер соединения сливного отверстия объекта.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAlias lang="ja-JP">人体を洗うために水をスプレー状に放射する廃水器具(BS6100)
+背景: IFC4において、要素と要素厚さのプロパティーは排除されています 。IfcMaterialsResourceのタイプを使ってください。 色のデータ形式は文字列としてIfcLabelに変更されています。</PsetDefinitionAlias>
+    <PsetDefinitionAliases lang="ru-RU">Водоотводная установка или устройство, распыляющие воду для мытья тела человека (BS6100). ИСТОРИЯ: Свойства Material и MaterialThickness удалены в IFC4. Следует использовать возможности материалов из схемы данных IfcMaterialsResource. Тип данных цвета изменен на IfcLabel (остается строковым значением).</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>

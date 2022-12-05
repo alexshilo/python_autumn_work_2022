@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ifdguid="fd89e880d1cd11e1800000215ad4efdf" templatetype="PSET_TYPEDRIVENOVERRIDE" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>Pset_ControllerTypeTwoPosition</Name>
+  <Definition>Properties for signal handling for an analog controller taking disparate valued multiple inputs and creating a single valued binary output. HISTORY: In IFC4, extended properties to replace Pset_BinaryInput and Pset_BinaryOutput.</Definition>
+  <Applicability />
+  <ApplicableClasses>
+    <ClassName>IfcController/TWOPOSITION</ClassName>
+  </ApplicableClasses>
+  <ApplicableTypeValue>IfcController/TWOPOSITION</ApplicableTypeValue>
+  <PropertyDefs>
+    <PropertyDef ifdguid="02e73300d1ce11e1800000215ad4efdf">
+      <Name>ControlType</Name>
+      <Definition>The type of signal modification effected and applicable ports:
+
+LOWERLIMITSWITCH: Single analog input is read and if less than Value.LowerBound then True is written to the output value.
+UPPERLIMITSWITCH: Single analog input is read and if more than Value.UpperBound then True is written to the output value.
+LOWERBANDSWITCH: Single analog input is read and if less than Value.LowerBound+BandWidth then True is written to the output value.
+UPPERBANDSWITCH: Single analog input is read and if more than Value.UpperBound-BandWidth then True is written to the output value.
+NOT: Single binary input is read and the opposite value is written to the output value.
+AND: Two binary inputs are read and if both are True then True is written to the output value.
+OR: Two binary inputs are read and if either is True then True is written to the output value.
+XOR: Two binary inputs are read and if one is true then True is written to the output value.
+CALENDAR: No inputs; the current time is compared with an IfcWorkCalendar to which the IfcController is assigned and True is written if active.
+INPUT: Controller element is a dedicated input.
+OUTPUT: Controller element is a dedicated output.
+VARIABLE: Controller element is an in-memory variable.</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList name="PEnum_ControllerTwoPositionType">
+            <EnumItem>NOT</EnumItem>
+            <EnumItem>AND</EnumItem>
+            <EnumItem>OR</EnumItem>
+            <EnumItem>XOR</EnumItem>
+            <EnumItem>LOWERLIMITSWITCH</EnumItem>
+            <EnumItem>UPPERLIMITSWITCH</EnumItem>
+            <EnumItem>LOWERBANDSWITCH</EnumItem>
+            <EnumItem>UPPERBANDSWITCH</EnumItem>
+            <EnumItem>AVERAGE</EnumItem>
+            <EnumItem>CALENDAR</EnumItem>
+            <EnumItem>INPUT</EnumItem>
+            <EnumItem>OUTPUT</EnumItem>
+            <EnumItem>VARIABLE</EnumItem>
+            <EnumItem>OTHER</EnumItem>
+            <EnumItem>NOTKNOWN</EnumItem>
+            <EnumItem>UNSET</EnumItem>
+          </EnumList>
+          <ConstantList>
+            <ConstantDef>
+              <Name>NOT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Not</NameAlias>
+                <NameAlias lang="ru-RU">Not</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Single binary input is read and the opposite value is written to the output value</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Считывается один двоичный входной сигнал, и противоположное значение записывается в выходное значение.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>AND</Name>
+              <NameAliases>
+                <NameAlias lang="en">And</NameAlias>
+                <NameAlias lang="ru-RU">And</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Two binary inputs are read and if both are True then True is written to the output value</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Два бинарных входных сигнала считываются, и если оба значения True, то True записывается в выходное значение.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Or</NameAlias>
+                <NameAlias lang="ru-RU">Or</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Two binary inputs are read and if either is True then True is written to the output value</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Два бинарных входных сигнала считываются, и если один из них True, то True записывается в выходное значение.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>XOR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Xor</NameAlias>
+                <NameAlias lang="ru-RU">Xor</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Two binary inputs are read and if one is true then True is written to the output value</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Два бинарных входных сигнала считываются, и если один из них True, то True записывается в выходное значение.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LOWERLIMITSWITCH</Name>
+              <NameAliases>
+                <NameAlias lang="en">Lower Limit Switch</NameAlias>
+                <NameAlias lang="ru-RU">Переключатель нижнего предела</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Single analog input is read and if less than Value</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Считывается один аналоговый входной сигнал, и если значение меньше Value</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UPPERLIMITSWITCH</Name>
+              <NameAliases>
+                <NameAlias lang="en">Upper Limit Switch</NameAlias>
+                <NameAlias lang="ru-RU">Переключатель верхнего предела</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Single analog input is read and if more than Value</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Считывается один аналоговый входной сигнал, и если значение больше Value</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>LOWERBANDSWITCH</Name>
+              <NameAliases>
+                <NameAlias lang="en">Lower Band Switch</NameAlias>
+                <NameAlias lang="ru-RU">Переключатель нижнего диапазона</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Single analog input is read and if less than Value</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Считывается один аналоговый входной сигнал, и если значение меньше Value</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UPPERBANDSWITCH</Name>
+              <NameAliases>
+                <NameAlias lang="en">Upper Band Switch</NameAlias>
+                <NameAlias lang="ru-RU">Переключатель верхнего диапазона</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Single analog input is read and if more than Value</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Считывается один аналоговый входной сигнал, и если значение больше Value</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>AVERAGE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Average</NameAlias>
+                <NameAlias lang="ru-RU">Среднее значение</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en" />
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>CALENDAR</Name>
+              <NameAliases>
+                <NameAlias lang="en">Calendar</NameAlias>
+                <NameAlias lang="ru-RU">Календарь</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">No inputs</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Нет входных данных</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>INPUT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Input</NameAlias>
+                <NameAlias lang="ru-RU">Вход</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Controller element is a dedicated input</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Элемент контроллера представляет собой некоммутируемый вход.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OUTPUT</Name>
+              <NameAliases>
+                <NameAlias lang="en">Output</NameAlias>
+                <NameAlias lang="ru-RU">Выход</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Controller element is a dedicated output</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Элемент регулятора представляет собой некоммутируемый выход.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>VARIABLE</Name>
+              <NameAliases>
+                <NameAlias lang="en">Variable</NameAlias>
+                <NameAlias lang="ru-RU">Переменная</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Controller element is an in-memory variable</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Элемент регулятора является переменной в памяти.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>OTHER</Name>
+              <NameAliases>
+                <NameAlias lang="en">(other)</NameAlias>
+                <NameAlias lang="ru-RU">(иное)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is not listed.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение отсутствует в списке.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>NOTKNOWN</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unknown)</NameAlias>
+                <NameAlias lang="ru-RU">(неизвестно)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value is unknown.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение неизвестно.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+            <ConstantDef>
+              <Name>UNSET</Name>
+              <NameAliases>
+                <NameAlias lang="en">(unset)</NameAlias>
+                <NameAlias lang="ru-RU">(не задано)</NameAlias>
+              </NameAliases>
+              <DefinitionAliases>
+                <DefinitionAlias lang="en">Value has not been specified.</DefinitionAlias>
+                <DefinitionAlias lang="ru-RU">Значение не указано.</DefinitionAlias>
+              </DefinitionAliases>
+            </ConstantDef>
+          </ConstantList>
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Control Type</NameAlias>
+        <NameAlias lang="ko-KR">TWOPOSITION 유형</NameAlias>
+        <NameAlias lang="ru-RU">Тип механизма управления</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ko-KR">신호 변경 유형 리미트 스위치가 범위를 Pset_ControllerTypeValue 값을 묶여 속성에 의해 결정 하한 : if (Value.LowerBound&gt; Input) output = TRUE 상한 : if (Value.UpperBound &lt;Input) output = TRUE 하한 + 불감대 : if (Value.LowerBound + BandWidth&gt; Input) output = TRUE 최대 - 불감대 : if (Value.UpperBound - BandWidth &lt;Input) output = TRUE 논리 부정 : output = NOT (input) 논리적 : output = AND (input1, input2) 논리합 : output = OR (input, input2) 배타적 논리합 : output = XOR (input, input2) 달력 : output = TRUE ※ 컨트롤러에 입력없이하고 IfcWorkCalendar 컨트롤러가 할당되어 현재 시간인 경우</DefinitionAlias>
+        <DefinitionAlias lang="ru-RU">Тип преобразованного сигнала и применимые порты:LOWERLIMITSWITCH: Один аналоговый входной сигнал считывается, и если значение меньше Value.LowerBound, то True записывается в выходное значение.UPPERLIMITSWITCH: Один аналоговый входной сигнал считывается, и если он больше значения Value.UpperBound, то True записывается в выходное значение.LOWERBANDSWITCH: Один аналоговый входной сигнал считывается, и если значение меньше Value.LowerBound+BandWidth, то True записывается в выходное значение.UPPERBANDSWITCH: Один аналоговый входной сигнал считывается, и если он больше Value.UpperBound-BandWidth, то True записывается в выходное значение.NOT: Один двоичный входной сигнал считывается, и противоположное значение записывается в выходное значение.AND: Два бинарных входных сигнала считываются, и если оба значения True, то True записывается в выходное значение.OR: Два бинарных входных сигнала считываются, и если один из них True, то True записывается в выходное значение.XOR: Два бинарных входных сигнала считываются, и если один из них True, то True записывается в выходное значение.CALENDAR: Нет входных данных; текущее время сравнивается с IfcWorkCalendar, которому присвоен IfcController, и True записывается, если активен.INPUT: Элемент контроллера представляет собой некоммутируемый вход.OUTPUT: Элемент контроллера представляет собой некоммутируемый выход.VARIABLE: Элемент контроллера является переменной в памяти.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="201c0180d1ce11e1800000215ad4efdf">
+      <Name>Labels</Name>
+      <Definition>Table mapping values to labels, where such labels indicate the meanings of True and False, such as 'Open' and 'Closed'</Definition>
+      <PropertyType>
+        <TypePropertyTableValue>
+          <Expression />
+          <DefiningValue>
+            <DataType type="IfcBoolean" />
+          </DefiningValue>
+          <DefinedValue>
+            <DataType type="IfcLabel" />
+          </DefinedValue>
+        </TypePropertyTableValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Labels</NameAlias>
+        <NameAlias lang="ru-RU">Метки</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Значения отображения таблиц с метками, где такие метки указывают значения True и False, такие как 'Open' и 'Closed'</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="27dba600d1ce11e1800000215ad4efdf">
+      <Name>Polarity</Name>
+      <Definition>True indicates normal polarity; False indicates reverse polarity.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Polarity</NameAlias>
+        <NameAlias lang="ru-RU">Полярность</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">True обозначает нормальную полярность; False обозначает обратную полярность.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="2d38f080d1ce11e1800000215ad4efdf">
+      <Name>Value</Name>
+      <Definition>The default value such as normally-closed or normally-open.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Value</NameAlias>
+        <NameAlias lang="ru-RU">Значение</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+        <DefinitionAlias lang="ru-RU">Значение по умолчанию, например нормально замкнутый или нормально разомкнутый.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+    <PsetDefinitionAliases lang="ru-RU">Свойства для обработки сигналов аналоговым контроллером, имеющим несколько многозадачных входов и однозадачный бинарный выход. ИСТОРИЯ: В IFC4 - расширенные свойства для замены Pset_BinaryInput и Pset_BinaryOutput.</PsetDefinitionAliases>
+  </PsetDefinitionAliases>
+</PropertySetDef>
